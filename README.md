@@ -1,6 +1,6 @@
 # Cloudflare新建page部署cf节点
 
-## 0获取 uuid  复制uuid备用
+## 0 获取 uuid  复制uuid备用
 点击 打开 [获取 uuid ](https://www.uuidgenerator.net/)
 打开后Copy复制，那一行uuid即可。
 复制后，做好记录备用，别整没了部署时用
@@ -136,6 +136,7 @@ V2代理软件中单节点更换pyip示例
 uuid
 
 proxyip 等于 ＝  pyip
+
 
 
 
