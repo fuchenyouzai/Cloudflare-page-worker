@@ -1,6 +1,6 @@
 # Cloudflare新建page部署cf节点
 
-## 0 获取 uuid  复制uuid备用
+## 0获取 uuid  复制uuid备用
 点击 打开 [获取 uuid ](https://www.uuidgenerator.net/)
 打开后Copy复制，那一行uuid即可。
 复制后，做好记录备用，别整没了部署时用
@@ -139,6 +139,23 @@ proxyip 等于 ＝  pyip
 
 
 
+clash 示例
+```json
+
+- name: 地区17
+  type: vless
+  server: 优选ip
+  port: 443
+  uuid: 你的uuid
+  tcp:  true
+  udp: true 
+  tls: true
+  network: ws
+  servername: 你的域名
+  ws-opts:
+    path: "/pyip=pyip地址:有端口号的加上端口号例如9527"  
+    headers:
+      Host: 你的域名
 
 
-
+```
