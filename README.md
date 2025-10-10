@@ -69,7 +69,7 @@ Cloudflare  cf  里左侧菜单点worker和page按钮 ，
 到此为止，部署就完成了。关闭页面即可。
 
 
-# 手搓，v2 单节点
+# 手搓，v2 单节点  示例
  
 替换你的uuid和域名
  
@@ -77,10 +77,12 @@ Cloudflare  cf  里左侧菜单点worker和page按钮 ，
  
 替换你的pyip和端口
  
-
+```json
+    
 vless://你的uuid填这里@你的优选ip填这里:443?path=%2Fpyip%3D你的pyip填这里&security=tls&encryption=none&host=填写不带前缀https的纯域名&fp=chrome&type=ws&sni=填写不带前缀的纯域名#填写不带前缀的纯域名
+   
 
-
+```
 
 # 悠哉苍井空配置文件.yaml
 使用方法：   
