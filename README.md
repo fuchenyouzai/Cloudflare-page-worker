@@ -54,7 +54,7 @@ Montana Ave,500,Havre,Montana,United States
 
 Cloudflare  cf  里左侧菜单点worker和page按钮 ， 
 进入后，新建page应用项目，   
-起项目名英文加数字能死上就行随意，  
+起项目名英文加数字能起上就行随意，  
 下载  _worker.zip   压缩包，  
 选择从计算机或设备上传，  
 选择 _worker.zip，压缩包上传，保存部署。
