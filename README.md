@@ -70,19 +70,60 @@ Cloudflare  cf  里左侧菜单点worker和page按钮 ，
 
 
 # 手搓，v2 单节点  示例
- 
-替换你的uuid和域名
- 
-替换你的优选ip和端口
- 
-替换你的pyip和端口
- 
+
+
+## 手搓单节点，可用于 v2
+
 ```json
-    
-vless://你的uuid填这里@你的优选ip填这里:443?path=%2Fpyip%3D你的pyip填这里&security=tls&encryption=none&host=填写不带前缀https的纯域名&fp=chrome&type=ws&sni=填写不带前缀的纯域名#填写不带前缀的纯域名
-   
+
+
+vless://提示开始你的uuid填这里提示结束@提示开始你的优选ip填这里提示结束:443?path=%2Fpyip%3D提示开始你的pyip填这里提示结束&security=tls&encryption=none&host=提示开始填写不带前缀https的纯域名指示结束&fp=chrome&type=ws&sni=提示开始填写不带前缀的纯域名提示结束#提示开始填写不带前缀的纯域名提示结束。
 
 ```
+
+
+指示开始至提示结束 的所有内容都不要。换为你的uuid和域名和优选ip和pyip
+
+
+```json
+
+
+vless://空@空?path=%2Fpyip%3D空&security=tls&encryption=none&host=空&fp=chrome&type=ws&sni=空#空。
+
+
+```
+
+
+```json
+
+
+vless://你的uuid@104.26.1.182:443?path=%2Fpyip%3D38.244.198.107:443&security=tls&encryption=none&host=你的域名&fp=chrome&type=ws&sni=你的域名#你的域名
+
+
+```
+
+
+其中是优选ip
+
+104.26.1.182:443
+
+具体端口根据你的优选ip是哪个就写哪个。
+
+
+
+其中是pyip
+
+38.244.198.107:443
+
+具体端口根据你的pyip是哪个就写哪个。
+
+不过，使用单节点，v2  客户端，需要设置一堆东西。。。还是直接用苍井空配置文件比较实用。
+
+
+
+
+
+
 
 # 悠哉   苍井空配置文件.yaml  使用方法 
 
