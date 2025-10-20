@@ -4,6 +4,8 @@
 点击 打开 [获取 uuid ](https://www.uuidgenerator.net/)
 打开后Copy复制，那一行uuid即可。
 复制后，做好记录备用，别整没了部署时用
+#
+#
 
 ## 1 注册 github 账号
   
@@ -13,7 +15,9 @@ github账号注册＝
 注册时可选谷歌账号快捷登录。
 一个github可验证一次dpdns域名注册共得两个域名
  
-
+#
+#
+#
  
 ## 2 注册 cloudflare cf账号
   
@@ -26,6 +30,9 @@ Cloudflare账号注册=
 github账号快捷登录
 然后再部署cf。
 
+#
+#
+#
 
 ## 3 注册号 dpdns 域名账号
   
@@ -50,6 +57,10 @@ Montana Ave,500,Havre,Montana,United States
 
 【dpdsn域名那个页面有个活动点进去后，按照提示可以额外获得一个域名注册资格，去他的仓库点收藏那个五角星⭐给点亮了，然后回那个活动页面点验证，即可多获得一个域名注册资格。这样就可以部署到两个cf账号上！！！】
 
+#
+#
+#
+
 ## 4 部署Cloudflare page
 
 Cloudflare  cf  里左侧菜单点worker和page按钮 ， 
@@ -67,6 +78,9 @@ Cloudflare  cf  里左侧菜单点worker和page按钮 ，
 
 
 到此为止，部署就完成了。关闭页面即可。
+#
+#
+#
 
 
 # 手搓，v2 单节点  示例
@@ -176,7 +190,9 @@ vless://你的uuid@104.26.1.182:443?path=%2Fpyip%3D38.244.198.107:443&security=t
 示例  域名.dpdsn.org
 
 
-
+#
+#
+#
 
 
 
@@ -211,6 +227,10 @@ uuid
 
 proxyip 等于 ＝  pyip
 
+
+#
+#
+#
 
 
 clash 示例
