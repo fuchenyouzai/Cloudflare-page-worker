@@ -2757,6 +2757,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     type: fallback         # 核心类型，实现故障自动切换
     interval: 300
     url: https://www.gstatic.com/generate_204
+    icon: "https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/漏网之鱼.gif"
     proxies:
       - 🕹️ 手动选择节点分组        # 未分配分流规则的访问目标，自动选择走，- 🕹️ 手动选择节点分组，中当前选择的节点
       - ⚠️ 谷歌GV专用节点分组     #  风险保障  上个节点失效时，自动切换备用代理节点1
