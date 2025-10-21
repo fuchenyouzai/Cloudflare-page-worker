@@ -223,7 +223,7 @@ dns: # DNS设置用于管理代理服务的域名解析逻辑，包括解析服�
 
 # 以上内容不要动   🔔
 
-# 以下节点内容可以复制粘贴增加节点，并修改名字排序地区等，修改优选ip和pyip，和你的域名和uuid
+# 以下节点内容可以复制粘贴增加节点，并修改名字排序地区等，修改优选ip和pyip，和qianhouqianhoujiasudu1.dpdns.org和uuid
 
 # 代理节点  每个地区节点制作12个或24个，使用最佳。
 
@@ -234,107 +234,107 @@ proxies:
   type: vless
   server: 104.16.156.206
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"  # 默认pyip写法，当你没有pyip可用是改为默认的写法。
     headers:
-      Host: 你的域名 
+      Host: qianhouqianhoujiasudu1.dpdns.org 
 
 
 - name: 香港一号
   type: vless
   server: 104.26.1.182
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.223.167"
     headers:
-      Host: 你的域名 
+      Host: qianhouqianhoujiasudu1.dpdns.org 
       
 - name: 香港二号
   type: vless
   server: 104.18.83.92	
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=89.185.25.171"
     headers:
-      Host: 你的域名 
+      Host: qianhouqianhoujiasudu1.dpdns.org 
 
 - name: 香港三号
   type: vless
   server: 104.17.190.232	
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=154.16.10.143"
     headers:
-      Host: 你的域名 
+      Host: qianhouqianhoujiasudu1.dpdns.org 
 
 - name: 香港四号
   type: vless
   server: 104.19.40.184
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=47.239.8.172"
     headers:
-      Host: 你的域名 
+      Host: qianhouqianhoujiasudu1.dpdns.org 
 
 - name: www.visa.com.hk1
   type: vless
   server: 104.18.21.69
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.157.47"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: www.visa.com.hk2
   type: vless
   server: 104.18.20.69
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=38.180.94.171"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 # 香港节点     
@@ -343,631 +343,631 @@ proxies:
   type: vless       # 协议代理协议类型
   server: 104.26.1.182           # 可以更换优选ip去群里找，悠哉定义：代理节点的服务器IP地址或域名
   port: 443         # TLS标准端口HTTPS支持端口：443，2053，2083，2087，2096，8443，悠哉定义：代理节点的服务器端口；可选值：常用端口：443（默认TLS端口，隐蔽性强）、80（HTTP端口，适合伪装）、2053/2083/2087/2096 等）；当前使用 443 端口（TLS标准端口，可降低被拦截概率）
-  uuid: 你的uuid  # 部署时填写的uuid，悠哉定义：vless 协议的唯一身份标识（用于节点验证）；可选值：符合 UUID v4 获取地址https://www.uuidgenerator.net格式的字符串（如“xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx”）；需与服务器端部署是填写的配置完全一致，否则无法连接
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757  # 部署时填写的uuid，悠哉定义：vless 协议的唯一身份标识（用于节点验证）；可选值：符合 UUID v4 获取地址https://www.uuidgenerator.net格式的字符串（如“xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx”）；需与服务器端部署是填写的配置完全一致，否则无法连接
   tcp: true                                         # 悠哉定义：是否启用 TCP 传输；可选值：true（启用）、false（禁用）；vless 协议默认支持 TCP，启用后可处理 TCP 类型流量（如网页浏览、文件下载）
   udp: true                                        # 悠哉定义：是否启用 UDP 传输；可选值：true（启用）、false（禁用）；启用后可处理 UDP 类型流量（如视频通话、游戏联机），建议需要实时交互的场景开启
   tls: true                                           # 悠哉定义：是否启用 TLS 加密（用于保护传输数据安全）；可选值：true（启用）、false（禁用）；启用后会对流量进行 TLS 加密，隐蔽性和安全性更高，建议优先开启（需服务器端支持）
   network: ws                                   # 悠哉定义：传输层网络类型；可选值：ws（WebSocket，适合突破常规封锁）、tcp（纯TCP，速度快）、h2（HTTP/2，兼容性强）、grpc（Google RPC，高效轻量）；当前使用 ws 协议（WebSocket 伪装性强，可通过 CDN 转发）
-  servername: 你的域名     # 悠哉定义：TLS 握手时的 SNI（服务器名称指示），用于指定要访问的服务器域名；可选值：服务器绑定的域名（需与 servername 一致，若 server 填 IP，需填写服务器对应的域名以通过 TLS 验证）；若不填写，默认使用 server 字段的值（填 IP 时可能导致 TLS 验证失败，建议必填）
+  servername: qianhouqianhoujiasudu1.dpdns.org     # 悠哉定义：TLS 握手时的 SNI（服务器名称指示），用于指定要访问的服务器域名；可选值：服务器绑定的域名（需与 servername 一致，若 server 填 IP，需填写服务器对应的域名以通过 TLS 验证）；若不填写，默认使用 server 字段的值（填 IP 时可能导致 TLS 验证失败，建议必填）
   ws-opts:                                         # 悠哉定义：WebSocket 协议的额外配置（仅当 network: ws 时生效），无固定可选值，需根据服务器端配置填写对应参数
     path: "/pyip=219.73.53.129"     # piyp可以更换去群里找，悠哉定义：WebSocket 连接的路径；可选值：服务器端指定的路径（如“/ws”“/path=xxx”）；需与服务器端配置完全一致，否则无法建立 WebSocket 连接
     headers:                                      # 悠哉定义：WebSocket 连接的自定义 HTTP 头；可选值：键值对格式（如 Host、User-Agent 等），用于伪装成正常 HTTP 请求，提升隐蔽性
-      Host: 你的域名 
+      Host: qianhouqianhoujiasudu1.dpdns.org 
 
 - name: 1hkg4
   type: vless
   server: 104.17.152.204
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=46.8.226.20"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 2hkg4
   type: vless
   server: 104.16.242.92
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=154.16.10.143"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 3hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=46.8.226.20"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 4hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=154.16.10.143"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 5hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip="
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 6hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=195.54.171.205"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 7hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=38.180.94.97:443"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 8hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=103.49.61.252"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 9hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=156.254.114.171"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
       
 - name: 10hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=188.253.112.112"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
  
 - name: 11hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=46.8.226.20"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
   
 - name: 12hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=156.255.90.175:8443"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 13hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=194.156.99.182:8443"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 14hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=47.76.218.163"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 15hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=47.239.8.172"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 16hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=47.243.166.181"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
    
 - name: 17hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=113.254.239.245:11885"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
    
 - name: 18hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=47.243.182.23"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 19hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=47.76.218.163"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 20hkg4
   type: vless
   server: 104.17.182.245
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=62.72.163.109"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 21hkg4
   type: vless
   server: 104.17.187.111
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=8.223.73.245"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 22hkg4
   type: vless
   server: 104.16.149.4
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=47.76.218.163:443"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 23hkg4
   type: vless
   server: 104.16.155.235
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=62.72.163.109:443"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 24hkg4
   type: vless
   server: 104.16.151.171
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=125.59.125.172:38691"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 25hkg4
   type: vless
   server: 104.18.28.2
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=129.154.50.159:443"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 26hkg4
   type: vless
   server: 104.19.43.237
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.196.235.45"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 27hkg4
   type: vless
   server: 104.18.43.135
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=38.180.94.171"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 28hkg4
   type: vless
   server: 104.19.160.160
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=154.16.10.143"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 29hkg4
   type: vless
   server: 104.16.243.11
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=219.73.53.129"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 30hkg4
   type: vless
   server: 104.16.243.11
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.196.235.45"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 31hkg4
   type: vless
   server: 104.17.78.30
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=154.16.10.143"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 1hkg6
   type: vless
   server: 2606:4700:90da:2cd3:3bc3:a602:6c4c:8d85
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.223.167"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 2hkg6
   type: vless
   server: 2606:4700:90db:daa9:81dc:f938:8cdc:b7ab
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.223.167"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 3hkg6
   type: vless
   server: 2606:4700:8cac:ab33:440b:617a:49a2:20e5
   port: 8443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.223.167"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 4hkg6
   type: vless
   server: 2606:4700:90d0:d9fa:afab:1657:dbe2:ea63
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.223.167"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 5hkg6
   type: vless
   server: 2606:4700:8ca1:d830:7d65:6d98:3fc8:698d
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.223.167"
     headers:
-      Host: 你的域名    
+      Host: qianhouqianhoujiasudu1.dpdns.org    
 
 - name: 6hkg6
   type: vless
   server: 2606:4700:964a:cdd8:f3c7:1746:1107:5ed7
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.223.167"
     headers:
-      Host: 你的域名    
+      Host: qianhouqianhoujiasudu1.dpdns.org    
 
 - name: 7hkg6
   type: vless
   server: 2606:4700:90da:60c7:1bf2:1ffe:80ef:59b
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.223.167"
     headers:
-      Host: 你的域名    
+      Host: qianhouqianhoujiasudu1.dpdns.org    
 
 - name: 8hkg6
   type: vless
   server: 2606:4700:9ad7:d08e:7823:a3c3:b983:fb0c
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.223.167"
     headers:
-      Host: 你的域名    
+      Host: qianhouqianhoujiasudu1.dpdns.org    
 
 - name: 9hkg6
   type: vless
   server: 2606:4700:91b9:6eb9:e663:ed52:a6ed:e543
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.223.167"
     headers:
-      Host: 你的域名    
+      Host: qianhouqianhoujiasudu1.dpdns.org    
 
 - name: 10hkg6
   type: vless
   server: 2606:4700:9ad4:6b72:cab1:fbb1:aea2:8eb8
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名    
+      Host: qianhouqianhoujiasudu1.dpdns.org    
 
 
 
@@ -977,198 +977,198 @@ proxies:
   type: vless
   server: 104.17.83.171
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=38.187.247.80"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 1us4
   type: vless
   server: 104.21.42.217
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=207.246.97.82"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 2us4
   type: vless
   server: 104.18.109.203
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=20.171.107.105"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 3us4
   type: vless
   server: 104.16.121.232
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=152.70.155.147"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: v4sea1
   type: vless
   server: 104.16.162.61
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=104.168.88.250"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: v4sea2
   type: vless
   server: 104.16.126.132
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=91.149.239.62"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: v4sea3
   type: vless
   server: 104.17.249.142
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=38.213.101.107"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: v6sea1
   type: vless
   server: 2606:4700:a9:83ab:3e5a:c073:ea1f:4a60
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=38.213.101.15"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: v6sea2
   type: vless
   server: 2606:4700:3037:69ab:a215:bcee:92e4:2271
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=38.213.101.107"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: v6sea3
   type: vless
   server: 2606:4700:22:b72c:1938:32bf:f1ca:b7d8
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.32.79.55"
     headers:
-      Host: 你的域名      
+      Host: qianhouqianhoujiasudu1.dpdns.org      
 
 - name: v4sjc1
   type: vless
   server: 104.17.204.172
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=104.168.88.250"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: v4sjc2
   type: vless
   server: 104.16.85.135
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=91.149.239.62"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: v4sjc3
   type: vless
   server: 104.18.104.232
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=38.213.101.15"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 # 🇫🇷 法国节点分组
@@ -1176,107 +1176,107 @@ proxies:
   type: vless
   server: 104.20.57.179
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=158.178.197.12"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 2fra4
   type: vless
   server: 104.20.63.200
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=158.178.197.12"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 3fra4
   type: vless
   server: 104.20.50.53
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=158.178.197.12"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: www.visa.fr
   type: vless
   server: www.visa.fr
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=158.178.197.12"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 # 🇬🇧 英国节点分组
 - name: 1lhr4  
   type: vless
   server: 104.18.34.177
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=103.13.208.242"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 2lhr4  
   type: vless
   server: 104.16.128.3
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=91.149.203.145"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: www.visa.co.uk         
   type: vless
   server: www.visa.co.uk
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=84.8.145.58"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 # 域名
@@ -1284,76 +1284,76 @@ proxies:
   type: vless
   server: www.shopify.com
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.196.235.45"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: www.wto.org
   type: vless
   server: www.wto.org
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: time.is
   type: vless
   server: time.is
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: icook.hk
   type: vless
   server: icook.hk
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: www.visa.cn
   type: vless
   server: www.visa.cn
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 
@@ -1361,197 +1361,197 @@ proxies:
   type: vless
   server: visa.com
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: pages
   type: vless
   server: pages.cloudflare.com
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: blog
   type: vless
   server: blog.cloudflare.com
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: developers
   type: vless
   server: developers.cloudflare.com
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: radar
   type: vless
   server: radar.cloudflare.com
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名  
+      Host: qianhouqianhoujiasudu1.dpdns.org  
 
 - name: one.dash
   type: vless
   server: one.dash.cloudflare.com
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: workers
   type: vless
   server: workers.cloudflare.com
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 # 日本
 - name: www.visa.co.jp
   type: vless
   server: www.visa.co.jp
   port: 2083
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=176.97.70.119"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
       
 - name: 1日本4
   type: vless
   server: 162.159.153.6
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=47.79.38.17"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name:  2日本4
   type: vless
   server: 162.159.152.93
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.137.181.101"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name:  3日本4
   type: vless
   server: 162.159.129.80
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=20.44.136.56"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 4日本4
   type: vless
   server: 162.159.142.197
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=13.230.34.30"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 5日本4
   type: vless
   server: 162.159.134.48
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=47.79.38.17"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 
@@ -1560,31 +1560,31 @@ proxies:
   type: vless
   server: www.visa.com.sg
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=139.180.159.133"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
       
 - name:  1SG4
   type: vless
   server: 104.16.155.10
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=138.2.104.177"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 # 台湾
 
@@ -1592,76 +1592,76 @@ proxies:
   type: vless
   server: www.visa.com.tw
   port: 2053
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=210.61.97.24181"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 1tw4
   type: vless
   server: www.visa.com.tw
   port: 2053
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=210.61.97.241:81"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 2tw4
   type: vless
   server: www.visa.com.tw
   port: 2053
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=210.61.97.241:81"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 3tw4
   type: vless
   server: www.visa.com.tw
   port: 2053
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=210.61.97.241:81"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 - name: 4tw4
   type: vless
   server: 104.28.198.3
   port: 2053
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/?ed=2560"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 
@@ -1669,32 +1669,32 @@ proxies:
   type: vless
   server: "2606:4700::" 
   port: 433
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=217.60.248.66"          # path: "/?ed=2560"
     headers:
-      Host: 你的域名    
+      Host: qianhouqianhoujiasudu1.dpdns.org    
 
 
 - name: ⚠️ 谷歌GV专用节点一
   type: vless
   server: 104.17.72.164
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=38.187.247.63"  
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
  
 
@@ -1702,32 +1702,32 @@ proxies:
   type: vless
   server: 104.18.30.48
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=89.185.25.171"               # 默认写法 path: "/?ed=2560"
     headers:
-      Host: 你的域名       
+      Host: qianhouqianhoujiasudu1.dpdns.org       
       
 
 - name: 悠哉✈️TG账号@fuchenyouzaibot 
   type: vless
   server: 104.17.35.135
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=91.149.239.62"             # 默认写法 path: "/?ed=2560"
     headers:
-      Host: 你的域名 
+      Host: qianhouqianhoujiasudu1.dpdns.org 
 
 
 
@@ -1740,144 +1740,144 @@ proxies:
   type: vless
   server: 104.26.1.182
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=89.185.25.171"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 哈哈2
   type: vless
   server: 104.18.30.48
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=154.16.10.143"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 哈哈3
   type: vless
   server: 104.17.184.119
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=195.54.171.205"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 哈哈4
   type: vless
   server: 104.16.153.32
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.157.47"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 哈哈5
   type: vless
   server: 104.26.1.182
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.196.235.45"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
      
 - name: 哈哈6w
   type: vless
   server: 104.18.231.17
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=38.180.94.171"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 哈哈7w
   type: vless
   server: 104.17.112.109
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=219.78.65.128"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 哈哈8w
   type: vless
   server: 104.17.113.88
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=45.207.223.167"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 哈哈9w
   type: vless
   server: 104.18.233.170
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=219.73.53.129"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 
@@ -1887,144 +1887,144 @@ proxies:
   type: vless
   server: 104.17.83.171
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=91.149.239.62"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 嘿嘿2
   type: vless
   server: 104.17.83.171
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=129.153.74.179"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 嘿嘿3
   type: vless
   server: 104.16.71.142
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=142.171.32.3"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 嘿嘿4
   type: vless
   server: 104.18.209.30
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=129.153.74.179"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 嘿嘿5
   type: vless
   server: 104.17.7.212
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=107.174.181.116"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
      
 - name: 嘿嘿6w
   type: vless
   server: 104.18.210.132
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=104.168.88.250"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 嘿嘿7w
   type: vless
   server: 172.64.79.221
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=91.149.239.62"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 嘿嘿8w
   type: vless
   server: 104.16.68.254
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=65.75.221.129"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 - name: 嘿嘿9w
   type: vless
   server: 104.17.35.135
   port: 443
-  uuid: 你的uuid
+  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: 你的域名
+  servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
     path: "/pyip=142.171.32.3"
     headers:
-      Host: 你的域名
+      Host: qianhouqianhoujiasudu1.dpdns.org
 
 
 
@@ -2086,9 +2086,9 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   ✈️机场名1:
     <<: *PProviders                                # 引用锚点
     proxy: "全球直连"                              # 拉取订阅时使用的网络（直连拉取，避免循环依赖
-    url: "填写你的订阅链接"
+    url: "https://shb.tyreo.cn/api/v1/client/subscribe?token=24504b24296578519eb4f6701fafd0c5"
     override:                                           # 自定义机场节点前缀标记
-      additional-prefix: '[✈️节点前缀1]'
+      additional-prefix: '[✈️华夏1]'
       skip-cert-verify: true                       # 跳过证书验证（解决部分机场证书不兼容问题）
       udp: true                                          # 启用 UDP 支持（提升游戏、语音通话等场景体验）
 
