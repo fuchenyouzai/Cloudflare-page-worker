@@ -2061,6 +2061,7 @@ proxies:
 PProviders: &PProviders
   type: http
   interval: 18000   # 五小时更新
+  ip-version: ipv6-prefer     # 新增优先使用IPv6
   health-check:
     enable: true
     url: 'https://www.gstatic.com/generate_204'
@@ -2068,7 +2069,7 @@ PProviders: &PProviders
   filter: '^(?!.*(您当前是试用套餐|满意请购买|🇦🇶|使用|邀请返佣|TG频道|TG群组|qq号码|qq群|微信|WeChat|仅供个人使用|返利|机场|VPN|剩余流量|套餐到期|有效期|距离下次重置剩余|您已到期|流量用完|请续费使用|续费后更新订阅|备用地址|永久地址|网址|官网|加入我的频道|加入我的群组|解锁更多优选节点|TG: @|telegram|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic))'
 
   # 上个是正向匹配另一种写法反向排除exclude-filter: "(?i)(流量|到期|重置|扣费|客服|更新|检查|fengwo)"
-
+  # 另类的感觉filter: 'a|b' 这样 golang regex 正则表达式  # 可选配置：用Golang语法的正则筛选数据（当前注释未启用，筛选包含"a"或"b"的内容）
 
 
 global-ua: clash.meta              # 用于下载订阅时指定UA
@@ -2082,13 +2083,78 @@ global-ua: clash.meta              # 用于下载订阅时指定UA
 
 proxy-providers:                       # 代理订阅源管理模块：用于批量加载、更新外部订阅链接节点
 
+  🍎机场名0:
+    <<: *PProviders
+    proxy: "全球直连"
+    type: http
+    interval: 18000
+    url: "https://2.luolicon.ru/oosaka/11fff967ea7887cade40b773e4481c46"
+    override: 
+      additional-prefix: '[🍎节点前缀0]'
+      skip-cert-verify: true
+      udp: true
+    health-check:
+      enable: true
+      interval: 300
+      url: http://www.gstatic.com/generate_204
+
+
+
+  🍎机场名1:
+    <<: *PProviders  
+    type: http   
+    url: "https://shb.tyreo.cn/api/v1/client/subscribe?token=24504b24296578519eb4f6701fafd0c5"         
+    override:
+      additional-prefix: '[🍎节点前缀1]'
+      skip-cert-verify: true
+      udp: true
+
+
+
+  🍎机场名2:
+    <<: *PProviders  
+    type: http   
+    url: "填写你的订阅链接"         
+    override:
+      additional-prefix: '[🍎节点前缀2]'   
+      skip-cert-verify: true
+      udp: true
+
+
+  🍎机场名3:
+    <<: *PProviders  
+    type: http   
+    url: "填写你的订阅链接"         
+    override:
+      additional-prefix: '[🍎节点前缀3]'   
+
+
+
+  🍎机场名4:
+    <<: *PProviders  
+    type: http   
+    url: "填写你的订阅链接"         
+    override:
+      additional-prefix: '[🍎节点前缀4]'   
+
+
+
+  🍎机场名5:
+    <<: *PProviders  
+    type: http   
+    url: "填写你的订阅链接"         
+    override:
+      additional-prefix: '[🍎节点前缀5]'   
+
+
+
 
   ✈️机场名1:
     <<: *PProviders                                # 引用锚点
     proxy: "全球直连"                              # 拉取订阅时使用的网络（直连拉取，避免循环依赖
-    url: "https://shb.tyreo.cn/api/v1/client/subscribe?token=24504b24296578519eb4f6701fafd0c5"
+    url: "填写你的订阅链接"
     override:                                           # 自定义机场节点前缀标记
-      additional-prefix: '[✈️华夏1]'
+      additional-prefix: '[✈️节点前缀1]'
       skip-cert-verify: true                       # 跳过证书验证（解决部分机场证书不兼容问题）
       udp: true                                          # 启用 UDP 支持（提升游戏、语音通话等场景体验）
 
@@ -2106,12 +2172,12 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
 
 
 
-  ✈️k3:
+  ✈️机场名3:
     <<: *PProviders
     proxy: "全球直连"
-    url: "https://2.luolicon.ru/oosaka/89c1cb4f4fdf90622ee6dc016c52d7fa"
+    url: "填写你的订阅链接"
     override:
-      additional-prefix: '[✈️k3]'
+      additional-prefix: '[✈️节点前缀3]'
       skip-cert-verify: true 
       udp: true
 
@@ -2260,6 +2326,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
 
 
+
   - name: 🕹️ 手动选择节点分组
     type: select
     include-all: true            # 显示全部节点
@@ -2300,6 +2367,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
       - 🌧️ Cloudflare自动节点分组
       - 🌏 全球自动直连节点分组      
       - DIRECT
+
 
 
 
@@ -2822,9 +2890,8 @@ rules:
   - DOMAIN-SUFFIX,twitter.com,🕹️ 手动选择节点分组
   - DOMAIN-KEYWORD,twitter,🕹️ 手动选择节点分组
   - PROCESS-NAME,com.twitter.android,🕹️ 手动选择节点分组
-  
-  - PROCESS-NAME,com.microsoft.emmx,🕹️ 手动选择节点分组      # Android端Edge浏览器
 
+  - PROCESS-NAME,com.microsoft.emmx,🕹️ 手动选择节点分组      # Android端Edge浏览器
 
  # 地域兜底分流规则，客户端，内置数据，按IP地域匹配，补充未被域名/IP段覆盖的关联请求
   - GEOIP,HK,🇭🇰 香港自动节点分组                      # 中国香港IP → 🇭🇰 香港自动节点分组（适配香港本地服务、跨境中转）
@@ -2865,7 +2932,6 @@ rule-providers:
   Google: { type: http, behavior: classical, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/Google.yaml', interval: 86400, path: ./ruleset/Google.yaml }
   jingwaiHK: { type: http, behavior: classical, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiHK.yaml', interval: 86400, path: ./ruleset/jingwaiHK.yaml }
   tiktokzoutaiwan: { type: http, behavior: classical, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/tiktokzoutaiwan.yaml', interval: 86400, path: ./ruleset/tiktokzoutaiwan.yaml }
-
 
 
 
