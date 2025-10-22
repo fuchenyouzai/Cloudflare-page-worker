@@ -2822,7 +2822,8 @@ rules:
   - DOMAIN-SUFFIX,twitter.com,🕹️ 手动选择节点分组
   - DOMAIN-KEYWORD,twitter,🕹️ 手动选择节点分组
   - PROCESS-NAME,com.twitter.android,🕹️ 手动选择节点分组
-
+  
+  - PROCESS-NAME,com.microsoft.emmx,🕹️ 手动选择节点分组      # Android端Edge浏览器
 
 
  # 地域兜底分流规则，客户端，内置数据，按IP地域匹配，补充未被域名/IP段覆盖的关联请求
@@ -2834,7 +2835,7 @@ rules:
   - GEOIP,US,⚠️ 谷歌GV专用节点分组         # 美国IP → ⚠️ 谷歌GV专用节点分组（适配北美流媒体、谷歌服务、美国本土平台）
 
 # 微软
-  - PROCESS-NAME,com.microsoft.emmx,🕹️ 手动选择节点分组      # Android端Edge浏览器
+
   - PROCESS-NAME,com.microsoft.office.outlook,🕹️ 手动选择节点分组      # Android端Outlook邮箱  
   - DOMAIN,fuchenyouzai.dpdns.org,悠哉✈️TG账号@fuchenyouzaibot
 
@@ -2864,6 +2865,7 @@ rule-providers:
   Google: { type: http, behavior: classical, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/Google.yaml', interval: 86400, path: ./ruleset/Google.yaml }
   jingwaiHK: { type: http, behavior: classical, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiHK.yaml', interval: 86400, path: ./ruleset/jingwaiHK.yaml }
   tiktokzoutaiwan: { type: http, behavior: classical, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/tiktokzoutaiwan.yaml', interval: 86400, path: ./ruleset/tiktokzoutaiwan.yaml }
+
 
 
 
