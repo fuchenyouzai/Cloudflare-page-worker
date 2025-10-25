@@ -1,10 +1,12 @@
 mode: rule # 流量处理模式，决定流量路由策略的核心配置项） 可选值：rule（规则模式）、global（全局模式）、direct（直连模式）。当前值：rule（悠哉定义：根据预设规则列表（域名、IP、端口等）判断流量，决定走代理、直连或拒绝，实现精细化控制）
-log-level: info # 日志级别 info 会输出普通流程，状态，debug 详细的调试信息帮助开发者排查问题通常在开发或调试阶段开启，减少日志可用 warning，error ，silent，# error 只记录错误信息，通常表示发生了严重问题需要关注，warning 记录警告信息提示可能的问题但不影响程序正常运行。日志输出级别（悠哉定义：控制代理服务日志的输出详细程度，用于调试或监控服务运行状态）可选值：debug（调试，输出最详细日志）、info（信息，输出常规运行日志）、warning（警告，仅输出潜在问题日志）、error（错误，仅输出功能异常日志）、silent（静默，不输出任何日志）当前值：info（悠哉定义：仅输出代理启动状态、规则匹配结果、连接建立/断开等常规流程日志，兼顾信息完整性与日志体积）
+log-level: info   # 日志级别 info 会输出普通流程，状态，debug 详细的调试信息帮助开发者排查问题通常在开发或调试阶段开启，减少日志可用 warning，error ，silent，# error 只记录错误信息，通常表示发生了严重问题需要关注，warning 记录警告信息提示可能的问题但不影响程序正常运行。日志输出级别（悠哉定义：控制代理服务日志的输出详细程度，用于调试或监控服务运行状态）可选值：debug（调试，输出最详细日志）、info（信息，输出常规运行日志）、warning（警告，仅输出潜在问题日志）、error（错误，仅输出功能异常日志）、silent（静默，不输出任何日志）当前值：info（悠哉定义：仅输出代理启动状态、规则匹配结果、连接建立/断开等常规流程日志，兼顾信息完整性与日志体积）
 global-client-fingerprint: chrome # 全局 TLS 客户端指纹设置 (chrome)。为 VLESS/Vmess/Trojan 等带 TLS 的协议设置“伪装”浏览器指纹。比起每个代理里的 client-fingerprint 设置优先级低。。。设置了全局客户端指纹为chrome。全局TLS客户端指纹（悠哉定义：为所有支持TLS协议的代理节点（VLESS、VMess、Trojan等）设置统一的TLS握手特征，用于模拟主流浏览器的TLS行为，提升连接兼容性）可选值：chrome、firefox、safari、ios、android等（对应不同浏览器/设备的TLS指纹）当前值：chrome（悠哉定义：模拟Chrome浏览器的TLS握手特征，优先级低于单个代理节点内单独配置的client-fingerprint参数）
 unified-delay: true # 统一延迟策略。这个在 Mihomo/Clash Meta 文档里是指延迟测试统一处理（比如 node 挂载的延迟测评）以避免某些协议／节点因为连接方式差异导致时延偏差。。启用统一延迟策略用于统一管理网络延迟或请求处理的延迟策略。统一延迟策略（悠哉定义：控制代理节点延迟测试的计算逻辑，仅适用于Mihomo/Clash Meta版本）可选值：true（启用）、false（禁用）当前值：true（悠哉定义：启用统一延迟测试逻辑，消除不同代理协议（如VLESS、VMess）、不同节点连接方式导致的延迟测评偏差，保证延迟数据的一致性与可比性）
 ipv6: true # 启用 IPv6 支持。表示支持 AAAA 记录解析和 IPv6 流量。。开启IPv6开关,关闭阻断所有IPv6链接和屏蔽DNS请求 AAAA 记录。IPv6支持开关（悠哉定义：控制代理服务是否支持IPv6协议相关功能）可选值：true（启用）、false（禁用）当前值：true（悠哉定义：启用IPv6地址解析（AAAA记录）和IPv6流量代理，若网络环境不支持IPv6，建议设为false避免连接异常）
 allow-lan: true # 允许局域网 (LAN) 的其他设备连接这个代理服务。局网里的设备也能用你的代理。false是禁止局域网访问，即不允许局域网内的设备使用此代理，局域网访问权限（悠哉定义：控制局域网内其他设备是否可通过当前设备IP连接代理服务）可选值：true（允许）、false（禁止）当前值：true（悠哉定义：允许手机、平板、其他电脑等局域网设备，通过当前设备IP和代理端口连接使用代理）
 bind-address: "*"   # 监听所有网络接口（IP）。即不只是 localhost，还包括局域网、外网接口（若有）都可以接受连接。。的*表示服务程序将监听所有可用的网络接口和IP地址接受来自任何IP的连接请求。监听网络接口（悠哉定义：指定代理服务监听的网络接口IP，决定哪些来源的连接可被接收）。可选值："*"（监听所有接口）、具体IP（如192.168.1.100，仅监听该IP对应接口）当前值："*"（悠哉定义：监听设备所有可用网络接口，包括本地回环接口、局域网接口、公网接口（若有），确保不同来源设备可正常连接）
+tcp-concurrent: true # 新增🔔启用 TCP 并发连接，提升多任务下的代理传输效率
+find-process-mode: strict # 新增🔔进程识别模式（strict 为严格模式，精准匹配发起网络请求的进程，避免规则误判）
 redir-port: 7892 # 重定向端口（redirect port）一般用于大陆直连 / 重定向方式，把 IP／端口重定向到代理里（Linux 下 iptables + redir 模式）。端口转发规则重定向端口流量重定向端口（悠哉定义：主要用于Linux系统，配合iptables防火墙规则，将指定IP/端口的流量重定向至该端口，实现特定流量代理），当前值：7892（悠哉无固定默认值，需根据系统防火墙配置调整，Windows/macOS系统通常无需配置）
 tproxy-port: 7893 # 透明代理端口，当网络支持 TPROXY 模式时，把流量透明捕获（通常在路由器或内核支持）到这个端口进行处理。。表示配置中的tproxy（透明代理）端口号为 7893。这是网络代理相关的参数，用于指定代理服务监听的端口号，即代理程序会在该端口等待连接，从而实现代理功能。 透明代理端口（悠哉定义：需系统内核支持TPROXY模块，用于透明捕获网络流量并转发至代理，无需客户端手动配置代理，常用于路由器场景），当前值：7893（悠哉无固定默认值，需依赖系统内核特性，普通桌面/移动设备较少使用）
 port: 7890 # HTTP代理端口TCP，HTTP代理监听端口，用于接收并处理HTTP协议代理请求的端口，仅支持TCP流量）当前值：7890（悠哉无固定默认值，为常用推荐端口，需确保与其他服务端口不冲突）
@@ -24,10 +26,60 @@ skip-auth-prefixes:                                  # 白名单跳过身份验�
   - 192.168.0.0/16                                     # 家庭局域网络。最常用的私有IPv4地址段，用于家庭和小型局域网。
   - 198.18.0.0/16                                       # 保留给网络测试和设备间的测试用途，不用于路由。
   - 224.0.0.0/4                                           # 多播地址范围，IPv4多播通信使用。 
-external-controller: 127.0.0.1:9090 # 开启本地外部控制接口和自定义 Web 管理界面，允许通过  127.0.0.1 （本地回环地址）的  9090  端口，用 API 或外部工具（如第三方管理脚本）控制 Clash Meta 客户端（如切换代理、获取节点状态）。配置格式：[监听IP]:[端口]，监听IP决定可访问设备范围。可选监听IP说明： - 127.0.0.1：仅允许当前设备（如安装代理的手机）访问，安全性最高，避免局域网/公网未授权访问。- 0.0.0.0：允许所有网络接口（含局域网）的设备访问，适合需在同一局域网其他设备管理代理的场景。当前值：127.0.0.1:9090（悠哉定义：仅开放本机访问权限，通过手机端GUI工具（如Mihomo Android客户端内置面板）连接127.0.0.1:9090端口，即可管理代理，无需担心外部设备非法操控）
+
+
+
+external-controller: 127.0.0.1:9090 # 外部控制接口（用于通过 API 管理 Clash，如脚本控制、第三方面板连接）
 secret: "TG@fuchenyouzaibot@9090" # 外部控制接口令牌  token是 TG@fuchenyouzaibot@9090。验证方式（悠哉规范）：客户端（如GUI工具）访问external-controller时，需在HTTP请求头中携带“Authorization: Bearer [secret值]”，例如“Authorization: Bearer TG@fuchenyouzaibot@9090”，验证通过后方可执行操作。。当GUI / API 客户端去访问external-controller时需要在请求头里带上: Authorization: Bearer TG@fuchenyouzaibot@9090。。如果你用 GUI（例如 Clash Dashboard 或者 Clash Verge）：在 GUI 的配置里，填上地址：http://127.0.0.1:9090:TG@fuchenyouzaibot@9090。。如果用 curl 或者脚本调用 REST API：例如获取当前配置：curl -H "Authorization: Bearer TG@fuchenyouzaibot@9090" http://127.0.0.1:9090/configs    这样 Clash 才会接受请求。。。如果你把 external-controller: 0.0.0.0:9090 暴露到公网，。。一定要加上 secret，否则别人可以远程完全控制你的 Clash# 控制面板 / API，。。 如果你人在外地，访问 Clash 控制面板：http://你的公网IP:9090: Authorization: Bearer TG@fuchenyouzaibot@2025。。GUI 工具（Clash Dashboard / Clash Verge / Meta UI）设置：地址：http://你的公网IP:9090: TG@fuchenyouzaibot@2025
-external-ui: ui # 指定本地Web管理界面的文件夹名称为  ui ，客户端会从该文件夹加载自定义界面文件（需先将界面压缩包解压到对应目录）。
-external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" # 指定远程自定义 Web 界面（这里是 MetaCubeX 官方的 metacubexd 界面）的下载链接，客户端会自动下载并使用该界面，无需手动解压。
+# external-ui: ui # 指定本地Web管理界面的文件夹名称为  ui ，客户端会从该文件夹加载自定义界面文件（需先将界面压缩包解压到对应目录）。
+# external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" # 指定远程自定义 Web 界面（这里是 MetaCubeX 官方的 metacubexd 界面）的下载链接，客户端会自动下载并使用该界面，无需手动解压。
+
+
+
+
+
+profile:                                 # 新增🔔配置文件（Profile）相关的状态存储设置：用于保存客户端的历史选择和网络配置，提升使用体验
+  store-selected: true          # 存储已选择的代理/规则组状态：开启后，重启Clash Meta客户端时，会自动恢复上次使用的代理节点和规则组，无需重新选择
+  store-fake-ip: true                  # 存储Fake IP映射关系：开启后，会保存客户端生成的Fake IP与真实域名的对应关系，避免每次联网重新解析，减少延迟并优化网络稳定性（Fake IP是Clash用于分流和隐私保护的技术）
+
+
+
+
+
+
+sniffer:                 # 新增🔔流量嗅探（Sniffer）模块配置：自动识别网络流量类型，提升代理规则匹配精度
+  enable: true      # 核心开关：启用流量嗅探功能（true=开启，false=关闭）
+  sniff:                  # 针对不同协议类型的具体嗅探规则配置
+    HTTP:                    # HTTP 协议嗅探配置：处理未加密的 HTTP 流量
+      ports: [80, 8080-8880]           # 需嗅探的端口：80（HTTP默认端口）、8080-8880（常见HTTP代理/服务端口范围）
+      override-destination: true        # 关键功能：用嗅探到的真实目标地址覆盖原请求地址，避免跳转导致规则失效
+    TLS:                                            # TLS 协议嗅探配置：处理加密的 TLS 流量（如 HTTPS 网页、App 加密请求）
+      ports: [443, 8443]                     # 需嗅探的端口：443（HTTPS默认端口）、8443（常见HTTPS备选端口）
+    QUIC:                                               # QUIC 协议嗅探配置：处理基于 UDP 的 QUIC 流量（如部分 App 高速传输、Google 服务）
+      ports: [443, 8443]                       # 需嗅探的端口：QUIC 常复用 443/8443 端口，与 TLS 端口一致
+  skip-domain:                           # 嗅探白名单：指定无需嗅探的域名，避免影响基础功能
+    - "Mijia Cloud"                   # 示例米家云服务域名：跳过嗅探，确保米家设备（如摄像头、家电）正常联网
+    - "+.push.apple.com"              # 示例苹果推送域名（通配符+表示所有子域名）：跳过嗅探，保障苹果设备推送通知正常
+
+
+
+
+
+
+tun:       # 新增🔔TUN 模式配置：Clash Meta 核心网络虚拟化功能，实现全局流量拦截与转发。
+  enable: true    # false为不启用 。启用 TUN 模式，（接管系统底层流量，实现全局代理，无需手动配置系统代理）
+  stack: mixed  # TUN 网络栈类型："mixed"表示同时支持 IPv4 和 IPv6 流量，适配双栈网络环境。  另外🔔TUN 网络栈选择（gvisor 为谷歌开源栈，隔离性强、稳定性高，适合对安全和兼容有要求的场景）
+  dns-hijack:     # DNS 劫持规则（劫持所有 53 端口的 DNS 请求，防止 DNS 泄漏，确保域名解析走代理）
+    - "any:53"     # 劫持 UDP 协议的 53 端口 DNS 请求
+    - "tcp://any:53"  # 劫持 TCP 协议的 53 端口 DNS 请求
+  auto-route: true    # 自动配置系统路由（无需手动修改路由表，TUN 模式自动管理流量转发）
+  auto-redirect: true    # 自动重定向系统流量（将系统所有流量自动导入 TUN 接口，实现全局代理覆盖）
+  auto-detect-interface: true    # 自动检测网络接口（动态适配当前使用的网卡，如切换 WiFi/有线网络时无需重新配置）
+
+
+
+
+
 
 dns: # DNS设置用于管理代理服务的域名解析逻辑，包括解析服务器、策略、安全过滤等，决定域名如何转换为IP地址）
   enable: true # 启用DNS接管系统和监听。接管后系统/应用的 DNS 请求将由代理处理。 启用 DNS 接管，代理将处理所有相关 DNS 请求，实现自定义解析策略。值为false时不启动。
@@ -2414,7 +2466,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 80
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(哈哈|香港|hk|🇭🇰|hongkong|hong kong)"
-    # exclude-filter: "(?i)()"
+    exclude-filter: "(?i)(www|visa|icook)"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Hong_Kong.png"
 
 
@@ -2426,7 +2478,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 80
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(哈哈|香港|hk|🇭🇰|hongkong|hong kong)"
-    # exclude-filter: "(?i)()"
+    exclude-filter: "(?i)(www|visa|icook)"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Hong_Kong.png"
 
 
@@ -2457,8 +2509,11 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 10
     url: https://www.gstatic.com/generate_204 
     filter: "(?i)(🇹🇼|Taiwan|TW|台湾|taiwan)"
-    exclude-filter: "(?i)(Kitty Network)"
+    exclude-filter: "(?i)(visa|Kitty Network)"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Taiwan.png"
+
+
+
 
     
   - name: 🇰🇷 韩国自动节点分组
@@ -2469,7 +2524,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 15
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(韩|kr|South Korea|KR|韩国|korea|🇰🇷)"
-    # exclude-filter: "(?i)()"
+    exclude-filter: "(?i)(visa)"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Korea.png"
 
 
@@ -2482,8 +2537,10 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 15
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(日本|🇯🇵|jp|japan|东京)"
-    # exclude-filter: "(?i)()"
+    exclude-filter: "(?i)(visa)"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Japan.png"
+
+
 
 
 
@@ -2495,29 +2552,33 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 20
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(新加坡|🇸🇬|sg|狮城|xinjiapo|singapore)"
-    # exclude-filter: "(?i)()"
+    exclude-filter: "(?i)(visa)"
+
+
+
 
 
   - name: 🇲🇴 澳门自动节点分组
     type: url-test
     include-all: true
-    # exclude-type: direct    # 没有筛选出来节点会显示Selector(COMPATIBLE)选择器兼容模式 。持兼容运行，避免因环境差异导致导入配置文件失败。可以加入全球直连节点进去防止崩溃
+    exclude-type: direct    # 没有筛选出来节点会显示Selector(COMPATIBLE)选择器兼容模式 。持兼容运行，避免因环境差异导致导入配置文件失败。可以加入全球直连节点进去防止崩溃
     interval: 300
     tolerance: 10
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(澳门|🇲🇴|Macao|MO|全球直连)"
+    filter: "(?i)(澳门|🇲🇴|Macao|MO)"
     # exclude-filter: "(?i)()"
+
 
 
 
   - name: 🇦🇺 澳大利亚自动节点分组
     type: url-test
     include-all: true
-    # exclude-type: direct 
+    exclude-type: direct 
     interval: 300
     tolerance: 20   
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(Australia|AU|🇦🇺|澳|aodaliya|全球直连)"
+    filter: "(?i)(Australia|AU|🇦🇺|澳|aodaliya)"
     # exclude-filter: "(?i)()"
 
 
@@ -2525,11 +2586,11 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
   - name: 🇨🇦 加拿大自动节点分组
     type: url-test
     include-all: true
-    # exclude-type: direct
+    exclude-type: direct
     interval: 300
     tolerance: 150
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(Canada|CA|加拿大|🇨🇦|全球直连)"
+    filter: "(?i)(Canada|CA|加拿大|🇨🇦)"
     exclude-filter: "(?i)(America)"
 
 
@@ -2555,7 +2616,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 180
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(🇬🇧|英国|GB|UK|Britian|伦敦|英格兰|United Kingdom|yingguo|lhr|uk)"
-    # exclude-filter: "(?i)()"
+    exclude-filter: "(?i)(visa)"
 
 
 
@@ -2580,7 +2641,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 180
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(🇳🇱|荷兰|NL|Netherlands#全球直连)"
+    filter: "(?i)(🇳🇱|荷兰|NL|Netherlands)"
     # exclude-filter: "(?i)()"
 
 
@@ -2593,7 +2654,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 180   
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(🇫🇮|芬兰|fenlan|Finland|FI|全球直连)"
+    filter: "(?i)(🇫🇮|芬兰|fenlan|Finland|FI)"
     # exclude-filter: "(?i)()"
 
 
@@ -2606,7 +2667,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 180
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(🇵🇱|波兰|Poland|PL|bolan|全球直连)"
+    filter: "(?i)(🇵🇱|波兰|Poland|PL|bolan)"
     # exclude-filter: "(?i)()"
 
 
@@ -2619,7 +2680,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 180    
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(🇸🇪|瑞典|Sweden|SE|全球直连)"
+    filter: "(?i)(🇸🇪|瑞典|Sweden|SE)"
     exclude-filter: "(?i)(sea)"
 
 
@@ -2633,7 +2694,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 80
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(🇭🇰|香港|hongkong|Hong Kong|HK|🇲🇴|澳门|Macao|MO|🇹🇼|台|台湾|taiwan|tw|Taiwan|TW|🇰🇵|朝鲜|North Korea|KP|🇯🇵|日|jp|japan|东京|日本|Japan|JP|🇰🇷|韩|korea|kr|韩国|South Korea|KR|🇸🇬|新加坡|Singapore|SG|sg|狮城|xinjiapo|🇻🇳|越南|Vietnam|VN|🇲🇾|马来西亚|Malaysia|MY|🇹🇭|泰国|Thailand|TH|🇵🇭|菲律宾|Philippines|PH|🇮🇩|印度尼西亚|Indonesia|ID|🇲🇲|缅甸|Myanmar|MM|🇰🇭|柬埔寨|Cambodia|KH|🇱🇦|老挝|Laos|LA|🇧🇳|文莱|Brunei|BN|🇹🇱|东帝汶|East Timor|TL|🇷🇺|俄|莫斯科|eluosi|俄罗斯|Russia|RU|🇲🇳|蒙|蒙古|Mongolia|MN|🇰🇿|哈萨克斯坦|Kazakhstan|KZ|🇺🇿|乌兹别克斯坦|Uzbekistan|UZ|🇹🇯|塔吉克斯坦|Tajikistan|TJ|🇰🇬|吉尔吉斯斯坦|Kyrgyzstan|KG|🇹🇲|土库曼斯坦|Turkmenistan|TM|🇹🇷|土耳其|Turkey|TR|🇦🇪|阿联酋|United Arab Emirates|AE|🇸🇦|沙特阿拉伯|Saudi Arabia|SA|🇰🇼|科威特|Kuwait|KW|🇶🇦|卡塔尔|Qatar|QA|🇱🇧|黎巴嫩|Lebanon|LB|🇮🇷|伊朗|Iran|IR|🇮🇶|伊拉克|Iraq|IQ|🇸🇾|叙利亚|Syria|SY|🇯🇴|约旦|Jordan|JO|🇵🇸|巴勒斯坦|Palestine|PS|🇮🇱|以色列|Israel|IL|🇧🇭|巴林|Bahrain|BH|🇴🇲|阿曼|Oman|OM|🇾🇪|也门|Yemen|YE|🇨🇾|塞浦路斯|Cyprus|CY|🇮🇳|印度|India|IN|🇱🇰|斯里兰卡|Sri Lanka|LK|🇵🇰|巴基斯坦|Pakistan|PK|🇧🇩|孟加拉国|Bangladesh|BD|🇳🇵|尼泊尔|Nepal|NP|🇧🇹|不丹|Bhutan|BT|🇲🇻|马尔代夫|Maldives|MV|🇦🇫|阿富汗|Afghanistan|AF)"
-    exclude-filter: "(?i)(visa|shopify|Kitty Network|永久地址|Britian|America|Britian|TG频道|TG账号|bot|悠哉)"
+    exclude-filter: "(?i)(www|visa|icook|尼日利亚|美国|visa|shopify|Kitty Network|永久地址|Britian|America|Britian|TG频道|TG账号|bot|悠哉)"
     icon: "https://pic1.zhimg.com/v2-732607b9cf63b28c2469be7696a4f30e_b.webp"
 
 
@@ -2645,7 +2706,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 200
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(🇸🇪|瑞典|Sweden|SE|🇳🇴|挪威|Norway|NO|🇫🇮|芬兰|Finland|FI|🇩🇰|丹麦|Denmark|DK|🇮🇸|冰岛|Iceland|IS|🇫🇴|法罗群岛|FO|🇬🇱|格陵兰|Greenland|GL|🇳🇴|斯瓦尔巴群岛|Svalbard|SJ|🇬🇧|英国|United Kingdom|GB|🇫🇷|法国|France|FR|🇩🇪|德国|Germany|DE|🇧🇪|比利时|Belgium|BE|🇳🇱|荷兰|Netherlands|NL|🇱🇺|卢森堡|Luxembourg|LU|🇮🇪|爱尔兰|Ireland|IE|🇲🇨|摩纳哥|Monaco|MC|🇬🇧|马恩岛|Isle of Man|IM|🇮🇹|意大利|Italy|IT|🇪🇸|西班牙|Spain|ES|🇵🇹|葡萄牙|Portugal|PT|🇬🇷|希腊|Greece|GR|🇻🇦|梵蒂冈|Vatican City|VA|🇸🇲|圣马力诺|San Marino|SM|🇲🇹|马耳他|Malta|MT|🇦🇩|安道尔|Andorra|AD|🇬🇮|直布罗陀|Gibraltar|GI|🇲🇰|北马其顿|North Macedonia|MK|🇦🇱|阿尔巴尼亚|Albania|AL|🇲🇪|黑山|Montenegro|ME|🇷🇸|塞尔维亚|Serbia|RS|🇧🇦|波黑|BA|🇷🇺|俄罗斯|Russia|RU|🇺🇦|乌克兰|Ukraine|UA|🇵🇱|波兰|Poland|PL|🇭🇺|匈牙利|Hungary|HU|🇨🇿|捷克|CZ|🇸🇰|斯洛伐克|Slovakia|SK|🇧🇬|保加利亚|Bulgaria|BG|🇷🇴|罗马尼亚|Romania|RO|🇲🇩|摩尔多瓦|Moldova|MD|🇺🇦|克里米亚|Crimea|🇱🇻|拉脱维亚|Latvia|LV|🇱🇹|立陶宛|Lithuania|LT|🇪🇪|爱沙尼亚|Estonia|EE|🇧🇾|白俄罗斯|Belarus|BY|🇦🇹|奥地利|Austria|AT|🇨🇭|瑞士|Switzerland|CH|🇭🇷|克罗地亚|Croatia|HR|🇸🇮|斯洛文尼亚|Slovenia|SI|🇨🇿|捷克|Czech Republic|CZ|🇸🇰|斯洛伐克|Slovakia|SK)"
-    exclude-filter: "(?i)(台湾|美国|日本|🇯🇵|新加坡|🇹🇼|香港|HK|US|🇺🇸|lhr|🇬🇧|🇸🇬|TG账号|TG频道|节点仅供个人使用|永久地址|官网|Kitty Network|套餐到期|距离下次重置剩余|剩余流量|japan|singapore|workers|time|radar|pages|developers|America|Taiwan|Korea|Hong Kong|🇬🇧|Netherland|Germany|America|developers|Netherland|v4sjc|sea|time|visa)"    
+    exclude-filter: "(?i)(JP|台湾|美国|日本|🇯🇵|新加坡|🇹🇼|香港|HK|US|🇺🇸|lhr|🇬🇧|🇸🇬|TG账号|TG频道|节点仅供个人使用|永久地址|官网|Kitty Network|套餐到期|距离下次重置剩余|剩余流量|japan|singapore|workers|time|radar|pages|developers|America|Taiwan|Korea|Hong Kong|🇬🇧|Netherland|Germany|America|developers|Netherland|v4sjc|sea|time|visa)"    
 
 
 
@@ -2656,8 +2717,8 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 300
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(全球直连|🇪🇬|埃及|Egypt|EG|🇲🇦|摩洛哥|Morocco|MA|🇹🇳|突尼斯|Tunisia|TN|🇩🇿|阿尔及利亚|Algeria|DZ|🇱🇾|利比亚|Libya|LY|🇸🇩|苏丹|Sudan|SD|🇪🇷|厄立特里亚|Eritrea|ER|🇩🇯|吉布提|Djibouti|DJ|🇸🇴|索马里|Somalia|SO|🇲🇷|毛里塔尼亚|Mauritania|MR|西撒哈拉|EH|🇨🇩|刚果金|CD|🇨🇬|刚果布|CG|🇨🇫|中非共和国|🇸🇸|南苏丹|South Sudan|SS|🇨🇫|乍得|Chad|TD|🇬🇦|加蓬|Gabon|GA|🇨🇲|喀麦隆|Cameroon|CM|🇧🇮|布隆迪|Burundi|BI|🇰🇪|肯尼亚|Kenya|KE|🇪🇹|埃塞俄比亚|Ethiopia|ET|🇹🇿|坦桑尼亚|Tanzania|TZ|🇺🇬|乌干达|Uganda|UG|🇷🇼|卢旺达|Rwanda|RW|🇧🇮|布隆迪|Burundi|BI|🇲🇼|马拉维|Malawi|MW|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇰🇲|科摩罗|Comoros|KM|🇲🇬|马达加斯加|Madagascar|MG|🇸🇨|塞舌尔|Seychelles|SC|留尼汪|Reunion|RE|🇳🇬|尼日利亚|Nigeria|NG|🇬🇭|加纳|Ghana|GH|🇨🇮|科特迪瓦|CI|🇬🇳|几内亚|Guinea|GN|🇸🇳|塞内加尔|Senegal|SN|🇧🇫|布基纳法索|Burkina Faso|BF|🇲🇱|马里|Mali|ML|🇳🇪|尼日尔|Niger|NE|🇨🇲|喀麦隆|Cameroon|CM|🇧🇯|贝宁|Benin|BJ|🇹🇬|多哥|Togo|TG|🇬🇳|几内亚比绍|GW|🇸🇹|圣多美和普林西比|ST|🇬🇲|冈比亚|Gambia|GM|🇨🇻|佛得角|Cape Verde|CV|🇿🇦|南非|South Africa|ZA|🇿🇼|津巴布韦|Zimbabwe|ZW|🇿🇲|赞比亚|Zambia|ZM|🇧🇼|博茨瓦纳|Botswana|BW|🇳🇦|纳米比亚|Namibia|NA|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇲🇼|马拉维|Malawi|MW)"
-    exclude-filter: "(?i)(Other|US|HK|🇦🇶|🇹🇼|🇭🇰|Hong Kong|one.dash|🇬🇧|TG账号|🇲🇾|马来西亚|🇻🇳|越南|新加坡|🇳🇱|🇺🇸|🇸🇬|singapore|SG|🇯🇵|🇰🇷|🇩🇪|workers|developers)"
+    filter: "(?i)(🇪🇬|埃及|Egypt|EG|🇲🇦|摩洛哥|Morocco|MA|🇹🇳|突尼斯|Tunisia|TN|🇩🇿|阿尔及利亚|Algeria|DZ|🇱🇾|利比亚|Libya|LY|🇸🇩|苏丹|Sudan|SD|🇪🇷|厄立特里亚|Eritrea|ER|🇩🇯|吉布提|Djibouti|DJ|🇸🇴|索马里|Somalia|SO|🇲🇷|毛里塔尼亚|Mauritania|MR|西撒哈拉|EH|🇨🇩|刚果金|CD|🇨🇬|刚果布|CG|🇨🇫|中非共和国|🇸🇸|南苏丹|South Sudan|SS|🇨🇫|乍得|Chad|TD|🇬🇦|加蓬|Gabon|GA|🇨🇲|喀麦隆|Cameroon|CM|🇧🇮|布隆迪|Burundi|BI|🇰🇪|肯尼亚|Kenya|KE|🇪🇹|埃塞俄比亚|Ethiopia|ET|🇹🇿|坦桑尼亚|Tanzania|TZ|🇺🇬|乌干达|Uganda|UG|🇷🇼|卢旺达|Rwanda|RW|🇧🇮|布隆迪|Burundi|BI|🇲🇼|马拉维|Malawi|MW|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇰🇲|科摩罗|Comoros|KM|🇲🇬|马达加斯加|Madagascar|MG|🇸🇨|塞舌尔|Seychelles|SC|留尼汪|Reunion|RE|🇳🇬|尼日利亚|Nigeria|NG|🇬🇭|加纳|Ghana|GH|🇨🇮|科特迪瓦|CI|🇬🇳|几内亚|Guinea|GN|🇸🇳|塞内加尔|Senegal|SN|🇧🇫|布基纳法索|Burkina Faso|BF|🇲🇱|马里|Mali|ML|🇳🇪|尼日尔|Niger|NE|🇨🇲|喀麦隆|Cameroon|CM|🇧🇯|贝宁|Benin|BJ|🇹🇬|多哥|Togo|TG|🇬🇳|几内亚比绍|GW|🇸🇹|圣多美和普林西比|ST|🇬🇲|冈比亚|Gambia|GM|🇨🇻|佛得角|Cape Verde|CV|🇿🇦|南非|South Africa|ZA|🇿🇼|津巴布韦|Zimbabwe|ZW|🇿🇲|赞比亚|Zambia|ZM|🇧🇼|博茨瓦纳|Botswana|BW|🇳🇦|纳米比亚|Namibia|NA|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇲🇼|马拉维|Malawi|MW)"
+    exclude-filter: "(?i)(JP|Other|US|HK|🇦🇶|🇹🇼|🇭🇰|Hong Kong|one.dash|🇬🇧|TG账号|🇲🇾|马来西亚|🇻🇳|越南|新加坡|🇳🇱|🇺🇸|🇸🇬|singapore|SG|🇯🇵|🇰🇷|🇩🇪|workers|developers)"
 
 
 
@@ -2682,7 +2743,8 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 200
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(🇦🇺|澳大利亚|Australia|AU|🇳🇿|新西兰|New Zealand|NZ|🇵🇬|巴布亚新几内亚|PG|🇫🇯|斐济|Fiji|FJ|🇸🇧|所罗门群岛|SB|🇻🇺|瓦努阿图|Vanuatu|VU|🇹🇻|图瓦卢|Tuvalu|TV|🇰🇮|基里巴斯|Kiribati|KI|🇲🇭|马绍尔群岛|MH|🇵🇼|帕劳|Palau|PW|🇳🇺|瑙鲁|Nauru|NR|🇹🇰|汤加|Tonga|TO|🇼🇸|萨摩亚|Samoa|WS|🇨🇰|库克群岛|Cook Islands|CK|🇳🇿|纽埃|Niue|NU|🇫🇷|法属波利尼西亚|French Polynesia|PF|🇳🇿|托克劳|Tokelau|TK)"
-    exclude-filter: "(?i)(日本|🇰🇷|🇭🇰|wto|🇺🇸|🇯🇵|🇸🇬|🇬🇧|🇳🇱|🇰🇷🇭🇰|🇹🇼|🇩🇪|🇫🇷)"
+    exclude-filter: "(?i)(日本|🇰🇷|🇭🇰|wto|🇺🇸|🇯🇵|🇸??|🇬🇧|🇳🇱|🇰🇷🇭🇰|🇹🇼|🇩🇪|🇫🇷)"
+
 
 
   - name: 🌐 域名自动节点分组
@@ -2701,22 +2763,23 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
   - name: 🌧️ Cloudflare自动节点分组
     type: url-test
     include-all: true
-    # exclude-type: direct
+    exclude-type: direct
     interval: 300
     tolerance: 200
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(cloudflare|CF|cf|wetest|ktff|VPS789|秋名山|OTC|xn--b6gac|freeyx|维护|优选|cfip|xyz|全球直连)"
+    filter: "(?i)(cloudflare|CF|cf|wetest|ktff|VPS789|秋名山|OTC|xn--b6gac|freeyx|维护|优选|cfip|xyz)"
     exclude-filter: "(?i)(新加坡)"
 
 
-  - name: Ⓜ️🍎📺🎵
+
+  - name: Ⓜ️🍎📺🎵Ⓜ️
     type: url-test
     include-all: true
-    # exclude-type: direct
+    exclude-type: direct
     interval: 300
     tolerance: 200
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(cloudflare|CF|cf|wetest|ktff|VPS789|秋名山|OTC|xn--b6gac|freeyx|维护|优选|cfip|xyz|全球直连)"
+    filter: "(?i)(cloudflare|CF|cf|wetest|ktff|VPS789|秋名山|OTC|xn--b6gac|freeyx|维护|优选|cfip|xyz)"
     exclude-filter: "(?i)(新加坡)"
     
 
@@ -2738,7 +2801,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(香港|HK|哈哈|🇭🇰)"  # 使用方法，多部署几个cf，然后 制作🇭🇰 香港自动节点分组，起名为哈哈1，这样排列。每个节点的uuid和域名不能重复，就是说一个🇭🇰 香港自动节点分组只能用一套不同的uuid和域名。。。必须使用不同cf部署的节点。或是其他香港服务器部署的节点。或是使用目前默认的词汇。不过，在自定义添加前，去除目前里面写的关于香港的筛选所有词汇。只留哈哈。二字。
-   #  exclude-filter: "(?i)()"
+    exclude-filter: "(?i)(www|visa|icook)"
 
 
 
@@ -2751,7 +2814,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(香港|HK|哈哈|🇭🇰)"   # 使用方法，多部署几个cf，然后 制作🇭🇰 香港自动节点分组，起名为哈哈1，这样排列。每个节点的uuid和域名不能重复，就是说一个🇭🇰 香港自动节点分组只能用一套不同的uuid和域名。。。必须使用不同cf部署的节点。或是其他香港服务器部署的节点。或是使用目前默认的词汇。不过，在自定义添加前，去除目前里面写的关于香港的筛选所有词汇。只留哈哈。二字。
-    # exclude-filter: "(?i)()"
+    exclude-filter: "(?i)(www|visa|icook)"
 
 
 
@@ -2779,10 +2842,16 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     # exclude-filter: "(?i)()"
 
 
+
+
+
   - name: 🈲 广告自动拦截0    # 广告拦截分组（悠哉定义：所有匹配到该分组的流量直接被拒绝，不发起任何网络请求，适配屏蔽广告的场景）🔔悠哉备注📝telegram✈️悠哉TG账号@fuchenyouzaibot✈️——✈️ 分组名称（悠哉定义：标识“拦截广告”功能）
     type: select
     proxies:
       - REJECT             # 悠哉关键字：表示直接拒绝流量，不发送任何请求，实现拦截效果
+
+
+
 
 
   - name: 🈲 广告自动拦截1     # 广告拦截分组（悠哉定义：所有匹配到该分组的流量直接被拒绝，不发起任何网络请求，适配屏蔽广告的场景）🔔悠哉备注📝telegram✈️悠哉TG账号@fuchenyouzaibot✈️——✈️ 分组名称（悠哉定义：标识“拦截广告”功能）
@@ -2795,6 +2864,8 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
       - 🕹️ 手动选择节点分组
       - 全球直连
       - DIRECT
+
+
 
 
   - name: 🈲 广告自动拦截2
@@ -2869,6 +2940,13 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
       - 🇭🇰 香港自动节点分组             #    香港节点 兜底  上个节点失效时，自动切换备用代理节点3
       - 全球直连     # 最后 兜底  上个节点失效时，网络 直连  不通过代理
       - DIRECT       # 最后 兜底  上个节点失效时，未识别到 全球直连 节点时，走客户端内置 DIRECT 节点，  网络 直连  不通过代理
+
+
+
+
+
+
+
 
 
 
