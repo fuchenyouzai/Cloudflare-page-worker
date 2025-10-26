@@ -1022,6 +1022,30 @@ proxies:
       Host: qianhouqianhoujiasudu1.dpdns.org    
 
 
+- {name: 香港0, server: 104.26.1.182, port: 443, type: vless, uuid: d65ae285-d209-4b9f-bb40-43cc45fdd1ce, tls: true, tfo: false, skip-cert-verify: false, servername: yf.fyy1.dpdns.org, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: yf.fyy1.dpdns.org}}}
+- {name: 香港1, server: 104.26.1.182, port: 443, type: vless, uuid: 9c8b8aec-7a20-4271-8a4f-a87bb029dae9, tls: true, tfo: false, skip-cert-verify: false, servername: sp5.sutu.eu.org, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sp5.sutu.eu.org}}}
+- {name: 香港2, server: 104.26.1.182, port: 443, type: vless, uuid: 346b670f-e6db-446d-9f8b-e056c9e2d7ca, tls: true, tfo: false, skip-cert-verify: false, servername: vless.ghp.cloudns.biz, network: ws, ws-opts: {path: "/?mode=auto&direct&proxyip=45.196.235.45", headers: {Host: vless.ghp.cloudns.biz}}}
+- {name: 香港3, server: 104.26.1.182, port: 443, type: vless, uuid: 188f8a72-6b58-4cf2-ab66-766a9388e6ba, tls: true, tfo: false, skip-cert-verify: false, servername: 5c8d.fsafasdfas.online, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 5c8d.fsafasdfas.online}}}
+- {name: 香港4, server: 104.26.1.182, port: 443, type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, tls: true, tfo: false, skip-cert-verify: false, servername: snippets.pusytroller.cf, network: ws, ws-opts: {path: /, headers: {Host: snippets.pusytroller.cf}}}
+- {name: 香港5, server: 104.26.1.182, port: 443, type: vless, uuid: 64bf9c97-212c-4814-ad17-f8539b53a8bd, tls: true, tfo: false, skip-cert-verify: true, servername: vless.pengjiajin.sbs, network: ws, ws-opts: {path: "/pyip=45.196.235.45:443", headers: {Host: vless.pengjiajin.sbs}}}
+- {name: 香港6, server: 104.26.1.182, port: 443, type: vless, uuid: 670d1cd0-7097-416c-a5da-7936af95cfac, tls: true, servername: ym.aizrf.com, client-fingerprint: random, network: ws, ws-opts: {path: "/pyip=45.207.157.47", headers: {Host: ym.aizrf.com}}}
+- {name: 香港7, server: 104.26.1.182, port: 443, type: trojan, password: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a, sni: sni.111000.dynv6.net, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560&proxyip=45.196.235.45:443", headers: {Host: sni.111000.dynv6.net}}}
+
+- name: 香港8
+  type: vless
+  server: 104.26.1.182
+  port: 443
+  uuid: 35e08691-8fae-4ab9-aa1e-e61fcc83752e
+  tls: true
+  udp: true
+  servername: mm.ssx.dpdns.org
+  network: ws
+  ws-opts:
+    path: "/pyip=38.244.198.107"
+    headers:
+      host: mm.ssx.dpdns.org
+  tfo: false
+  skip-cert-verify: false
 
 
 
