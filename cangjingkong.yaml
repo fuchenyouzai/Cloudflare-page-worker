@@ -1812,295 +1812,298 @@ proxies:
 # 悠哉🔔🔔 🔔香港负载均衡  每个嘿嘿节点里的，域名和uuid不可以重复，重复了就没意义了，但是重复了不影响使用。
 
 
-- name: 哈哈1
+
+
+- name: 🇭🇰 v4哈哈1
   type: vless
   server: 104.26.1.182
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
-  ws-opts:
-    path: "/pyip=89.185.25.171"
-    headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
-
-
-- name: 哈哈2
-  type: vless
-  server: 104.18.30.48
-  port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
-  tcp: true
-  udp: true
-  tls: true
-  network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
-  ws-opts:
-    path: "/pyip=154.16.10.143"
-    headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
-
-
-- name: 哈哈3
-  type: vless
-  server: 104.17.184.119
-  port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
-  tcp: true
-  udp: true
-  tls: true
-  network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
-  ws-opts:
-    path: "/pyip=195.54.171.205"
-    headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
-
-
-- name: 哈哈4
-  type: vless
-  server: 104.16.153.32
-  port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
-  tcp: true
-  udp: true
-  tls: true
-  network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
-  ws-opts:
-    path: "/pyip=45.207.157.47"
-    headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
-
-
-- name: 哈哈5
-  type: vless
-  server: 104.26.1.182
-  port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
-  tcp: true
-  udp: true
-  tls: true
-  network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
     path: "/pyip=45.196.235.45"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
+
+
+- name: 🇭🇰 v4哈哈2
+  type: vless
+  server: 104.18.30.48
+  port: 443
+  uuid: 你的uuid
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: 你的域名
+  ws-opts:
+    path: "/pyip=45.207.157.47"
+    headers:
+      Host: 你的域名
+
+
+- name: 🇭🇰 v4哈哈3
+  type: vless
+  server: 104.17.184.119
+  port: 443
+  uuid: 你的uuid
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: 你的域名
+  ws-opts:
+    path: "/pyip=46.20.109.64"
+    headers:
+      Host: 你的域名
+
+
+- name: 🇭🇰 v4哈哈4
+  type: vless
+  server: 104.16.153.32
+  port: 443
+  uuid: 你的uuid
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: 你的域名
+  ws-opts:
+    path: "/pyip=45.207.157.47"
+    headers:
+      Host: 你的域名
+
+
+- name: 🇭🇰 v4哈哈5
+  type: vless
+  server: 104.26.1.182
+  port: 443
+  uuid: 你的uuid
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: 你的域名
+  ws-opts:
+    path: "/pyip=45.196.235.45"
+    headers:
+      Host: 你的域名
 
      
-- name: 哈哈6w
+- name: 🇭🇰 v4哈哈6
   type: vless
   server: 104.18.231.17
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
-    path: "/pyip=38.180.94.171"
+    path: "/pyip=38.244.198.107"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
 
 
-- name: 哈哈7w
+- name: 🇭🇰 v4哈哈7
   type: vless
   server: 104.17.112.109
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
     path: "/pyip=219.78.65.128"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
 
 
-- name: 哈哈8w
+- name: 🇭🇰 v4哈哈8
   type: vless
   server: 104.17.113.88
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
     path: "/pyip=45.207.223.167"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
 
 
-- name: 哈哈9w
+- name: 🇭🇰 v4哈哈9
   type: vless
   server: 104.18.233.170
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
-    path: "/pyip=219.73.53.129"
+    path: "/pyip=38.244.198.117"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
 
 
 
 # 负载均衡美国节点   每个嘿嘿节点里的，域名和uuid不可以重复，重复了就没意义了，但是重复了不影响使用。
 
-- name: 嘿嘿1
+- name: 🇺🇸 v4嘿嘿1
   type: vless
   server: 104.17.83.171
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
-    path: "/pyip=91.149.239.62"
+    path: "/pyip=149.248.7.208"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
 
 
-- name: 嘿嘿2
+- name: 🇺🇸 v4嘿嘿2
   type: vless
   server: 104.17.83.171
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
-    path: "/pyip=129.153.74.179"
+    path: "/pyip=45.32.79.55"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
 
 
-- name: 嘿嘿3
+- name: 🇺🇸 v4嘿嘿3
   type: vless
   server: 104.16.71.142
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
-    path: "/pyip=142.171.32.3"
+    path: "/pyip=207.246.97.82"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
 
 
-- name: 嘿嘿4
+- name: 🇺🇸 v4嘿嘿4
   type: vless
   server: 104.18.209.30
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
-    path: "/pyip=129.153.74.179"
+    path: "/pyip=128.199.0.28"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
 
 
-- name: 嘿嘿5
+- name: 🇺🇸 v4嘿嘿5
   type: vless
   server: 104.17.7.212
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
-    path: "/pyip=107.174.181.116"
+    path: "/pyip=134.199.185.31"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
 
      
-- name: 嘿嘿6w
+- name: 🇺🇸 v4嘿嘿6
   type: vless
   server: 104.18.210.132
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
-    path: "/pyip=104.168.88.250"
+    path: "/pyip=45.38.133.132"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
 
 
-- name: 嘿嘿7w
+- name: 🇺🇸 v4嘿嘿7
   type: vless
   server: 172.64.79.221
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
-    path: "/pyip=91.149.239.62"
+    path: "/pyip=45.38.133.132"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
 
 
-- name: 嘿嘿8w
+- name: 🇺🇸 v4嘿嘿8
   type: vless
   server: 104.16.68.254
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
     path: "/pyip=65.75.221.129"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
 
 
-- name: 嘿嘿9w
+- name: 🇺🇸 v4嘿嘿9
   type: vless
   server: 104.17.35.135
   port: 443
-  uuid: 868ebca6-0f72-4efa-bcbc-3fd139208757
+  uuid: 你的uuid
   tcp: true
   udp: true
   tls: true
   network: ws
-  servername: qianhouqianhoujiasudu1.dpdns.org
+  servername: 你的域名
   ws-opts:
-    path: "/pyip=142.171.32.3"
+    path: "/pyip=207.246.97.82"
     headers:
-      Host: qianhouqianhoujiasudu1.dpdns.org
+      Host: 你的域名
+
 
 
 
@@ -2185,7 +2188,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   🍎机场名1:
     <<: *PProviders  
     type: http   
-    url: "https://igdux.top/pKGZ"         
+    url: "填写你的订阅链接"         
     override:
       additional-prefix: '[🍎节点前缀1]'
       skip-cert-verify: true
@@ -2420,7 +2423,6 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
 # 以下内容，🔔不需要你操作全自动的！请勿编辑，⚠️ 动一丝，也会影响正常使用！！！
 
 
-
 proxy-groups:               # 代理节点分组（悠哉定义：将多个代理节点按地区，功能，策略，等归类，实现流量的精细化路由，支持手动选择、自动测速、故障切换等多种管理模式）支持的5 种代理分组类型（url-test/fallback/load-balance/select/reject等）
 
 
@@ -2489,9 +2491,27 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 80
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(哈哈|香港|hk|🇭🇰|hongkong|hong kong)"
+    filter: "(?i)(哈哈|港|香港|hk|🇭🇰|hongkong|hong kong)"
     exclude-filter: "(?i)(www|visa|icook)"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Hong_Kong.png"
+
+
+  - name: 🇭🇰 香港分流自动节点分组
+    type: url-test
+    interval: 300
+    tolerance: 80
+    url: https://www.gstatic.com/generate_204
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Hong_Kong.png"
+    proxies:
+      - 🇭🇰 v4哈哈1
+      - 🇭🇰 v4哈哈2
+      - 🇭🇰 v4哈哈3
+      - 🇭🇰 v4哈哈4
+      - 🇭🇰 v4哈哈5
+      - 🇭🇰 v4哈哈6
+      - 🇭🇰 v4哈哈7
+      - 🇭🇰 v4哈哈8
+      - 🇭🇰 v4哈哈9
 
 
   - name: 🎮 PUBG🇭🇰节点自动切换分组
@@ -2521,6 +2541,24 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     # exclude-filter: "(?i)()"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/United_States.png"
 
+
+
+  - name: 🇺🇸 美国分流自动节点分组
+    type: url-test
+    interval: 300
+    tolerance: 80
+    url: https://www.gstatic.com/generate_204
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/United_States.png"
+    proxies:
+      - 🇺🇸 v4嘿嘿1
+      - 🇺🇸 v4嘿嘿2
+      - 🇺🇸 v4嘿嘿3
+      - 🇺🇸 v4嘿嘿4
+      - 🇺🇸 v4嘿嘿5
+      - 🇺🇸 v4嘿嘿6
+      - 🇺🇸 v4嘿嘿7
+      - 🇺🇸 v4嘿嘿8
+      - 🇺🇸 v4嘿嘿9
 
 
 
@@ -2560,7 +2598,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 15
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(日本|🇯🇵|jp|japan|东京)"
+    filter: "(?i)(日本|🇯🇵|jp|japan|东京|Tokyo)"
     exclude-filter: "(?i)(visa)"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Japan.png"
 
@@ -2730,7 +2768,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 200
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(🇸🇪|瑞典|Sweden|SE|🇳🇴|挪威|Norway|NO|🇫🇮|芬兰|Finland|FI|🇩🇰|丹麦|Denmark|DK|🇮🇸|冰岛|Iceland|IS|🇫🇴|法罗群岛|FO|🇬🇱|格陵兰|Greenland|GL|🇳🇴|斯瓦尔巴群岛|Svalbard|SJ|🇬🇧|英国|United Kingdom|GB|🇫🇷|法国|France|FR|🇩🇪|德国|Germany|DE|🇧🇪|比利时|Belgium|BE|🇳🇱|荷兰|Netherlands|NL|🇱🇺|卢森堡|Luxembourg|LU|🇮🇪|爱尔兰|Ireland|IE|🇲🇨|摩纳哥|Monaco|MC|🇬🇧|马恩岛|Isle of Man|IM|🇮🇹|意大利|Italy|IT|🇪🇸|西班牙|Spain|ES|🇵🇹|葡萄牙|Portugal|PT|🇬🇷|希腊|Greece|GR|🇻🇦|梵蒂冈|Vatican City|VA|🇸🇲|圣马力诺|San Marino|SM|🇲🇹|马耳他|Malta|MT|🇦🇩|安道尔|Andorra|AD|🇬🇮|直布罗陀|Gibraltar|GI|🇲🇰|北马其顿|North Macedonia|MK|🇦🇱|阿尔巴尼亚|Albania|AL|🇲🇪|黑山|Montenegro|ME|🇷🇸|塞尔维亚|Serbia|RS|🇧🇦|波黑|BA|🇷🇺|俄罗斯|Russia|RU|🇺🇦|乌克兰|Ukraine|UA|🇵🇱|波兰|Poland|PL|🇭🇺|匈牙利|Hungary|HU|🇨🇿|捷克|CZ|🇸🇰|斯洛伐克|Slovakia|SK|🇧🇬|保加利亚|Bulgaria|BG|🇷🇴|罗马尼亚|Romania|RO|🇲🇩|摩尔多瓦|Moldova|MD|🇺🇦|克里米亚|Crimea|🇱🇻|拉脱维亚|Latvia|LV|🇱🇹|立陶宛|Lithuania|LT|🇪🇪|爱沙尼亚|Estonia|EE|🇧🇾|白俄罗斯|Belarus|BY|🇦🇹|奥地利|Austria|AT|🇨🇭|瑞士|Switzerland|CH|🇭🇷|克罗地亚|Croatia|HR|🇸🇮|斯洛文尼亚|Slovenia|SI|🇨🇿|捷克|Czech Republic|CZ|🇸🇰|斯洛伐克|Slovakia|SK)"
-    exclude-filter: "(?i)(JP|台湾|美国|日本|🇯🇵|新加坡|🇹🇼|香港|HK|US|🇺🇸|lhr|🇬🇧|🇸🇬|TG账号|TG频道|节点仅供个人使用|永久地址|官网|Kitty Network|套餐到期|距离下次重置剩余|剩余流量|japan|singapore|workers|time|radar|pages|developers|America|Taiwan|Korea|Hong Kong|🇬🇧|Netherland|Germany|America|developers|Netherland|v4sjc|sea|time|visa)"    
+    exclude-filter: "(?i)(SG|JP|台湾|美国|日本|🇯🇵|新加坡|🇹🇼|香港|HK|US|🇺🇸|lhr|🇬🇧|🇸🇬|TG账号|TG频道|节点仅供个人使用|永久地址|官网|Kitty Network|套餐到期|距离下次重置剩余|剩余流量|japan|singapore|workers|time|radar|pages|developers|America|Taiwan|Korea|Hong Kong|🇬🇧|Netherland|Germany|America|developers|Netherland|v4sjc|sea|time|visa)"    
 
 
 
@@ -2824,7 +2862,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     strategy: round-robin                    # 分流策略（悠哉定义：轮询策略，按节点列表顺序依次分配流量，每个节点处理相同数量的请求，均匀分摊压力）
     interval: 300
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(香港|HK|哈哈|🇭🇰)"  # 使用方法，多部署几个cf，然后 制作🇭🇰 香港自动节点分组，起名为哈哈1，这样排列。每个节点的uuid和域名不能重复，就是说一个🇭🇰 香港自动节点分组只能用一套不同的uuid和域名。。。必须使用不同cf部署的节点。或是其他香港服务器部署的节点。或是使用目前默认的词汇。不过，在自定义添加前，去除目前里面写的关于香港的筛选所有词汇。只留哈哈。二字。
+    filter: "(?i)(港|香港|HK|哈哈|🇭🇰)"  # 使用方法，多部署几个cf，然后 制作🇭🇰 香港自动节点分组，起名为哈哈1，这样排列。每个节点的uuid和域名不能重复，就是说一个🇭🇰 香港自动节点分组只能用一套不同的uuid和域名。。。必须使用不同cf部署的节点。或是其他香港服务器部署的节点。或是使用目前默认的词汇。不过，在自定义添加前，去除目前里面写的关于香港的筛选所有词汇。只留哈哈。二字。
     exclude-filter: "(?i)(www|visa|icook)"
 
 
@@ -2837,7 +2875,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     strategy: consistent-hashing              # 分流策略（悠哉定义：一致性哈希策略，相同请求特征映射到同一个节点，保证会话稳定性）
     interval: 300
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(香港|HK|哈哈|🇭🇰)"   # 使用方法，多部署几个cf，然后 制作🇭🇰 香港自动节点分组，起名为哈哈1，这样排列。每个节点的uuid和域名不能重复，就是说一个🇭🇰 香港自动节点分组只能用一套不同的uuid和域名。。。必须使用不同cf部署的节点。或是其他香港服务器部署的节点。或是使用目前默认的词汇。不过，在自定义添加前，去除目前里面写的关于香港的筛选所有词汇。只留哈哈。二字。
+    filter: "(?i)(港|香港|HK|哈哈|🇭🇰)"   # 使用方法，多部署几个cf，然后 制作🇭🇰 香港自动节点分组，起名为哈哈1，这样排列。每个节点的uuid和域名不能重复，就是说一个🇭🇰 香港自动节点分组只能用一套不同的uuid和域名。。。必须使用不同cf部署的节点。或是其他香港服务器部署的节点。或是使用目前默认的词汇。不过，在自定义添加前，去除目前里面写的关于香港的筛选所有词汇。只留哈哈。二字。
     exclude-filter: "(?i)(www|visa|icook)"
 
 
@@ -2968,13 +3006,6 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
 
 
-
-
-
-
-
-
-
 # 分流规则（悠哉定义：根据流量的特征（如域名、IP、进程名），将流量路由到指定的代理分组，实现“按需代理”，核心遵循“自上而下匹配，命中即生效”原则）
 
 
@@ -2988,9 +3019,9 @@ rules:
   - RULE-SET,ipv4ipv6PrivateAndLocal,DIRECT,no-resolve      # ipv4ipv6私有/特殊IP段
   - RULE-SET,neiwangluyouqi,DIRECT                                        # 内网和路由器
   - RULE-SET,jingneiDNSipDIRECT,DIRECT,no-resolve
-  - RULE-SET,jingwaiDNSipHKG,🇭🇰 香港自动节点分组,no-resolve
+  - RULE-SET,jingwaiDNSipHKG,🇭🇰 香港分流自动节点分组,no-resolve
   - RULE-SET,jingneiDNSyumingDIRECT,DIRECT
-  - RULE-SET,jingwaiDNSyumingHKG,🇭🇰 香港自动节点分组
+  - RULE-SET,jingwaiDNSyumingHKG,🇭🇰 香港分流自动节点分组
   - RULE-SET,guoneiIPbujiexiDIRECT,DIRECT,no-resolve         # 国内软件和手机系统和国内直连ip 不解析
   - RULE-SET,guoneiDIRECT,DIRECT                        # 国内软件和手机系统和国内直连
 
@@ -3023,7 +3054,7 @@ rules:
 
   - RULE-SET,YouTube,⚖️ 香港自动负载均衡轮询节点分组
   - RULE-SET,Google,⚠️ 谷歌GV专用节点分组
-  - RULE-SET,jingwaiHK,🇭🇰 香港自动节点分组
+  - RULE-SET,jingwaiHK,🇭🇰 香港分流自动节点分组
   - RULE-SET,tiktokzoutaiwan,🇹🇼 台湾自动节点分组
 
   # bigo 直播规则
@@ -3031,8 +3062,6 @@ rules:
   - PROCESS-NAME,sg.bigo.live,⚖️ 香港自动负载均衡散列节点分组                   # BIGOLIVE
 
 
-  # telegram 规则
-  - PROCESS-NAME,org.telegram.messenger.web,🐟 漏网之鱼     # 🕹️ 手动选择节点分组
 
 
   # Twitter 规则
@@ -3046,16 +3075,22 @@ rules:
 
 
  # 地域兜底分流规则，客户端，内置数据，按IP地域匹配，补充未被域名/IP段覆盖的关联请求
-  - GEOIP,HK,🇭🇰 香港自动节点分组                      # 中国香港IP → 🇭🇰 香港自动节点分组（适配香港本地服务、跨境中转）
+  - GEOIP,HK,🇭🇰 香港分流自动节点分组                      # 中国香港IP → 🇭🇰 香港自动节点分组（适配香港本地服务、跨境中转）
   - GEOIP,TW,🇹🇼 台湾自动节点分组                       # 中国台湾地区IP → 🇹🇼 台湾自动节点分组（覆盖台湾地区本地服务）
   - GEOIP,SG,🇸🇬 新加坡自动节点分组                   # 新加坡IP → 🇸🇬 新加坡自动节点分组（东南亚核心节点，覆盖东南亚服务低延迟）
   - GEOIP,JP,🇯🇵 日本自动节点分组                        # 日本IP → 🇯🇵 日本自动节点分组（适配日韩娱乐、电商、本地服务）
   - GEOIP,KR,🇰🇷 韩国自动节点分组                       # 韩国IP → 🇰🇷 韩国自动节点分组（覆盖韩国流媒体、购物平台）
-  - GEOIP,US,⚠️ 谷歌GV专用节点分组         # 美国IP → ⚠️ 谷歌GV专用节点分组（适配北美流媒体、谷歌服务、美国本土平台）
+  - GEOIP,US,🇺🇸 美国分流自动节点分组                      # 美国IP → 🇺🇸 美国自动节点分组（适配北美流媒体、谷歌服务、美国本土平台）
+
+
+
+  # telegram 规则
+  - PROCESS-NAME,org.telegram.messenger.web,🐟 漏网之鱼     # 🕹️ 手动选择节点分组
+
 
 # 微软
 
-  - PROCESS-NAME,com.microsoft.office.outlook,🕹️ 手动选择节点分组      # Android端Outlook邮箱  
+  - PROCESS-NAME,com.microsoft.office.outlook,🐟 漏网之鱼     # Android端Outlook邮箱  
   - DOMAIN,fuchenyouzai.dpdns.org,⚖️ 香港自动负载均衡散列节点分组
 
 
@@ -3064,12 +3099,16 @@ rules:
   - PROCESS-NAME,com.fongmi.android.tv,DIRECT   # TVBox进程
 
 
-
   - GEOSITE,geolocation-!cn,🐟 漏网之鱼         # 仅当流量/请求的地理定位不属于中国时走🐟 漏网之鱼
+
+
 
  # 未匹配到的请求都通过🐟 漏网之鱼的🕹️ 手动选择节点分组，的当前选择的节点代理流量！！！🐟 漏网之鱼设置有保底会自动切换到能用的网络节点。
 
   - MATCH,🐟 漏网之鱼
+
+
+
  
 rule-providers:
 # 境内分流规则
