@@ -2188,7 +2188,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   🍎机场名1:
     <<: *PProviders  
     type: http   
-    url: "填写你的订阅链接"         
+    url: "https://api.taxicab.cc/sub?target=clash&url=https%3A%2F%2Fget.api-biubiu.sbs%2Fbiu%2Fsubscribe%3Ftoken%3Dbe2db36ba059f47ee1e231a6fa27f275&insert=false&include=%E7%BE%8E%E5%9B%BD06-IPLC-2x-ATT%E5%AE%B6%E5%AE%BD&emoji=true&list=false&scv=true&fdn=true&expand=true&sort=false&udp=true&new_name=true"         
     override:
       additional-prefix: '[🍎节点前缀1]'
       skip-cert-verify: true
@@ -2199,7 +2199,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   🍎机场名2:
     <<: *PProviders  
     type: http   
-    url: "填写你的订阅链接"         
+    url: "https://api.taxicab.cc/sub?target=clash&url=https%3A%2F%2Fget.api-biubiu.sbs%2Fbiu%2Fsubscribe%3Ftoken%3Dbe2db36ba059f47ee1e231a6fa27f275&insert=false&include=%E7%BE%8E%E5%9B%BD05-IPLC-3x-Frontier%E5%AE%B6%E5%AE%BD&emoji=true&list=false&scv=true&fdn=true&expand=true&sort=false&udp=true&new_name=true"         
     override:
       additional-prefix: '[🍎节点前缀2]'   
       skip-cert-verify: true
