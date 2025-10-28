@@ -2116,7 +2116,6 @@ proxies:
 
 
 
-
 # 以下内容 🔔 不要动！悠哉排除广告规则 ⚠️ 勿动！！！！
 # 悠哉✈️TG账号@fuchenyouzaibot✈️filter: "(?i)^(?!.*(您当前是试用套餐|满意请购买|🇦🇶使用|邀请返佣|TG频道|TG群组|qq号码|qq群|微信|WeChat|仅供个人使用|返利|机场|VPN|剩余流量|套餐到期|有效期|距离下次重置剩余|您已到期|流量用完|请续费使用|续费后更新订阅|备用地址|永久地址|网址|官网|加入我的频道|加入我的群组|解锁更多优选节点|TG: @|telegram|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic)).*$"
 
@@ -2153,96 +2152,21 @@ global-ua: clash.meta            # 用于下载订阅时指定UA
 # 保存机场订阅文件路径 path: ./proxies/自定义名字.yaml
 
 
-
-
-
 proxy-providers:                       # 代理订阅源管理模块：用于批量加载、更新外部订阅链接节点
-
-  🍎Kitty0:
-    <<: *PProviders
-    proxy: "全球直连"
-    type: http
-    interval: 18000
-    path: ./proxies/3/Kitty0.yaml
-    url: "https://2.luolicon.ru/oosaka/11fff967ea7887cade40b773e4481c46"
-    override: 
-      additional-prefix: '[🍎Kitty0]'
-      skip-cert-verify: true
-      udp: true
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-
-
-
-  🍎机场名1:
-    <<: *PProviders  
-    type: http
-    path: ./proxies/3/机场名11.yaml
-    url: "https://get.api-biubiu.sbs/biu/subscribe?token=be2db36ba059f47ee1e231a6fa27f275"
-    override:
-      additional-prefix: '[🍎节点前缀1]'
-      skip-cert-verify: true
-      udp: true
-
-
-
-  🍎机场名2:
-    <<: *PProviders  
-    type: http   
-    url: "填写你的订阅链接"     
-    path: ./proxies/3/机场名22.yaml    
-    override:
-      additional-prefix: '[🍎节点前缀2]'
-      skip-cert-verify: true
-      udp: true
-
-
-
-  🍎机场名3:
-    <<: *PProviders  
-    type: http   
-    url: "填写你的订阅链接"
-    path: ./proxies/3/机场名33.yaml    
-    override:
-      additional-prefix: '[🍎节点前缀3]'
-      skip-cert-verify: true
-      udp: true
-
-
-
-  🍎机场名4:
-    <<: *PProviders  
-    type: http   
-    url: "填写你的订阅链接"
-    path: ./proxies/3/机场名44.yaml    
-    override:
-      additional-prefix: '[🍎节点前缀4]'   
-
-
-
-  🍎机场名5:
-    <<: *PProviders  
-    type: http   
-    url: "填写你的订阅链接"
-    path: ./proxies/3/机场名55.yaml      
-    override:
-      additional-prefix: '[🍎节点前缀5]'   
-
-
 
 
 
   ✈️机场名1:
     <<: *PProviders
     proxy: "全球直连"
-    url: "填写你的订阅链接"
-    path: ./proxies/3/机场名1.yaml    
+    url: "https://2.luolicon.ru/oosaka/11fff967ea7887cade40b773e4481c46"
+    path: ./proxies/2/机场名1.yaml    
     override:
-      additional-prefix: '[✈️节点前缀1]'
+      additional-prefix: '[✈️Kitty1]'
       skip-cert-verify: true
       udp: true
+
+
 
 
 
@@ -2251,7 +2175,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/浪潮机场专用2.yaml    
+    path: ./proxies/2/浪潮机场专用2.yaml    
     override:
       additional-prefix: '[✈️浪2]'
       sni:
@@ -2266,8 +2190,8 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   ✈️机场名3:
     <<: *PProviders
     proxy: "全球直连"
-    url: "填写你的订阅链接"
-    path: ./proxies/3/机场名3.yaml
+    url: "https://get.api-biubiu.sbs/biu/subscribe?token=be2db36ba059f47ee1e231a6fa27f275"
+    path: ./proxies/2/机场名3.yaml
     override:
       additional-prefix: '[✈️节点前缀3]'
       skip-cert-verify: true 
@@ -2281,7 +2205,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/机场名4.yaml
+    path: ./proxies/2/机场名4.yaml
     override:
       additional-prefix: '[✈️机场名4]'
       skip-cert-verify: true
@@ -2295,7 +2219,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/机场名5.yaml
+    path: ./proxies/2/机场名5.yaml
     override:
       additional-prefix: '[✈️节点前缀5]'
       skip-cert-verify: true
@@ -2308,7 +2232,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/机场名6.yaml
+    path: ./proxies/2/机场名6.yaml
     override:
       additional-prefix: '[✈️节点前缀6]'
       skip-cert-verify: true                   
@@ -2322,7 +2246,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/机场名7.yaml
+    path: ./proxies/2/机场名7.yaml
     override:
       additional-prefix: '[✈️节点前缀7]'
       skip-cert-verify: true                   
@@ -2334,7 +2258,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/机场名8.yaml
+    path: ./proxies/2/机场名8.yaml
     override:
       additional-prefix: '[✈️节点前缀8]'
       skip-cert-verify: true                   
@@ -2346,7 +2270,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/机场名9.yaml
+    path: ./proxies/2/机场名9.yaml
     override:
       additional-prefix: '[✈️节点前缀9]'
       skip-cert-verify: true                   
@@ -2358,7 +2282,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/机场名10.yaml
+    path: ./proxies/2/机场名10.yaml
     override:
       additional-prefix: '[✈️节点前缀10]'
       skip-cert-verify: true                   
@@ -2370,7 +2294,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/机场名11.yaml
+    path: ./proxies/2/机场名11.yaml
     override:
       additional-prefix: '[✈️节点前缀11]'
       skip-cert-verify: true                   
@@ -2382,7 +2306,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/机场名12.yaml
+    path: ./proxies/2/机场名12.yaml
     override:
       additional-prefix: '[✈️节点前缀12]'
       skip-cert-verify: true                   
@@ -2394,7 +2318,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/机场名13.yaml
+    path: ./proxies/2/机场名13.yaml
     override:
       additional-prefix: '[✈️节点前缀13]'
       skip-cert-verify: true                   
@@ -2406,7 +2330,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/机场名14.yaml
+    path: ./proxies/2/机场名14.yaml
     override:
       additional-prefix: '[✈️节点前缀14]'
       skip-cert-verify: true                   
@@ -2419,7 +2343,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
-    path: ./proxies/3/机场名15.yaml
+    path: ./proxies/2/机场名15.yaml
     override:
       additional-prefix: '[✈️节点前缀15]'
       skip-cert-verify: true                   
@@ -2428,9 +2352,11 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
 
 
 
+
 # 以下内容，🔔不需要你操作全自动的！请勿编辑，⚠️ 动一丝，也会影响正常使用！！！
 # 以下内容，🔔不需要你操作全自动的！请勿编辑，⚠️ 动一丝，也会影响正常使用！！！
 # 以下内容，🔔不需要你操作全自动的！请勿编辑，⚠️ 动一丝，也会影响正常使用！！！
+
 
 
 proxy-groups:               # 代理节点分组（悠哉定义：将多个代理节点按地区，功能，策略，等归类，实现流量的精细化路由，支持手动选择、自动测速、故障切换等多种管理模式）支持的5 种代理分组类型（url-test/fallback/load-balance/select/reject等）
@@ -2547,7 +2473,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 50
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(嘿嘿|sea|sjc|美国|United States|US|🇺??|america|America|洛杉矶|圣何塞|纽约|unitedstates|united states)"
+    filter: "(?i)(嘿嘿|sea|sjc|美国|United States|US|🇺🇸|america|America|洛杉矶|圣何塞|纽约|unitedstates|united states)"
     # exclude-filter: "(?i)()"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/United_States.png"
 
@@ -2765,7 +2691,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 80
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(🇭🇰|香港|hongkong|Hong Kong|HK|🇲🇴|澳门|Macao|MO|🇹🇼|台|台湾|taiwan|tw|Taiwan|TW|🇰🇵|朝鲜|North Korea|KP|🇯🇵|日|jp|japan|东京|日本|Japan|JP|🇰🇷|韩|korea|kr|韩国|South Korea|KR|🇸🇬|新加坡|Singapore|SG|sg|狮城|xinjiapo|🇻🇳|越南|Vietnam|VN|🇲🇾|马来西亚|Malaysia|MY|🇹🇭|泰国|Thailand|TH|🇵🇭|菲律宾|Philippines|PH|🇮🇩|印度尼西亚|Indonesia|ID|🇲🇲|缅甸|Myanmar|MM|🇰🇭|柬埔寨|Cambodia|KH|🇱🇦|老挝|Laos|LA|🇧🇳|文莱|Brunei|BN|🇹🇱|东帝汶|East Timor|TL|🇷🇺|俄|莫斯科|eluosi|俄罗斯|Russia|RU|🇲🇳|蒙|蒙古|Mongolia|MN|🇰🇿|哈萨克斯坦|Kazakhstan|KZ|🇺🇿|乌兹别克斯坦|Uzbekistan|UZ|🇹🇯|塔吉克斯坦|Tajikistan|TJ|🇰🇬|吉尔吉斯斯坦|Kyrgyzstan|KG|🇹🇲|土库曼斯坦|Turkmenistan|TM|🇹🇷|土耳其|Turkey|TR|🇦🇪|阿联酋|United Arab Emirates|AE|🇸🇦|沙特阿拉伯|Saudi Arabia|SA|🇰🇼|科威特|Kuwait|KW|🇶🇦|卡塔尔|Qatar|QA|🇱🇧|黎巴嫩|Lebanon|LB|🇮🇷|伊朗|Iran|IR|🇮🇶|伊拉克|Iraq|IQ|🇸🇾|叙利亚|Syria|SY|🇯🇴|约旦|Jordan|JO|🇵🇸|巴勒斯坦|Palestine|PS|🇮🇱|以色列|Israel|IL|🇧🇭|巴林|Bahrain|BH|🇴🇲|阿曼|Oman|OM|🇾🇪|也门|Yemen|YE|🇨🇾|塞浦路斯|Cyprus|CY|🇮🇳|印度|India|IN|🇱🇰|斯里兰卡|Sri Lanka|LK|🇵🇰|巴基斯坦|Pakistan|PK|🇧🇩|孟加拉国|Bangladesh|BD|🇳🇵|尼泊尔|Nepal|NP|🇧🇹|不丹|Bhutan|BT|🇲🇻|马尔代夫|Maldives|MV|🇦🇫|阿富汗|Afghanistan|AF)"
+    filter: "(?i)(🇭🇰|香港|hongkong|Hong Kong|HK|🇲🇴|澳门|Macao|MO|🇹🇼|台|台湾|taiwan|tw|Taiwan|TW|🇰🇵|朝鲜|North Korea|KP|🇯🇵|日|jp|japan|东京|日本|Japan|JP|🇰🇷|韩|korea|kr|韩国|South Korea|KR|🇸??|新加坡|Singapore|SG|sg|狮城|xinjiapo|🇻🇳|越南|Vietnam|VN|🇲🇾|马来西亚|Malaysia|MY|🇹🇭|泰国|Thailand|TH|🇵🇭|菲律宾|Philippines|PH|🇮🇩|印度尼西亚|Indonesia|ID|🇲🇲|缅甸|Myanmar|MM|🇰🇭|柬埔寨|Cambodia|KH|🇱🇦|老挝|Laos|LA|🇧🇳|文莱|Brunei|BN|🇹🇱|东帝汶|East Timor|TL|🇷🇺|俄|莫斯科|eluosi|俄罗斯|Russia|RU|🇲🇳|蒙|蒙古|Mongolia|MN|🇰🇿|哈萨克斯坦|Kazakhstan|KZ|🇺🇿|乌兹别克斯坦|Uzbekistan|UZ|🇹🇯|塔吉克斯坦|Tajikistan|TJ|🇰🇬|吉尔吉斯斯坦|Kyrgyzstan|KG|🇹🇲|土库曼斯坦|Turkmenistan|TM|🇹🇷|土耳其|Turkey|TR|🇦🇪|阿联酋|United Arab Emirates|AE|🇸🇦|沙特阿拉伯|Saudi Arabia|SA|🇰🇼|科威特|Kuwait|KW|🇶🇦|卡塔尔|Qatar|QA|🇱🇧|黎巴嫩|Lebanon|LB|🇮🇷|伊朗|Iran|IR|🇮🇶|伊拉克|Iraq|IQ|🇸🇾|叙利亚|Syria|SY|🇯🇴|约旦|Jordan|JO|🇵🇸|巴勒斯坦|Palestine|PS|🇮🇱|以色列|Israel|IL|🇧🇭|巴林|Bahrain|BH|🇴🇲|阿曼|Oman|OM|🇾🇪|也门|Yemen|YE|🇨🇾|塞浦路斯|Cyprus|CY|🇮🇳|印度|India|IN|🇱🇰|斯里兰卡|Sri Lanka|LK|🇵🇰|巴基斯坦|Pakistan|PK|🇧🇩|孟加拉国|Bangladesh|BD|🇳🇵|尼泊尔|Nepal|NP|🇧🇹|不丹|Bhutan|BT|🇲🇻|马尔代夫|Maldives|MV|🇦🇫|阿富汗|Afghanistan|AF)"
     exclude-filter: "(?i)(www|visa|icook|尼日利亚|美国|visa|shopify|Kitty Network|永久地址|Britian|America|Britian|TG频道|TG账号|bot|悠哉)"
     icon: "https://pic1.zhimg.com/v2-732607b9cf63b28c2469be7696a4f30e_b.webp"
 
@@ -2789,7 +2715,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 300
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(🇪🇬|埃及|Egypt|EG|🇲🇦|摩洛哥|Morocco|MA|🇹🇳|突尼斯|Tunisia|TN|🇩🇿|阿尔及利亚|Algeria|DZ|🇱🇾|利比亚|Libya|LY|🇸🇩|苏丹|Sudan|SD|🇪🇷|厄立特里亚|Eritrea|ER|🇩🇯|吉布提|Djibouti|DJ|🇸🇴|索马里|Somalia|SO|🇲🇷|毛里塔尼亚|Mauritania|MR|西撒哈拉|EH|🇨🇩|刚果金|CD|🇨🇬|刚果布|CG|🇨🇫|中非共和国|🇸🇸|南苏丹|South Sudan|SS|🇨🇫|乍得|Chad|TD|🇬🇦|加蓬|Gabon|GA|🇨🇲|喀麦隆|Cameroon|CM|🇧🇮|布隆迪|Burundi|BI|??🇪|肯尼亚|Kenya|KE|🇪🇹|埃塞俄比亚|Ethiopia|ET|🇹🇿|坦桑尼亚|Tanzania|TZ|🇺🇬|乌干达|Uganda|UG|🇷🇼|卢旺达|Rwanda|RW|🇧🇮|布隆迪|Burundi|BI|🇲🇼|马拉维|Malawi|MW|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇰🇲|科摩罗|Comoros|KM|🇲🇬|马达加斯加|Madagascar|MG|🇸🇨|塞舌尔|Seychelles|SC|留尼汪|Reunion|RE|🇳🇬|尼日利亚|Nigeria|NG|🇬🇭|加纳|Ghana|GH|🇨🇮|科特迪瓦|CI|🇬🇳|几内亚|Guinea|GN|🇸🇳|塞内加尔|Senegal|SN|🇧🇫|布基纳法索|Burkina Faso|BF|🇲🇱|马里|Mali|ML|🇳🇪|尼日尔|Niger|NE|🇨🇲|喀麦隆|Cameroon|CM|🇧🇯|贝宁|Benin|BJ|🇹🇬|多哥|Togo|TG|🇬🇳|几内亚比绍|GW|🇸🇹|圣多美和普林西比|ST|🇬🇲|冈比亚|Gambia|GM|🇨🇻|佛得角|Cape Verde|CV|🇿🇦|南非|South Africa|ZA|🇿🇼|津巴布韦|Zimbabwe|ZW|🇿🇲|赞比亚|Zambia|ZM|🇧🇼|博茨瓦纳|Botswana|BW|🇳🇦|纳米比亚|Namibia|NA|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇲🇼|马拉维|Malawi|MW)"
+    filter: "(?i)(🇪🇬|埃及|Egypt|EG|🇲🇦|摩洛哥|Morocco|MA|🇹🇳|突尼斯|Tunisia|TN|🇩🇿|阿尔及利亚|Algeria|DZ|🇱🇾|利比亚|Libya|LY|🇸🇩|苏丹|Sudan|SD|🇪🇷|厄立特里亚|Eritrea|ER|🇩🇯|吉布提|Djibouti|DJ|🇸🇴|索马里|Somalia|SO|🇲🇷|毛里塔尼亚|Mauritania|MR|西撒哈拉|EH|🇨🇩|刚果金|CD|🇨🇬|刚果布|CG|🇨🇫|中非共和国|🇸🇸|南苏丹|South Sudan|SS|🇨🇫|乍得|Chad|TD|🇬🇦|加蓬|Gabon|GA|🇨🇲|喀麦隆|Cameroon|CM|🇧🇮|布隆迪|Burundi|BI|🇰🇪|肯尼亚|Kenya|KE|🇪🇹|埃塞俄比亚|Ethiopia|ET|🇹🇿|坦桑尼亚|Tanzania|TZ|🇺🇬|乌干达|Uganda|UG|🇷🇼|卢旺达|Rwanda|RW|🇧🇮|布隆迪|Burundi|BI|🇲🇼|马拉维|Malawi|MW|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇰🇲|科摩罗|Comoros|KM|🇲🇬|马达加斯加|Madagascar|MG|🇸🇨|塞舌尔|Seychelles|SC|留尼汪|Reunion|RE|🇳🇬|尼日利亚|Nigeria|NG|🇬🇭|加纳|Ghana|GH|🇨🇮|科特迪瓦|CI|🇬🇳|几内亚|Guinea|GN|🇸🇳|塞内加尔|Senegal|SN|🇧🇫|布基纳法索|Burkina Faso|BF|🇲🇱|马里|Mali|ML|🇳🇪|尼日尔|Niger|NE|🇨🇲|喀麦隆|Cameroon|CM|🇧🇯|贝宁|Benin|BJ|🇹🇬|多哥|Togo|TG|🇬🇳|几内亚比绍|GW|🇸🇹|圣多美和普林西比|ST|🇬🇲|冈比亚|Gambia|GM|🇨🇻|佛得角|Cape Verde|CV|🇿🇦|南非|South Africa|ZA|🇿🇼|津巴布韦|Zimbabwe|ZW|🇿🇲|赞比亚|Zambia|ZM|🇧🇼|博茨瓦纳|Botswana|BW|🇳🇦|纳米比亚|Namibia|NA|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇲🇼|马拉维|Malawi|MW)"
     exclude-filter: "(?i)(JP|Other|US|HK|🇦🇶|🇹🇼|🇭🇰|Hong Kong|one.dash|🇬🇧|TG账号|🇲🇾|马来西亚|🇻🇳|越南|新加坡|🇳🇱|🇺🇸|🇸🇬|singapore|SG|🇯🇵|🇰🇷|🇩🇪|workers|developers)"
 
 
@@ -3004,7 +2930,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     type: fallback         # 核心类型，实现故障自动切换
     interval: 300
     url: https://www.gstatic.com/generate_204
-    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/漏网之鱼.gif"
+    icon: "https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/漏网之鱼.gif"
     proxies:
       - 🕹️ 手动选择节点分组        # 未分配分流规则的访问目标，自动选择走，- 🕹️ 手动选择节点分组，中当前选择的节点
       - ⚠️ 谷歌GV专用节点分组     #  风险保障  上个节点失效时，自动切换备用代理节点1
@@ -3017,7 +2943,6 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
 
 # 分流规则（悠哉定义：根据流量的特征（如域名、IP、进程名），将流量路由到指定的代理分组，实现“按需代理”，核心遵循“自上而下匹配，命中即生效”原则）
-
 
 
 rules:
@@ -3096,12 +3021,12 @@ rules:
 
 
   # telegram 规则
-  - PROCESS-NAME,org.telegram.messenger.web,🕹️ 手动选择节点分组     # 🕹️ 手动选择节点分组
+  - PROCESS-NAME,org.telegram.messenger.web,🕹️ 手动选择节点分组                # 🕹️ 手动选择节点分组
 
 
 # 微软
 
-  - PROCESS-NAME,com.microsoft.office.outlook,🕹️ 手动选择节点分组    # Android端Outlook邮箱  
+  - PROCESS-NAME,com.microsoft.office.outlook,🕹️ 手动选择节点分组            # Android端Outlook邮箱  
   - DOMAIN,fuchenyouzai.dpdns.org,⚖️ 香港自动负载均衡散列节点分组
 
 
@@ -3110,7 +3035,7 @@ rules:
   - PROCESS-NAME,com.fongmi.android.tv,DIRECT   # TVBox进程
 
 
-  - GEOSITE,geolocation-!cn,🇭🇰 香港自动节点分组         # 仅当流量/请求的地理定位不属于中国时走🐟 漏网之鱼
+  - GEOSITE,geolocation-!cn,🇭🇰 香港自动节点分组                   # 仅当流量/请求的地理定位不属于中国时走🇭🇰 香港自动节点分组
 
 
 
@@ -3120,29 +3045,21 @@ rules:
 
 
 
+ 
 rule-providers:
 # 境内分流规则
-  ipv4ipv6PrivateAndLocal: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/ipv4ipv6PrivateAndLocal.yaml', interval: 86400, path: ./ruleset/3/ipv4ipv6PrivateAndLocal.yaml }
-  neiwangluyouqi: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/neiwangluyouqi.yaml', interval: 86400, path: ./ruleset/3/neiwangluyouqi.yaml }
-  jingneiDNSipDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingneiDNSipDIRECT.yaml', interval: 86400, path: ./ruleset/3/jingneiDNSipDIRECT.yaml }
-  guoneiIPbujiexiDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/guoneiIPbujiexiDIRECT.yaml', interval: 86400, path: ./ruleset/3/guoneiIPbujiexiDIRECT.yaml }
-  jingwaiDNSipHKG: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiDNSipHKG.yaml', interval: 86400, path: ./ruleset/3/jingwaiDNSipHKG.yaml }
-  jingneiDNSyumingDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingneiDNSyumingDIRECT.yaml', interval: 86400, path: ./ruleset/3/jingneiDNSyumingDIRECT.yaml }
-  jingwaiDNSyumingHKG: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiDNSyumingHKG.yaml', interval: 86400, path: ./ruleset/3/ingwaiDNSyumingHKG.yaml }
-  guoneiDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/guoneiDIRECT.yaml', interval: 86400, path: ./ruleset/3/guoneiDIRECT.yaml }
-  wangluojianceshoudong: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/wangluojianceshoudong.yaml', interval: 86400, path: ./ruleset/3/wangluojianceshoudong.yaml }
+  ipv4ipv6PrivateAndLocal: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/ipv4ipv6PrivateAndLocal.yaml', interval: 86400, path: ./ruleset/2/ipv4ipv6PrivateAndLocal.yaml }
+  neiwangluyouqi: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/neiwangluyouqi.yaml', interval: 86400, path: ./ruleset/2/neiwangluyouqi.yaml }
+  jingneiDNSipDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingneiDNSipDIRECT.yaml', interval: 86400, path: ./ruleset/2/jingneiDNSipDIRECT.yaml }
+  guoneiIPbujiexiDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/guoneiIPbujiexiDIRECT.yaml', interval: 86400, path: ./ruleset/2/guoneiIPbujiexiDIRECT.yaml }
+  jingwaiDNSipHKG: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiDNSipHKG.yaml', interval: 86400, path: ./ruleset/2/jingwaiDNSipHKG.yaml }
+  jingneiDNSyumingDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingneiDNSyumingDIRECT.yaml', interval: 86400, path: ./ruleset/2/jingneiDNSyumingDIRECT.yaml }
+  jingwaiDNSyumingHKG: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiDNSyumingHKG.yaml', interval: 86400, path: ./ruleset/2/ingwaiDNSyumingHKG.yaml }
+  guoneiDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/guoneiDIRECT.yaml', interval: 86400, path: ./ruleset/2/guoneiDIRECT.yaml }
+  wangluojianceshoudong: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/wangluojianceshoudong.yaml', interval: 86400, path: ./ruleset/2/wangluojianceshoudong.yaml }
 # 境外分流规则
-  YouTube: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/YouTube.yaml', interval: 86400, path: ./ruleset/3/YouTube.yaml }
-  Google: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/Google.yaml', interval: 86400, path: ./ruleset/3/Google.yaml }
-  jingwaiHK: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiHK.yaml', interval: 86400, path: ./ruleset/3/jingwaiHK.yaml }
-  tiktokzoutaiwan: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/tiktokzoutaiwan.yaml', interval: 86400, path: ./ruleset/3/tiktokzoutaiwan.yaml }
-
-
-
-
-
-
-
-
-
+  YouTube: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/YouTube.yaml', interval: 86400, path: ./ruleset/2/YouTube.yaml }
+  Google: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/Google.yaml', interval: 86400, path: ./ruleset/2/Google.yaml }
+  jingwaiHK: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiHK.yaml', interval: 86400, path: ./ruleset/2/jingwaiHK.yaml }
+  tiktokzoutaiwan: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/tiktokzoutaiwan.yaml', interval: 86400, path: ./ruleset/2/tiktokzoutaiwan.yaml }
 
