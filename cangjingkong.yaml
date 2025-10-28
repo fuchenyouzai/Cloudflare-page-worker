@@ -28,7 +28,7 @@ skip-auth-prefixes:                                  # 白名单跳过身份验�
   - 224.0.0.0/4                                           # 多播地址范围，IPv4多播通信使用。 
 
 
-
+# 外部面板
 external-controller: 127.0.0.1:9090 # 外部控制接口（用于通过 API 管理 Clash，如脚本控制、第三方面板连接）
 secret: "TG@fuchenyouzaibot@9090" # 外部控制接口令牌  token是 TG@fuchenyouzaibot@9090。验证方式（悠哉规范）：客户端（如GUI工具）访问external-controller时，需在HTTP请求头中携带“Authorization: Bearer [secret值]”，例如“Authorization: Bearer TG@fuchenyouzaibot@9090”，验证通过后方可执行操作。。当GUI / API 客户端去访问external-controller时需要在请求头里带上: Authorization: Bearer TG@fuchenyouzaibot@9090。。如果你用 GUI（例如 Clash Dashboard 或者 Clash Verge）：在 GUI 的配置里，填上地址：http://127.0.0.1:9090:TG@fuchenyouzaibot@9090。。如果用 curl 或者脚本调用 REST API：例如获取当前配置：curl -H "Authorization: Bearer TG@fuchenyouzaibot@9090" http://127.0.0.1:9090/configs    这样 Clash 才会接受请求。。。如果你把 external-controller: 0.0.0.0:9090 暴露到公网，。。一定要加上 secret，否则别人可以远程完全控制你的 Clash# 控制面板 / API，。。 如果你人在外地，访问 Clash 控制面板：http://你的公网IP:9090: Authorization: Bearer TG@fuchenyouzaibot@2025。。GUI 工具（Clash Dashboard / Clash Verge / Meta UI）设置：地址：http://你的公网IP:9090: TG@fuchenyouzaibot@2025
 # external-ui: ui # 指定本地Web管理界面的文件夹名称为  ui ，客户端会从该文件夹加载自定义界面文件（需先将界面压缩包解压到对应目录）。
@@ -36,17 +36,7 @@ secret: "TG@fuchenyouzaibot@9090" # 外部控制接口令牌  token是 TG@fuchen
 
 
 
-
-
-# profile:                                 # 新增🔔配置文件（Profile）相关的状态存储设置：用于保存客户端的历史选择和网络配置，提升使用体验
-  # store-selected: true          # 存储已选择的代理/规则组状态：开启后，重启Clash Meta客户端时，会自动恢复上次使用的代理节点和规则组，无需重新选择
-  # store-fake-ip: true                  # 存储Fake IP映射关系：开启后，会保存客户端生成的Fake IP与真实域名的对应关系，避免每次联网重新解析，减少延迟并优化网络稳定性（Fake IP是Clash用于分流和隐私保护的技术）
-
-
-
-
-
-
+# 嗅探
 sniffer:                 # 新增🔔流量嗅探（Sniffer）模块配置：自动识别网络流量类型，提升代理规则匹配精度
   enable: true      # 核心开关：启用流量嗅探功能（true=开启，false=关闭）
   sniff:                  # 针对不同协议类型的具体嗅探规则配置
@@ -63,9 +53,7 @@ sniffer:                 # 新增🔔流量嗅探（Sniffer）模块配置：自
 
 
 
-
-
-
+# 进站
 tun:       # 新增🔔TUN 模式配置：Clash Meta 核心网络虚拟化功能，实现全局流量拦截与转发。
   enable: true    # false为不启用 。启用 TUN 模式，（接管系统底层流量，实现全局代理，无需手动配置系统代理）
   stack: mixed  # TUN 网络栈类型："mixed"表示同时支持 IPv4 和 IPv6 流量，适配双栈网络环境。  另外🔔TUN 网络栈选择（gvisor 为谷歌开源栈，隔离性强、稳定性高，适合对安全和兼容有要求的场景）
@@ -75,8 +63,6 @@ tun:       # 新增🔔TUN 模式配置：Clash Meta 核心网络虚拟化功能
   auto-route: true    # 自动配置系统路由（无需手动修改路由表，TUN 模式自动管理流量转发）
   auto-redirect: true    # 自动重定向系统流量（将系统所有流量自动导入 TUN 接口，实现全局代理覆盖）
   auto-detect-interface: true    # 自动检测网络接口（动态适配当前使用的网卡，如切换 WiFi/有线网络时无需重新配置）
-
-
 
 
 
