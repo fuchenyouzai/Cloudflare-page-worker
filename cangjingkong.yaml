@@ -2136,7 +2136,9 @@ PProviders: &PProviders
     enable: true
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
-  filter: '^(?!.*(您当前是试用套餐|满意请购买|🇦🇶|使用|邀请返佣|TG频道|TG群组|qq号码|qq群|微信|WeChat|仅供个人使用|返利|机场|VPN|剩余流量|节点分享|TG群@|订阅进群|流量剩余 ≫|套餐到期|127.0.0.1|有效期|https://t.me|距离下次重置剩余|您已到期|流量用完|请续费使用|续费后更新订阅|备用地址|永久地址|网址|官网|加入我的频道|加入我的群组|LSMOO|解锁更多优选节点|TG: @|telegram|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic))'
+  filter: '^(?!.*(超时请重新订阅|代表|分割线|网址发布|网站注册地址|注|防失联地址|您当前是试用套餐|满意请购买|🇦🇶|使用|邀请返佣|TG频道|TG群组|qq号码|qq群|微信|WeChat|仅供个人使用|返利|机场|VPN|剩余流量|节点分享|电报群|TG群@|订阅进群|流量剩余 ≫|套餐到期|127.0.0.1|有效期|https://t.me|距离下次重置剩余|sufujia|只有爱懂的人才能用|线路少请更换软件看公告|您已到期|流量用完|请续费使用|续费后更新订阅|备用地址|永久地址|网址|官网|加入我的频道|加入我的群组|LSMOO|解锁更多优选节点|TG: @|telegram|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic))'
+
+
 
   # 上个是正向匹配,另一种写法反向排除exclude-filter: "(?i)(流量|到期|重置|扣费|客服|更新|检查|fengwo)"
   # 另类的感觉filter: 'a|b' 这样 golang regex 正则表达式  可选配置：用Golang语法的正则筛选数据（当前注释未启用，筛选包含"a"或"b"的内容）
@@ -2568,7 +2570,6 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
 
 
-
   - name: 🇦🇺 澳大利亚自动节点分组
     type: url-test
     include-all: true
@@ -2576,8 +2577,8 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 20   
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(Australia|AU|🇦🇺|澳|aodaliya)"
-    # exclude-filter: "(?i)()"
+    filter: "(?i)(Australia|AU|🇦🇺|澳洲|澳大利亚)"
+    exclude-filter: "(?i)(门)"
 
 
 
@@ -2601,7 +2602,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 180
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(🇫🇷|France|FR|法国|fra|fr)"
-    exclude-filter: "(?i)(🇺🇸|法国|America|Germany)"
+    exclude-filter: "(?i)(🇺🇸|美国|法国|America|Germany)"
 
 
 
@@ -2614,7 +2615,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 180
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(🇬🇧|英国|GB|UK|Britian|伦敦|英格兰|United Kingdom|yingguo|lhr|uk)"
-    exclude-filter: "(?i)(visa)"
+    exclude-filter: "(?i)(🇸🇬|visa)"
 
 
 
@@ -2627,7 +2628,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 180
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(DE|🇩🇪|德国|Germany)"
-    exclude-filter: "(?i)(🇳🇱|developers)"
+    exclude-filter: "(?i)(日本|🇳🇱|developers)"
 
 
 
@@ -2665,8 +2666,8 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 180
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(🇵🇱|波兰|Poland|PL|bolan)"
-    # exclude-filter: "(?i)()"
+    filter: "(?i)(🇵🇱|波兰)"
+    exclude-filter: "(?i)(🇺🇸|美国|香港|澳门|日本|韩国|台湾|新加坡|澳洲)"
 
 
 
@@ -2691,7 +2692,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 80
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(🇭🇰|香港|hongkong|Hong Kong|HK|🇲🇴|澳门|Macao|MO|🇹🇼|台|台湾|taiwan|tw|Taiwan|TW|🇰🇵|朝鲜|North Korea|KP|🇯🇵|日|jp|japan|东京|日本|Japan|JP|🇰🇷|韩|korea|kr|韩国|South Korea|KR|🇸??|新加坡|Singapore|SG|sg|狮城|xinjiapo|🇻🇳|越南|Vietnam|VN|🇲🇾|马来西亚|Malaysia|MY|🇹🇭|泰国|Thailand|TH|🇵🇭|菲律宾|Philippines|PH|🇮🇩|印度尼西亚|Indonesia|ID|🇲🇲|缅甸|Myanmar|MM|🇰🇭|柬埔寨|Cambodia|KH|🇱🇦|老挝|Laos|LA|🇧🇳|文莱|Brunei|BN|🇹🇱|东帝汶|East Timor|TL|🇷🇺|俄|莫斯科|eluosi|俄罗斯|Russia|RU|🇲🇳|蒙|蒙古|Mongolia|MN|🇰🇿|哈萨克斯坦|Kazakhstan|KZ|🇺🇿|乌兹别克斯坦|Uzbekistan|UZ|🇹🇯|塔吉克斯坦|Tajikistan|TJ|🇰🇬|吉尔吉斯斯坦|Kyrgyzstan|KG|🇹🇲|土库曼斯坦|Turkmenistan|TM|🇹🇷|土耳其|Turkey|TR|🇦🇪|阿联酋|United Arab Emirates|AE|🇸🇦|沙特阿拉伯|Saudi Arabia|SA|🇰🇼|科威特|Kuwait|KW|🇶🇦|卡塔尔|Qatar|QA|🇱🇧|黎巴嫩|Lebanon|LB|🇮🇷|伊朗|Iran|IR|🇮🇶|伊拉克|Iraq|IQ|🇸🇾|叙利亚|Syria|SY|🇯🇴|约旦|Jordan|JO|🇵🇸|巴勒斯坦|Palestine|PS|🇮🇱|以色列|Israel|IL|🇧🇭|巴林|Bahrain|BH|🇴🇲|阿曼|Oman|OM|🇾🇪|也门|Yemen|YE|🇨🇾|塞浦路斯|Cyprus|CY|🇮🇳|印度|India|IN|🇱🇰|斯里兰卡|Sri Lanka|LK|🇵🇰|巴基斯坦|Pakistan|PK|🇧🇩|孟加拉国|Bangladesh|BD|🇳🇵|尼泊尔|Nepal|NP|🇧🇹|不丹|Bhutan|BT|🇲🇻|马尔代夫|Maldives|MV|🇦🇫|阿富汗|Afghanistan|AF)"
+    filter: "(?i)(🇭🇰|香港|hongkong|Hong Kong|HK|🇲🇴|澳门|Macao|MO|🇹🇼|台|台湾|taiwan|tw|Taiwan|TW|🇰🇵|朝鲜|North Korea|KP|🇯🇵|日|jp|japan|东京|日本|Japan|JP|🇰🇷|韩|korea|kr|韩国|South Korea|KR|🇸🇬|新加坡|Singapore|SG|sg|狮城|xinjiapo|🇻🇳|越南|Vietnam|VN|🇲🇾|马来西亚|Malaysia|MY|🇹🇭|泰国|Thailand|TH|🇵🇭|菲律宾|Philippines|PH|🇮🇩|印度尼西亚|Indonesia|ID|🇲🇲|缅甸|Myanmar|MM|🇰🇭|柬埔寨|Cambodia|KH|🇱🇦|老挝|Laos|LA|🇧🇳|文莱|Brunei|BN|🇹🇱|东帝汶|East Timor|TL|🇷🇺|俄|莫斯科|eluosi|俄罗斯|Russia|RU|🇲🇳|蒙|蒙古|Mongolia|MN|🇰🇿|哈萨克斯坦|Kazakhstan|KZ|🇺🇿|乌兹别克斯坦|Uzbekistan|UZ|🇹🇯|塔吉克斯坦|Tajikistan|TJ|🇰🇬|吉尔吉斯斯坦|Kyrgyzstan|KG|🇹🇲|土库曼斯坦|Turkmenistan|TM|🇹🇷|土耳其|Turkey|TR|🇦🇪|阿联酋|United Arab Emirates|AE|🇸🇦|沙特阿拉伯|Saudi Arabia|SA|🇰🇼|科威特|Kuwait|KW|🇶🇦|卡塔尔|Qatar|QA|🇱🇧|黎巴嫩|Lebanon|LB|🇮🇷|伊朗|Iran|IR|🇮🇶|伊拉克|Iraq|IQ|🇸🇾|叙利亚|Syria|SY|🇯🇴|约旦|Jordan|JO|🇵🇸|巴勒斯坦|Palestine|PS|🇮🇱|以色列|Israel|IL|🇧🇭|巴林|Bahrain|BH|🇴🇲|阿曼|Oman|OM|🇾🇪|也门|Yemen|YE|🇨🇾|塞浦路斯|Cyprus|CY|🇮🇳|印度|India|IN|🇱🇰|斯里兰卡|Sri Lanka|LK|🇵🇰|巴基斯坦|Pakistan|PK|🇧🇩|孟加拉国|Bangladesh|BD|🇳🇵|尼泊尔|Nepal|NP|🇧🇹|不丹|Bhutan|BT|🇲🇻|马尔代夫|Maldives|MV|🇦🇫|阿富汗|Afghanistan|AF)"
     exclude-filter: "(?i)(www|visa|icook|尼日利亚|美国|visa|shopify|Kitty Network|永久地址|Britian|America|Britian|TG频道|TG账号|bot|悠哉)"
     icon: "https://pic1.zhimg.com/v2-732607b9cf63b28c2469be7696a4f30e_b.webp"
 
@@ -2703,8 +2704,8 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 200
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(🇸🇪|瑞典|Sweden|SE|🇳🇴|挪威|Norway|NO|🇫🇮|芬兰|Finland|FI|🇩🇰|丹麦|Denmark|DK|🇮🇸|冰岛|Iceland|IS|🇫🇴|法罗群岛|FO|🇬🇱|格陵兰|Greenland|GL|🇳🇴|斯瓦尔巴群岛|Svalbard|SJ|🇬🇧|英国|United Kingdom|GB|🇫🇷|法国|France|FR|🇩🇪|德国|Germany|DE|🇧🇪|比利时|Belgium|BE|🇳🇱|荷兰|Netherlands|NL|🇱🇺|卢森堡|Luxembourg|LU|🇮🇪|爱尔兰|Ireland|IE|🇲🇨|摩纳哥|Monaco|MC|🇬🇧|马恩岛|Isle of Man|IM|🇮🇹|意大利|Italy|IT|🇪🇸|西班牙|Spain|ES|🇵🇹|葡萄牙|Portugal|PT|🇬🇷|希腊|Greece|GR|🇻🇦|梵蒂冈|Vatican City|VA|🇸🇲|圣马力诺|San Marino|SM|🇲🇹|马耳他|Malta|MT|🇦🇩|安道尔|Andorra|AD|🇬🇮|直布罗陀|Gibraltar|GI|🇲🇰|北马其顿|North Macedonia|MK|🇦🇱|阿尔巴尼亚|Albania|AL|🇲🇪|黑山|Montenegro|ME|🇷🇸|塞尔维亚|Serbia|RS|🇧🇦|波黑|BA|🇷🇺|俄罗斯|Russia|RU|🇺🇦|乌克兰|Ukraine|UA|🇵🇱|波兰|Poland|PL|🇭🇺|匈牙利|Hungary|HU|🇨🇿|捷克|CZ|🇸🇰|斯洛伐克|Slovakia|SK|🇧🇬|保加利亚|Bulgaria|BG|🇷🇴|罗马尼亚|Romania|RO|🇲🇩|摩尔多瓦|Moldova|MD|🇺🇦|克里米亚|Crimea|🇱🇻|拉脱维亚|Latvia|LV|🇱🇹|立陶宛|Lithuania|LT|🇪🇪|爱沙尼亚|Estonia|EE|🇧🇾|白俄罗斯|Belarus|BY|🇦🇹|奥地利|Austria|AT|🇨🇭|瑞士|Switzerland|CH|🇭🇷|克罗地亚|Croatia|HR|🇸🇮|斯洛文尼亚|Slovenia|SI|🇨🇿|捷克|Czech Republic|CZ|🇸🇰|斯洛伐克|Slovakia|SK)"
-    exclude-filter: "(?i)(SG|JP|台湾|美国|日本|🇯🇵|新加坡|🇹🇼|香港|HK|US|🇺🇸|lhr|🇬🇧|🇸🇬|TG账号|TG频道|节点仅供个人使用|永久地址|官网|Kitty Network|套餐到期|距离下次重置剩余|剩余流量|japan|singapore|workers|time|radar|pages|developers|America|Taiwan|Korea|Hong Kong|🇬🇧|Netherland|Germany|America|developers|Netherland|v4sjc|sea|time|visa)"    
+    filter: "(?i)(🇸🇪|瑞典|Sweden|SE|🇳🇴|挪威|Norway|NO|🇫🇮|芬兰|Finland|FI|🇩🇰|丹麦|Denmark|DK|🇮🇸|冰岛|Iceland|IS|🇫🇴|法罗群岛|FO|🇬🇱|格陵兰|Greenland|GL|🇳🇴|斯瓦尔巴群岛|Svalbard|SJ|🇬🇧|英国|United Kingdom|GB|🇫🇷|法国|France|FR|🇩🇪|德国|Germany|DE|🇧🇪|比利时|Belgium|BE|🇳🇱|荷兰|Netherlands|NL|🇱🇺|卢森堡|Luxembourg|LU|🇮🇪|爱尔兰|Ireland|IE|🇲🇨|摩纳哥|Monaco|MC|🇬🇧|马恩岛|Isle of Man|IM|🇮🇹|意大利|Italy|IT|🇪🇸|西班牙|Spain|ES|🇵🇹|葡萄牙|Portugal|PT|🇬🇷|希腊|Greece|GR|🇻🇦|梵蒂冈|Vatican City|VA|🇸🇲|圣马力诺|San Marino|SM|🇲🇹|马耳他|Malta|MT|🇦🇩|安道尔|Andorra|AD|🇬🇮|直布罗陀|Gibraltar|GI|🇲🇰|北马其顿|North Macedonia|MK|🇦🇱|阿尔巴尼亚|Albania|AL|🇲🇪|黑山|Montenegro|ME|🇷🇸|塞尔维亚|Serbia|RS|🇧🇦|波黑|BA|🇷🇺|俄罗斯|Russia|RU|🇺🇦|乌克兰|Ukraine|UA|🇵🇱|波兰|Poland|PL|🇭🇺|匈牙利|Hungary|HU|🇨🇿|捷克|CZ|🇸🇰|斯洛伐克|Slovakia|SK|🇧🇬|保加利亚|Bulgaria|BG|🇷🇴|罗马尼亚|Romania|RO|🇲🇩|摩尔多瓦|Moldova|MD|🇺🇦|克里米亚|Crimea|🇱🇻|拉脱维亚|Latvia|LV|🇱🇹|立陶宛|Lithuania|LT|🇪🇪|爱沙尼亚|Estonia|EE|🇧🇾|白俄罗斯|Belarus|BY|🇦🇹|奥地利|Austria|AT|🇨🇭|瑞士|Switzerland|CH|🇭🇷|克罗地亚|Croatia|HR|🇸🇮|斯洛文尼亚|Slovenia|SI|🇨🇿|捷克|CZ|🇸🇰|斯洛伐克|Slovakia|SK)"
+    exclude-filter: "(?i)(新西兰|伊拉克|巴基斯坦|🇹🇷|土耳其|南非|🇰🇷|🇨🇳|埃及|缅甸|巴西|乌拉圭|哈萨克斯坦|澳门|韩国|泰国|澳洲|马来西亚|菲律宾|越南|加拿大|柬埔寨|印度|印度尼西亚|尼日利亚|阿根廷|孟加拉|SG|JP|台湾|美国|日本|🇯🇵|新加坡|🇹🇼|香港|HK|US|🇺🇸|lhr|🇬🇧|🇸🇬|TG账号|TG频道|节点仅供个人使用|永久地址|官网|Kitty Network|套餐到期|距离下次重置剩余|剩余流量|japan|singapore|workers|time|radar|pages|developers|America|Taiwan|Korea|Hong Kong|🇬🇧|Netherland|Germany|America|developers|Netherland|v4sjc|sea|time|visa)"    
 
 
 
@@ -2716,7 +2717,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 300
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(🇪🇬|埃及|Egypt|EG|🇲🇦|摩洛哥|Morocco|MA|🇹🇳|突尼斯|Tunisia|TN|🇩🇿|阿尔及利亚|Algeria|DZ|🇱🇾|利比亚|Libya|LY|🇸🇩|苏丹|Sudan|SD|🇪🇷|厄立特里亚|Eritrea|ER|🇩🇯|吉布提|Djibouti|DJ|🇸🇴|索马里|Somalia|SO|🇲🇷|毛里塔尼亚|Mauritania|MR|西撒哈拉|EH|🇨🇩|刚果金|CD|🇨🇬|刚果布|CG|🇨🇫|中非共和国|🇸🇸|南苏丹|South Sudan|SS|🇨🇫|乍得|Chad|TD|🇬🇦|加蓬|Gabon|GA|🇨🇲|喀麦隆|Cameroon|CM|🇧🇮|布隆迪|Burundi|BI|🇰🇪|肯尼亚|Kenya|KE|🇪🇹|埃塞俄比亚|Ethiopia|ET|🇹🇿|坦桑尼亚|Tanzania|TZ|🇺🇬|乌干达|Uganda|UG|🇷🇼|卢旺达|Rwanda|RW|🇧🇮|布隆迪|Burundi|BI|🇲🇼|马拉维|Malawi|MW|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇰🇲|科摩罗|Comoros|KM|🇲🇬|马达加斯加|Madagascar|MG|🇸🇨|塞舌尔|Seychelles|SC|留尼汪|Reunion|RE|🇳🇬|尼日利亚|Nigeria|NG|🇬🇭|加纳|Ghana|GH|🇨🇮|科特迪瓦|CI|🇬🇳|几内亚|Guinea|GN|🇸🇳|塞内加尔|Senegal|SN|🇧🇫|布基纳法索|Burkina Faso|BF|🇲🇱|马里|Mali|ML|🇳🇪|尼日尔|Niger|NE|🇨🇲|喀麦隆|Cameroon|CM|🇧🇯|贝宁|Benin|BJ|🇹🇬|多哥|Togo|TG|🇬🇳|几内亚比绍|GW|🇸🇹|圣多美和普林西比|ST|🇬🇲|冈比亚|Gambia|GM|🇨🇻|佛得角|Cape Verde|CV|🇿🇦|南非|South Africa|ZA|🇿🇼|津巴布韦|Zimbabwe|ZW|🇿🇲|赞比亚|Zambia|ZM|🇧🇼|博茨瓦纳|Botswana|BW|🇳🇦|纳米比亚|Namibia|NA|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇲🇼|马拉维|Malawi|MW)"
-    exclude-filter: "(?i)(JP|Other|US|HK|🇦🇶|🇹🇼|🇭🇰|Hong Kong|one.dash|🇬🇧|TG账号|🇲🇾|马来西亚|🇻🇳|越南|新加坡|🇳🇱|🇺🇸|🇸🇬|singapore|SG|🇯🇵|🇰🇷|🇩🇪|workers|developers)"
+    exclude-filter: "(?i)(🇨🇳|美国|JP|Other|US|HK|🇦🇶|🇹🇼|🇭🇰|Hong Kong|one.dash|🇬🇧|TG账号|🇲🇾|马来西亚|🇻🇳|越南|新加坡|🇳🇱|🇺🇸|🇸🇬|singapore|SG|🇯🇵|🇰🇷|🇩🇪|workers|developers)"
 
 
 
@@ -2729,7 +2730,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     tolerance: 180
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(美国|United States|US|🇺🇸|america|America|洛杉矶|圣何塞|纽约|us|unitedstates|united states|US|🇨🇦|加拿大|Canada|CA|🇲🇽|墨西哥|Mexico|MX|🇺🇸|关岛|Guam|GU|🇺🇸|波多黎各|Puerto Rico|PR|🇨🇦|格陵兰|Greenland|GL|🇨🇺|古巴|Cuba|CU|🇩🇴|多米尼加共和国|Dominican Republic|DO|🇩🇲|多米尼克|Dominica|DM|🇻🇨|圣文森特和格林纳丁斯|VC|🇯🇲|牙买加|Jamaica|JM|🇧🇧|巴巴多斯|Barbados|BB|🇹🇹|特立尼达和多巴哥|TT|🇬🇩|格林纳达|Grenada|GD|🇻🇬|英属维尔京群岛|VG|🇬🇹|危地马拉|Guatemala|GT|🇨🇷|哥斯达黎加|Costa Rica|CR|🇵🇦|巴拿马|Panama|PA|🇭🇳|洪都拉斯|Honduras|HN|🇳🇮|尼加拉瓜|Nicaragua|NI|🇸🇻|萨尔瓦多|SV|🇧🇿|伯利兹|Belize|BZ|🇨🇱|智利|Chile|CL|🇧🇷|巴西|Brazil|BR|🇦🇷|阿根廷|Argentina|AR|🇨🇴|哥伦比亚|Colombia|CO|🇵🇪|秘鲁|Peru|PE|🇺🇾|乌拉圭|Uruguay|UY|🇪🇨|厄瓜多尔|Ecuador|EC|🇻🇪|委内瑞拉|Venezuela|VE|🇧🇴|玻利维亚|Bolivia|BO|🇵🇾|巴拉圭亚|Paraguay|PY|🇬🇾|圭亚那|Guyana|GY|🇸🇷|苏里南|Suriname|SR|🇫🇷|法属圭亚那|GF|🇨🇱|复活节岛|IC)"
-    exclude-filter: "(?i)(🇸🇬|🇹🇼|🇩🇪|法国|🇳🇱|🇰🇷|🇫🇷|HK|AU|shopify|Hong Kong|pages|japan|developers|icook|radar|悠哉|🇬🇧|fr|visa|hoog koog)"
+    exclude-filter: "(?i)(🇹🇷|🇸🇬|🇹🇼|🇩🇪|法国|🇳🇱|🇰🇷|🇫🇷|HK|AU|shopify|Hong Kong|pages|japan|developers|icook|radar|悠哉|🇬🇧|fr|visa|hoog koog)"
 
 
 
@@ -2742,6 +2743,8 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(🇦🇺|澳大利亚|Australia|AU|🇳🇿|新西兰|New Zealand|NZ|🇵🇬|巴布亚新几内亚|PG|🇫🇯|斐济|Fiji|FJ|🇸🇧|所罗门群岛|SB|🇻🇺|瓦努阿图|Vanuatu|VU|🇹🇻|图瓦卢|Tuvalu|TV|🇰🇮|基里巴斯|Kiribati|KI|🇲🇭|马绍尔群岛|MH|🇵🇼|帕劳|Palau|PW|🇳🇺|瑙鲁|Nauru|NR|🇹🇰|汤加|Tonga|TO|🇼🇸|萨摩亚|Samoa|WS|🇨🇰|库克群岛|Cook Islands|CK|🇳🇿|纽埃|Niue|NU|🇫🇷|法属波利尼西亚|French Polynesia|PF|🇳🇿|托克劳|Tokelau|TK)"
     exclude-filter: "(?i)(日本|🇰🇷|🇭🇰|wto|🇺🇸|🇯🇵|🇸??|🇬🇧|🇳🇱|🇰🇷🇭🇰|🇹🇼|🇩🇪|🇫🇷)"
+
+
 
 
 
