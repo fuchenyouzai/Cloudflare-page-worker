@@ -5,8 +5,8 @@ unified-delay: true # 统一延迟策略。这个在 Mihomo/Clash Meta 文档里
 ipv6: true # 启用 IPv6 支持。表示支持 AAAA 记录解析和 IPv6 流量。。开启IPv6开关,关闭阻断所有IPv6链接和屏蔽DNS请求 AAAA 记录。IPv6支持开关（悠哉定义：控制代理服务是否支持IPv6协议相关功能）可选值：true（启用）、false（禁用）当前值：true（悠哉定义：启用IPv6地址解析（AAAA记录）和IPv6流量代理，若网络环境不支持IPv6，建议设为false避免连接异常）
 allow-lan: true # 允许局域网 (LAN) 的其他设备连接这个代理服务。局网里的设备也能用你的代理。false是禁止局域网访问，即不允许局域网内的设备使用此代理，局域网访问权限（悠哉定义：控制局域网内其他设备是否可通过当前设备IP连接代理服务）可选值：true（允许）、false（禁止）当前值：true（悠哉定义：允许手机、平板、其他电脑等局域网设备，通过当前设备IP和代理端口连接使用代理）
 bind-address: "*"   # 监听所有网络接口（IP）。即不只是 localhost，还包括局域网、外网接口（若有）都可以接受连接。。的*表示服务程序将监听所有可用的网络接口和IP地址接受来自任何IP的连接请求。监听网络接口（悠哉定义：指定代理服务监听的网络接口IP，决定哪些来源的连接可被接收）。可选值："*"（监听所有接口）、具体IP（如192.168.1.100，仅监听该IP对应接口）当前值："*"（悠哉定义：监听设备所有可用网络接口，包括本地回环接口、局域网接口、公网接口（若有），确保不同来源设备可正常连接）
-tcp-concurrent: true # 新增🔔启用 TCP 并发连接，提升多任务下的代理传输效率
-find-process-mode: strict # 新增🔔进程识别模式（strict 为严格模式，精准匹配发起网络请求的进程，避免规则误判）
+tcp-concurrent: true # 新增🔔启用 TCP 并发连接，提升多任务下的代理传输效率。开启TCP并发连接模式，允许同时建立多个TCP连接，能显著提升多任务网络请求（如下载、多网页浏览）的速度。
+find-process-mode: strict # 新增🔔进程识别模式（strict 为严格模式，精准匹配发起网络请求的进程，避免规则误判）启用严格的进程匹配模式，只有明确配置了代理规则的进程才会走代理，避免无关进程误走代理导致的网络混乱。
 redir-port: 7892 # 重定向端口（redirect port）一般用于大陆直连 / 重定向方式，把 IP／端口重定向到代理里（Linux 下 iptables + redir 模式）。端口转发规则重定向端口流量重定向端口（悠哉定义：主要用于Linux系统，配合iptables防火墙规则，将指定IP/端口的流量重定向至该端口，实现特定流量代理），当前值：7892（悠哉无固定默认值，需根据系统防火墙配置调整，Windows/macOS系统通常无需配置）
 tproxy-port: 7893 # 透明代理端口，当网络支持 TPROXY 模式时，把流量透明捕获（通常在路由器或内核支持）到这个端口进行处理。。表示配置中的tproxy（透明代理）端口号为 7893。这是网络代理相关的参数，用于指定代理服务监听的端口号，即代理程序会在该端口等待连接，从而实现代理功能。 透明代理端口（悠哉定义：需系统内核支持TPROXY模块，用于透明捕获网络流量并转发至代理，无需客户端手动配置代理，常用于路由器场景），当前值：7893（悠哉无固定默认值，需依赖系统内核特性，普通桌面/移动设备较少使用）
 port: 7890 # HTTP代理端口TCP，HTTP代理监听端口，用于接收并处理HTTP协议代理请求的端口，仅支持TCP流量）当前值：7890（悠哉无固定默认值，为常用推荐端口，需确保与其他服务端口不冲突）
@@ -28,15 +28,14 @@ skip-auth-prefixes:                                  # 白名单跳过身份验�
   - 224.0.0.0/4                                           # 多播地址范围，IPv4多播通信使用。 
 
 
-# 外部面板
+
 external-controller: 127.0.0.1:9090 # 外部控制接口（用于通过 API 管理 Clash，如脚本控制、第三方面板连接）
 secret: "TG@fuchenyouzaibot@9090" # 外部控制接口令牌  token是 TG@fuchenyouzaibot@9090。验证方式（悠哉规范）：客户端（如GUI工具）访问external-controller时，需在HTTP请求头中携带“Authorization: Bearer [secret值]”，例如“Authorization: Bearer TG@fuchenyouzaibot@9090”，验证通过后方可执行操作。。当GUI / API 客户端去访问external-controller时需要在请求头里带上: Authorization: Bearer TG@fuchenyouzaibot@9090。。如果你用 GUI（例如 Clash Dashboard 或者 Clash Verge）：在 GUI 的配置里，填上地址：http://127.0.0.1:9090:TG@fuchenyouzaibot@9090。。如果用 curl 或者脚本调用 REST API：例如获取当前配置：curl -H "Authorization: Bearer TG@fuchenyouzaibot@9090" http://127.0.0.1:9090/configs    这样 Clash 才会接受请求。。。如果你把 external-controller: 0.0.0.0:9090 暴露到公网，。。一定要加上 secret，否则别人可以远程完全控制你的 Clash# 控制面板 / API，。。 如果你人在外地，访问 Clash 控制面板：http://你的公网IP:9090: Authorization: Bearer TG@fuchenyouzaibot@2025。。GUI 工具（Clash Dashboard / Clash Verge / Meta UI）设置：地址：http://你的公网IP:9090: TG@fuchenyouzaibot@2025
-# external-ui: ui # 指定本地Web管理界面的文件夹名称为  ui ，客户端会从该文件夹加载自定义界面文件（需先将界面压缩包解压到对应目录）。
+# external-ui: "ui" # 指定本地Web管理界面的文件夹名称为  ui ，客户端会从该文件夹加载自定义界面文件（需先将界面压缩包解压到对应目录）。
 # external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" # 指定远程自定义 Web 界面（这里是 MetaCubeX 官方的 metacubexd 界面）的下载链接，客户端会自动下载并使用该界面，无需手动解压。
 
 
 
-# 嗅探
 sniffer:                 # 新增🔔流量嗅探（Sniffer）模块配置：自动识别网络流量类型，提升代理规则匹配精度
   enable: true      # 核心开关：启用流量嗅探功能（true=开启，false=关闭）
   sniff:                  # 针对不同协议类型的具体嗅探规则配置
@@ -48,12 +47,12 @@ sniffer:                 # 新增🔔流量嗅探（Sniffer）模块配置：自
     QUIC:                                               # QUIC 协议嗅探配置：处理基于 UDP 的 QUIC 流量（如部分 App 高速传输、Google 服务）
       ports: [443, 8443]                       # 需嗅探的端口：QUIC 常复用 443/8443 端口，与 TLS 端口一致
   skip-domain:                           # 嗅探白名单：指定无需嗅探的域名，避免影响基础功能
-    - "Mijia Cloud"                   # 示例米家云服务域名：跳过嗅探，确保米家设备（如摄像头、家电）正常联网
-    - "+.push.apple.com"              # 示例苹果推送域名（通配符+表示所有子域名）：跳过嗅探，保障苹果设备推送通知正常
+    - "Mijia Cloud"                   # 米家云服务域名：跳过嗅探，确保米家设备（如摄像头、家电）正常联网
+    - "+.push.apple.com"              # 苹果推送域名（通配符+表示所有子域名）：跳过嗅探，保障苹果设备推送通知正常
 
 
 
-# 进站
+
 tun:       # 新增🔔TUN 模式配置：Clash Meta 核心网络虚拟化功能，实现全局流量拦截与转发。
   enable: true    # false为不启用 。启用 TUN 模式，（接管系统底层流量，实现全局代理，无需手动配置系统代理）
   stack: mixed  # TUN 网络栈类型："mixed"表示同时支持 IPv4 和 IPv6 流量，适配双栈网络环境。  另外🔔TUN 网络栈选择（gvisor 为谷歌开源栈，隔离性强、稳定性高，适合对安全和兼容有要求的场景）
@@ -67,6 +66,7 @@ tun:       # 新增🔔TUN 模式配置：Clash Meta 核心网络虚拟化功能
 
 
 
+# DNS模块
 dns: # DNS设置用于管理代理服务的域名解析逻辑，包括解析服务器、策略、安全过滤等，决定域名如何转换为IP地址）
   enable: true # 启用DNS接管系统和监听。接管后系统/应用的 DNS 请求将由代理处理。 启用 DNS 接管，代理将处理所有相关 DNS 请求，实现自定义解析策略。值为false时不启动。
   listen: 0.0.0.0:1053 # 表示相关程序正在监听服务器上所有网络接口的1053端口。这意味着Clash或Clash Meta等工具配置为通过1053端口接收网络请求，通常用于DNS相关功能，可能会将域名解析请求导向该端口进行处理，以便实现自定义的DNS解析策略，如域名分流、使用特定的DNS服务器等。
@@ -93,13 +93,13 @@ dns: # DNS设置用于管理代理服务的域名解析逻辑，包括解析服�
     - 2409:8014:2000::2       # 中国移动辽宁省
 
   direct-nameserver: # 点击切换到代理软件中“全球直连”分组节点时，设备所有网络流量（尤其是国内域名相关）都会走 DIRECT 直连模式网络，此时会自动触发悠哉配置的 direct-nameserver 列表中的例如（阿里云、腾讯等DNS）来解析域名。配置格式，数组形式，填写 DNS 服务器ip或地址（支持“- system”（系统默认 DNS）或具体 IP/地址）或运营商提供的本地dns地址，就近原则稳定无劫持的情况下可以在首位填写就近的DNSip或地址分运营商需要自己填写
-    - system                              # 代表调用设备自身默认DNS   
-    - 8.8.8.8
-    - 2001:4860:4860::8888     # 中国境外 Google IPv6 DNS
     - 211.140.197.58                 # 中国移动大连市 IPv4 DNS 域名 liaoning-chinamobile-dns.ln.chinamobile.com
     - 2409:8014:2000::1           # 中国移动辽宁省大连市DNS
     - 211.137.32.178                  # 中国移动辽宁省 IPv4 DNS
-    - 2409:8014:2000::2            # 中国移动辽宁省ipv6DNS    
+    - 2409:8014:2000::2            # 中国移动辽宁省ipv6DNS
+    - 8.8.8.8
+    - 2001:4860:4860::8888     # 中国境外 Google IPv6 DNS
+    - system                              # 代表调用设备自身默认DNS   
   direct-nameserver-follow-policy: false # 可选值true跟随，fals。不跟随。 当前值false（悠哉定义直连场景的 DNS 请求不跟随分流策略，仅固定使用 direct-nameserver 配置的 DNS 服务器，避免分流规则干扰直连解析）。该配置仅作用于，直连场景，（不使用代理时），表示直连网络下的DNS解析不跟随系统的分流策略（如VPN分流规则、域名分组策略等），仅固定使用  direct-nameserver  中配置的DNS
 
   nameserver-policy: # 指定域名的查询dns解析服务器，优先于 nameserver/fallback 查询 。
@@ -256,6 +256,7 @@ dns: # DNS设置用于管理代理服务的域名解析逻辑，包括解析服�
   - 2001:4860:4860::8844       # 中国境外 Google IPv6 DNS
   - 2606:4700:4700::1111       # 中国境外 Cloudflare的ipv6 DNS  one.one.one.one   DoY，1dot1dot1dot1.cloudflare-dns.com
   - 2606:4700:4700::1001       # 中国境外 Cloudflare的ipv6 DNS  one.one.one.one   DoY，1dot1dot1dot1.cloudflare-dns.com
+
 
 
 
@@ -2152,6 +2153,9 @@ global-ua: clash.meta            # 用于下载订阅时指定UA
 # 保存机场订阅文件路径 path: ./proxies/自定义名字.yaml
 
 
+
+
+
 proxy-providers:                       # 代理订阅源管理模块：用于批量加载、更新外部订阅链接节点
 
   🍎Kitty0:
@@ -2159,6 +2163,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     proxy: "全球直连"
     type: http
     interval: 18000
+    path: ./proxies/3/Kitty0.yaml
     url: "https://2.luolicon.ru/oosaka/11fff967ea7887cade40b773e4481c46"
     override: 
       additional-prefix: '[🍎Kitty0]'
@@ -2173,8 +2178,9 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
 
   🍎机场名1:
     <<: *PProviders  
-    type: http   
-    url: "https://api.taxicab.cc/sub?target=clash&url=https%3A%2F%2Fget.api-biubiu.sbs%2Fbiu%2Fsubscribe%3Ftoken%3Dbe2db36ba059f47ee1e231a6fa27f275&insert=false&include=%E7%BE%8E%E5%9B%BD05-IPLC-3x-Frontier%E5%AE%B6%E5%AE%BD&emoji=true&list=false&scv=true&fdn=true&expand=true&sort=false&udp=true&new_name=true"
+    type: http
+    path: ./proxies/3/机场名11.yaml
+    url: "https://get.api-biubiu.sbs/biu/subscribe?token=be2db36ba059f47ee1e231a6fa27f275"
     override:
       additional-prefix: '[🍎节点前缀1]'
       skip-cert-verify: true
@@ -2185,9 +2191,10 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   🍎机场名2:
     <<: *PProviders  
     type: http   
-    url: "https://api.taxicab.cc/sub?target=clash&url=https%3A%2F%2Fget.api-biubiu.sbs%2Fbiu%2Fsubscribe%3Ftoken%3Dbe2db36ba059f47ee1e231a6fa27f275&insert=false&include=%E7%BE%8E%E5%9B%BD06-IPLC-2x-ATT%E5%AE%B6%E5%AE%BD&emoji=true&list=false&scv=true&fdn=true&expand=true&sort=false&udp=true&new_name=true"
+    url: "填写你的订阅链接"     
+    path: ./proxies/3/机场名22.yaml    
     override:
-      additional-prefix: '[🍎节点前缀2]'   
+      additional-prefix: '[🍎节点前缀2]'
       skip-cert-verify: true
       udp: true
 
@@ -2196,9 +2203,10 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   🍎机场名3:
     <<: *PProviders  
     type: http   
-    url: "https://get.api-biubiu.sbs/biu/subscribe?token=be2db36ba059f47ee1e231a6fa27f275"
+    url: "填写你的订阅链接"
+    path: ./proxies/3/机场名33.yaml    
     override:
-      additional-prefix: '[🍎节点前缀3]'  
+      additional-prefix: '[🍎节点前缀3]'
       skip-cert-verify: true
       udp: true
 
@@ -2206,17 +2214,19 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
 
   🍎机场名4:
     <<: *PProviders  
-    type: http
+    type: http   
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名44.yaml    
     override:
-      additional-prefix: '[🍎节点前缀4]'
+      additional-prefix: '[🍎节点前缀4]'   
 
 
 
   🍎机场名5:
     <<: *PProviders  
     type: http   
-    url: "填写你的订阅链接"         
+    url: "填写你的订阅链接"
+    path: ./proxies/3/机场名55.yaml      
     override:
       additional-prefix: '[🍎节点前缀5]'   
 
@@ -2228,6 +2238,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名1.yaml    
     override:
       additional-prefix: '[✈️节点前缀1]'
       skip-cert-verify: true
@@ -2240,6 +2251,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/浪潮机场专用2.yaml    
     override:
       additional-prefix: '[✈️浪2]'
       sni:
@@ -2255,6 +2267,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名3.yaml
     override:
       additional-prefix: '[✈️节点前缀3]'
       skip-cert-verify: true 
@@ -2268,6 +2281,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名4.yaml
     override:
       additional-prefix: '[✈️机场名4]'
       skip-cert-verify: true
@@ -2281,6 +2295,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名5.yaml
     override:
       additional-prefix: '[✈️节点前缀5]'
       skip-cert-verify: true
@@ -2293,6 +2308,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名6.yaml
     override:
       additional-prefix: '[✈️节点前缀6]'
       skip-cert-verify: true                   
@@ -2306,6 +2322,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名7.yaml
     override:
       additional-prefix: '[✈️节点前缀7]'
       skip-cert-verify: true                   
@@ -2317,6 +2334,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名8.yaml
     override:
       additional-prefix: '[✈️节点前缀8]'
       skip-cert-verify: true                   
@@ -2328,6 +2346,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名9.yaml
     override:
       additional-prefix: '[✈️节点前缀9]'
       skip-cert-verify: true                   
@@ -2339,6 +2358,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名10.yaml
     override:
       additional-prefix: '[✈️节点前缀10]'
       skip-cert-verify: true                   
@@ -2350,6 +2370,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名11.yaml
     override:
       additional-prefix: '[✈️节点前缀11]'
       skip-cert-verify: true                   
@@ -2361,6 +2382,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名12.yaml
     override:
       additional-prefix: '[✈️节点前缀12]'
       skip-cert-verify: true                   
@@ -2372,6 +2394,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名13.yaml
     override:
       additional-prefix: '[✈️节点前缀13]'
       skip-cert-verify: true                   
@@ -2383,6 +2406,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名14.yaml
     override:
       additional-prefix: '[✈️节点前缀14]'
       skip-cert-verify: true                   
@@ -2395,11 +2419,11 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
     <<: *PProviders
     proxy: "全球直连"
     url: "填写你的订阅链接"
+    path: ./proxies/3/机场名15.yaml
     override:
       additional-prefix: '[✈️节点前缀15]'
       skip-cert-verify: true                   
       udp: true            
-
 
 
 
@@ -2980,7 +3004,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     type: fallback         # 核心类型，实现故障自动切换
     interval: 300
     url: https://www.gstatic.com/generate_204
-    icon: "https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/漏网之鱼.gif"
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/漏网之鱼.gif"
     proxies:
       - 🕹️ 手动选择节点分组        # 未分配分流规则的访问目标，自动选择走，- 🕹️ 手动选择节点分组，中当前选择的节点
       - ⚠️ 谷歌GV专用节点分组     #  风险保障  上个节点失效时，自动切换备用代理节点1
@@ -2993,6 +3017,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
 
 # 分流规则（悠哉定义：根据流量的特征（如域名、IP、进程名），将流量路由到指定的代理分组，实现“按需代理”，核心遵循“自上而下匹配，命中即生效”原则）
+
 
 
 rules:
@@ -3071,12 +3096,12 @@ rules:
 
 
   # telegram 规则
-  - PROCESS-NAME,org.telegram.messenger.web,🐟 漏网之鱼     # 🕹️ 手动选择节点分组
+  - PROCESS-NAME,org.telegram.messenger.web,🕹️ 手动选择节点分组     # 🕹️ 手动选择节点分组
 
 
 # 微软
 
-  - PROCESS-NAME,com.microsoft.office.outlook,🐟 漏网之鱼     # Android端Outlook邮箱  
+  - PROCESS-NAME,com.microsoft.office.outlook,🕹️ 手动选择节点分组    # Android端Outlook邮箱  
   - DOMAIN,fuchenyouzai.dpdns.org,⚖️ 香港自动负载均衡散列节点分组
 
 
@@ -3085,7 +3110,7 @@ rules:
   - PROCESS-NAME,com.fongmi.android.tv,DIRECT   # TVBox进程
 
 
-  - GEOSITE,geolocation-!cn,🐟 漏网之鱼         # 仅当流量/请求的地理定位不属于中国时走🐟 漏网之鱼
+  - GEOSITE,geolocation-!cn,🇭🇰 香港自动节点分组         # 仅当流量/请求的地理定位不属于中国时走🐟 漏网之鱼
 
 
 
@@ -3095,21 +3120,29 @@ rules:
 
 
 
- 
 rule-providers:
 # 境内分流规则
-  ipv4ipv6PrivateAndLocal: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/ipv4ipv6PrivateAndLocal.yaml', interval: 86400, path: ./ruleset/ipv4ipv6PrivateAndLocal.yaml }
-  neiwangluyouqi: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/neiwangluyouqi.yaml', interval: 86400, path: ./ruleset/neiwangluyouqi.yaml }
-  jingneiDNSipDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingneiDNSipDIRECT.yaml', interval: 86400, path: ./ruleset/jingneiDNSipDIRECT.yaml }
-  guoneiIPbujiexiDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/guoneiIPbujiexiDIRECT.yaml', interval: 86400, path: ./ruleset/guoneiIPbujiexiDIRECT.yaml }
-  jingwaiDNSipHKG: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiDNSipHKG.yaml', interval: 86400, path: ./ruleset/jingwaiDNSipHKG.yaml }
-  jingneiDNSyumingDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingneiDNSyumingDIRECT.yaml', interval: 86400, path: ./ruleset/jingneiDNSyumingDIRECT.yaml }
-  jingwaiDNSyumingHKG: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiDNSyumingHKG.yaml', interval: 86400, path: ./ruleset/jingwaiDNSyumingHKG.yaml }
-  guoneiDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/guoneiDIRECT.yaml', interval: 86400, path: ./ruleset/guoneiDIRECT.yaml }
-  wangluojianceshoudong: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/wangluojianceshoudong.yaml', interval: 86400, path: ./ruleset/wangluojianceshoudong.yaml }
+  ipv4ipv6PrivateAndLocal: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/ipv4ipv6PrivateAndLocal.yaml', interval: 86400, path: ./ruleset/3/ipv4ipv6PrivateAndLocal.yaml }
+  neiwangluyouqi: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/neiwangluyouqi.yaml', interval: 86400, path: ./ruleset/3/neiwangluyouqi.yaml }
+  jingneiDNSipDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingneiDNSipDIRECT.yaml', interval: 86400, path: ./ruleset/3/jingneiDNSipDIRECT.yaml }
+  guoneiIPbujiexiDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/guoneiIPbujiexiDIRECT.yaml', interval: 86400, path: ./ruleset/3/guoneiIPbujiexiDIRECT.yaml }
+  jingwaiDNSipHKG: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiDNSipHKG.yaml', interval: 86400, path: ./ruleset/3/jingwaiDNSipHKG.yaml }
+  jingneiDNSyumingDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingneiDNSyumingDIRECT.yaml', interval: 86400, path: ./ruleset/3/jingneiDNSyumingDIRECT.yaml }
+  jingwaiDNSyumingHKG: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiDNSyumingHKG.yaml', interval: 86400, path: ./ruleset/3/ingwaiDNSyumingHKG.yaml }
+  guoneiDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/guoneiDIRECT.yaml', interval: 86400, path: ./ruleset/3/guoneiDIRECT.yaml }
+  wangluojianceshoudong: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/wangluojianceshoudong.yaml', interval: 86400, path: ./ruleset/3/wangluojianceshoudong.yaml }
 # 境外分流规则
-  YouTube: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/YouTube.yaml', interval: 86400, path: ./ruleset/YouTube.yaml }
-  Google: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/Google.yaml', interval: 86400, path: ./ruleset/Google.yaml }
-  jingwaiHK: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiHK.yaml', interval: 86400, path: ./ruleset/jingwaiHK.yaml }
-  tiktokzoutaiwan: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/tiktokzoutaiwan.yaml', interval: 86400, path: ./ruleset/tiktokzoutaiwan.yaml }
+  YouTube: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/YouTube.yaml', interval: 86400, path: ./ruleset/3/YouTube.yaml }
+  Google: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/Google.yaml', interval: 86400, path: ./ruleset/3/Google.yaml }
+  jingwaiHK: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiHK.yaml', interval: 86400, path: ./ruleset/3/jingwaiHK.yaml }
+  tiktokzoutaiwan: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/tiktokzoutaiwan.yaml', interval: 86400, path: ./ruleset/3/tiktokzoutaiwan.yaml }
+
+
+
+
+
+
+
+
+
 
