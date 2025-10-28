@@ -2210,7 +2210,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   🍎机场名3:
     <<: *PProviders  
     type: http   
-    url: "https://get.api-biubiu.sbs/biu/subscribe?token=be2db36ba059f47ee1e231a6fa27f275"         
+    url: "https://get.api-biubiu.sbs/biu/subscribe?token=be2db36ba059f47ee1e231a6fa27f275"
     override:
       additional-prefix: '[🍎节点前缀3]'   
       skip-cert-verify: true
