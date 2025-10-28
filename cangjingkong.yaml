@@ -2210,7 +2210,7 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   🍎机场名3:
     <<: *PProviders  
     type: http   
-    url: "填写你的订阅链接"         
+    url: "https://get.api-biubiu.sbs/biu/subscribe?token=be2db36ba059f47ee1e231a6fa27f275"         
     override:
       additional-prefix: '[🍎节点前缀3]'   
       skip-cert-verify: true
@@ -2537,7 +2537,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 50
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(嘿嘿|sea|sjc|美国|United States|US|🇺🇸|america|America|洛杉矶|圣何塞|纽约|unitedstates|united states)"
+    filter: "(?i)(嘿嘿|sea|sjc|美国|United States|US|🇺??|america|America|洛杉矶|圣何塞|纽约|unitedstates|united states)"
     # exclude-filter: "(?i)()"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/United_States.png"
 
@@ -2779,7 +2779,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 300
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(🇪🇬|埃及|Egypt|EG|🇲🇦|摩洛哥|Morocco|MA|🇹🇳|突尼斯|Tunisia|TN|🇩🇿|阿尔及利亚|Algeria|DZ|🇱🇾|利比亚|Libya|LY|🇸🇩|苏丹|Sudan|SD|🇪🇷|厄立特里亚|Eritrea|ER|🇩🇯|吉布提|Djibouti|DJ|🇸🇴|索马里|Somalia|SO|🇲🇷|毛里塔尼亚|Mauritania|MR|西撒哈拉|EH|🇨🇩|刚果金|CD|🇨🇬|刚果布|CG|🇨🇫|中非共和国|🇸🇸|南苏丹|South Sudan|SS|🇨🇫|乍得|Chad|TD|🇬🇦|加蓬|Gabon|GA|🇨🇲|喀麦隆|Cameroon|CM|🇧🇮|布隆迪|Burundi|BI|🇰🇪|肯尼亚|Kenya|KE|🇪🇹|埃塞俄比亚|Ethiopia|ET|🇹🇿|坦桑尼亚|Tanzania|TZ|🇺🇬|乌干达|Uganda|UG|🇷🇼|卢旺达|Rwanda|RW|🇧🇮|布隆迪|Burundi|BI|🇲🇼|马拉维|Malawi|MW|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇰🇲|科摩罗|Comoros|KM|🇲🇬|马达加斯加|Madagascar|MG|🇸🇨|塞舌尔|Seychelles|SC|留尼汪|Reunion|RE|🇳🇬|尼日利亚|Nigeria|NG|🇬🇭|加纳|Ghana|GH|🇨🇮|科特迪瓦|CI|🇬🇳|几内亚|Guinea|GN|🇸🇳|塞内加尔|Senegal|SN|🇧🇫|布基纳法索|Burkina Faso|BF|🇲🇱|马里|Mali|ML|🇳🇪|尼日尔|Niger|NE|🇨🇲|喀麦隆|Cameroon|CM|🇧🇯|贝宁|Benin|BJ|🇹🇬|多哥|Togo|TG|🇬🇳|几内亚比绍|GW|🇸🇹|圣多美和普林西比|ST|🇬🇲|冈比亚|Gambia|GM|🇨🇻|佛得角|Cape Verde|CV|🇿🇦|南非|South Africa|ZA|🇿🇼|津巴布韦|Zimbabwe|ZW|🇿🇲|赞比亚|Zambia|ZM|🇧🇼|博茨瓦纳|Botswana|BW|🇳🇦|纳米比亚|Namibia|NA|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇲🇼|马拉维|Malawi|MW)"
+    filter: "(?i)(🇪🇬|埃及|Egypt|EG|🇲🇦|摩洛哥|Morocco|MA|🇹🇳|突尼斯|Tunisia|TN|🇩🇿|阿尔及利亚|Algeria|DZ|🇱🇾|利比亚|Libya|LY|🇸🇩|苏丹|Sudan|SD|🇪🇷|厄立特里亚|Eritrea|ER|🇩🇯|吉布提|Djibouti|DJ|🇸🇴|索马里|Somalia|SO|🇲🇷|毛里塔尼亚|Mauritania|MR|西撒哈拉|EH|🇨🇩|刚果金|CD|🇨🇬|刚果布|CG|🇨🇫|中非共和国|🇸🇸|南苏丹|South Sudan|SS|🇨🇫|乍得|Chad|TD|🇬🇦|加蓬|Gabon|GA|🇨🇲|喀麦隆|Cameroon|CM|🇧🇮|布隆迪|Burundi|BI|??🇪|肯尼亚|Kenya|KE|🇪🇹|埃塞俄比亚|Ethiopia|ET|🇹🇿|坦桑尼亚|Tanzania|TZ|🇺🇬|乌干达|Uganda|UG|🇷🇼|卢旺达|Rwanda|RW|🇧🇮|布隆迪|Burundi|BI|🇲🇼|马拉维|Malawi|MW|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇰🇲|科摩罗|Comoros|KM|🇲🇬|马达加斯加|Madagascar|MG|🇸🇨|塞舌尔|Seychelles|SC|留尼汪|Reunion|RE|🇳🇬|尼日利亚|Nigeria|NG|🇬🇭|加纳|Ghana|GH|🇨🇮|科特迪瓦|CI|🇬🇳|几内亚|Guinea|GN|🇸🇳|塞内加尔|Senegal|SN|🇧🇫|布基纳法索|Burkina Faso|BF|🇲🇱|马里|Mali|ML|🇳🇪|尼日尔|Niger|NE|🇨🇲|喀麦隆|Cameroon|CM|🇧🇯|贝宁|Benin|BJ|🇹🇬|多哥|Togo|TG|🇬🇳|几内亚比绍|GW|🇸🇹|圣多美和普林西比|ST|🇬🇲|冈比亚|Gambia|GM|🇨🇻|佛得角|Cape Verde|CV|🇿🇦|南非|South Africa|ZA|🇿🇼|津巴布韦|Zimbabwe|ZW|🇿🇲|赞比亚|Zambia|ZM|🇧🇼|博茨瓦纳|Botswana|BW|🇳🇦|纳米比亚|Namibia|NA|🇲🇿|莫桑比克|Mozambique|MZ|🇸🇿|斯威士兰|Eswatini|SZ|🇱🇸|莱索托|Lesotho|LS|🇲🇼|马拉维|Malawi|MW)"
     exclude-filter: "(?i)(JP|Other|US|HK|🇦🇶|🇹🇼|🇭🇰|Hong Kong|one.dash|🇬🇧|TG账号|🇲🇾|马来西亚|🇻🇳|越南|新加坡|🇳🇱|🇺🇸|🇸🇬|singapore|SG|🇯🇵|🇰🇷|🇩🇪|workers|developers)"
 
 
