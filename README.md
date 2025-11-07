@@ -198,6 +198,12 @@ vless://你的uuid@104.26.1.182:443?path=%2Fpyip%3D38.244.198.107:443&security=t
 
 
 
+# 测试，ip和dns。只可以用edge浏览器测。⚠️
+
+## 手动选择分组中，选择一个节点。然后打开edge浏览器。测试。
+
+### https://whoer.net
+
 
 
 ## ip和dns位置测试 防止dns和ip位置不一样！
