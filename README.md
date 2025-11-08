@@ -1,3 +1,4 @@
+#  悠哉 电报 TG @fuchenyouzaibot
 # Cloudflare新建page部署cf节点
 
 ## 0获取 uuid  复制uuid备用
@@ -196,7 +197,8 @@ vless://你的uuid@104.26.1.182:443?path=%2Fpyip%3D38.244.198.107:443&security=t
 
 
 
-
+
+
 
 # 测试，ip和dns。只可以用edge浏览器测。⚠️
 
@@ -259,4 +261,5 @@ clash 示例
 
 
 ```
+
 
