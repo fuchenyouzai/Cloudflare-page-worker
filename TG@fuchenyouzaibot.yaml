@@ -639,6 +639,23 @@ proxies:
       Host: qianhouqianhoujiasudu1.dpdns.org
    
 
+- name: 🇭🇰 v4哈哈22
+  type: vless
+  server: 172.65.90.42
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.HK.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+   
+
+
 
 - name: 🇭🇰 v6哈哈1
   type: vless
@@ -788,7 +805,7 @@ proxies:
   network: ws
   servername: qianhouqianhoujiasudu1.dpdns.org
   ws-opts:
-    path: "/pyip=ProxyIP.US.CMLiussss.net"
+    path: "/pyip=sjc.o00o.ooo"
     headers:
       Host: qianhouqianhoujiasudu1.dpdns.org
 
@@ -1119,6 +1136,24 @@ proxies:
     path: "/pyip=ProxyIP.US.CMLiussss.net"
     headers:
       Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+- name: 🇺🇸 v4美国23
+  type: vless
+  server: 172.65.90.52
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.US.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
 
 
 
@@ -1629,6 +1664,23 @@ proxies:
       Host: qianhouqianhoujiasudu1.dpdns.org
 
 
+- name: 🇯🇵 v4嘻嘻21
+  type: vless
+  server: 172.65.90.14
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.JP.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
 
 - name: 🇹🇼 v4台湾0
   type: vless
@@ -1716,6 +1768,113 @@ proxies:
 
 
 
+
+- name: 🇹🇼 v4台湾5
+  type: vless
+  server: 122.117.174.80
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=tw.ttzxw.cf"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+- name: 🇹🇼 v4台湾6
+  type: vless
+  server: 172.65.90.42
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=tw.ttzxw.cf"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+- name: 🇹🇼 v4台湾7
+  type: vless
+  server: www.visa.com.tw
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=220.128.110.108:43"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+- name: 🇹🇼 v4台湾8
+  type: vless
+  server: www.visa.com.tw
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=61.220.128.226:43"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+- name: 🇹🇼 v4台湾9
+  type: vless
+  server: www.visa.com.tw
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=211.75.189.101:43"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+
+- name: 🇹🇼 v4台湾10
+  type: vless
+  server: www.visa.com.tw
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=tw.soso.edu.kg:43"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+
+
+
+
+
 - name: 🇸🇬 v4新加坡1
   type: vless
   server: www.visa.com.sg
@@ -1763,6 +1922,8 @@ proxies:
     path: "/pyip=ProxyIP.SG.CMLiussss.net"
     headers:
       Host: qianhouqianhoujiasudu1.dpdns.org
+
+
 
 
 - name: 🇸🇬 v4新加坡4
@@ -1954,6 +2115,208 @@ proxies:
       Host: qianhouqianhoujiasudu1.dpdns.org
 
 
+- name: 🇸🇬 v4新加坡10
+  type: vless
+  server: 172.65.90.29
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.SG.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+- name: 🇸🇬 v4新加坡11
+  type: vless
+  server: 104.18.40.158
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.SG.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+- name: 🇸🇬 v4新加坡12
+  type: vless
+  server: 104.18.47.211
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.SG.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+- name: 🇸🇬 v4新加坡13
+  type: vless
+  server: 173.245.58.229
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.SG.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+
+
+- name: 🇸🇬 SG电信网专用1
+  type: vless
+  server: 8.35.211.180
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.SG.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+- name: 🇸🇬 SG电信网专用2
+  type: vless
+  server: 8.35.211.180
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.SG.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+- name: 🇸🇬 SG电信网专用3
+  type: vless
+  server: 8.35.211.160
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.SG.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+- name: 🇸🇬 SG电信网专用4
+  type: vless
+  server: 8.35.211.66
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.SG.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+- name: 🇸🇬 SG电信网专用5
+  type: vless
+  server: 8.35.211.245
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.SG.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+- name: 🇸🇬 SG电信网专用6
+  type: vless
+  server: 8.35.211.183
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.SG.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+- name: 🇸🇬 SG电信网专用7
+  type: vless
+  server: 8.35.211.179
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.SG.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+
+- name: 🇸🇬 SG电信网专用8
+  type: vless
+  server: 8.35.211.69
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=ProxyIP.SG.CMLiussss.net"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
 
 
 - name: 🇰🇷 v4韩国1
@@ -2019,6 +2382,97 @@ proxies:
     path: "/pyip=ProxyIP.KR.CMLiussss.net"
     headers:
       Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+- name: 🇰🇷 v4韩国5
+  type: vless
+  server: 64.176.227.171
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=proxy.xxxxxxxx.tk:50001"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+
+- name: 🇰🇷 v4韩国6
+  type: vless
+  server: 64.176.227.171
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=tp50001.kr.proxyip.fgfw.eu.org:50001"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+- name: 🇰🇷 v4韩国7
+  type: vless
+  server: 64.176.227.171
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=tp50006.kr.proxyip.fgfw.eu.org:50006"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+- name: 🇷🇺 俄罗斯
+  type: vless
+  server: 188.225.34.155
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=188.225.34.155:443"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+
+- name: 🇵🇱 波兰
+  type: vless
+  server: 37.252.10.91
+  port: 443
+  uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+  tcp: true
+  udp: true
+  tls: true
+  network: ws
+  servername: qianhouqianhoujiasudu1.dpdns.org
+  ws-opts:
+    path: "/pyip=37.252.10.91:443"
+    headers:
+      Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
+
 
 
 - name: 🇬🇧 v4英国0
@@ -2867,8 +3321,6 @@ proxies:
 
 
 
-
-
 - name: 全球直连
   type: direct
   udp: true
@@ -3235,6 +3687,9 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Hong_Kong.png"
 
 
+
+
+
   - name: 🇭🇰 香港分流自动节点分组
     type: url-test
     interval: 300
@@ -3253,6 +3708,8 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
       - 🇭🇰 v4哈哈9
 
 
+
+
   - name: 🎮 PUBG🇭🇰节点自动切换分组
     type: fallback
     include-all: true
@@ -3269,9 +3726,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
   - name: 🇺🇸 美国自动节点分组
     type: url-test
-    include-all: true            # 通用全量包含。明确包含所有订阅和包含所有代理节点
-  # include-all-proxies: true明确包含所有代理节点
-  # include-all-providers: true明确包含所有订阅
+    include-all: true            # 通用全量包含。明确包含所有订阅和包含所有代理节点。。include-all-proxies: true明确包含所有代理节点。。。include-all-providers: true明确包含所有订阅
     exclude-type: direct
     interval: 300
     tolerance: 50
