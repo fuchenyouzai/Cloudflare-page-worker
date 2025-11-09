@@ -923,7 +923,7 @@ proxies:
 
 
 
-- name: 🇺🇸 v4洛杉矶10
+- name: 🇺🇸 v4嘿嘿10
   type: vless
   server: 162.159.44.23
   port: 443
@@ -3616,7 +3616,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
   - name: 🕹️ 手动选择节点分组
     type: select
     include-all: true            # 显示全部节点
-    interval: 300                 # lazy: true                    # 按需检测（悠哉定义：true表示仅当该分组有流量时才发起延迟测试，false表示启动客户端即全量测试，true更节省网络资源）
+    interval: 300                 # lazy: true 按需检测（悠哉定义：true表示仅当该分组有流量时才发起延迟测试，false表示启动客户端即全量测试，true更节省网络资源）
     url: https://www.gstatic.com/generate_204
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/icon-192.png"
     proxies:
@@ -3628,7 +3628,8 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
       - 🇭🇰 香港分流自动节点分组
       - 🇺🇸 美国自动节点分组
       - 🇺🇸 美国分流自动节点分组
-      - 🎮 PUBG🇭🇰节点自动切换分组
+      - 🎮 PUBG🇭🇰节点自动切换分组   
+      - 🎮 PUBG🇺🇸节点自动切换分组
       - 🇹🇼 台湾自动节点分组
       - 🇯🇵 日本自动节点分组
       - 🇰🇷 韩国自动节点分组
@@ -3644,7 +3645,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
       - 🇵🇱 波兰自动节点分组
       - 🇸🇪 瑞典自动节点分组
       - 🐼 东西南北中亚洲自动节点分组
-      - 🦅 东西南北中欧洲自动节点分组    
+      - 🦅 东西南北中欧洲自动节点分组      
       - 🐵 东西南北中非洲自动节点分组
       - 🦁 北中南美洲自动节点分组
       - 🐨 大洋洲自动节点分组
@@ -3655,7 +3656,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
       - ⚖️ 美国自动负载均衡轮询节点分组
       - 🌐 域名自动节点分组
       - 🌧️ Cloudflare自动节点分组
-      - 🌏 全球自动直连节点分组      
+      - 🐓 中国网络自动直连节点分组
       - DIRECT
 
 
@@ -3674,26 +3675,24 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
 
 
-  
+
+
   - name: 🇭🇰 香港自动节点分组
     type: url-test
     include-all: true
     exclude-type: direct
     interval: 300
-    tolerance: 80
+    tolerance: 600
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(哈哈|港|香港|hk|🇭🇰|hongkong|hong kong)"
     exclude-filter: "(?i)(www|visa|icook)"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Hong_Kong.png"
 
 
-
-
-
   - name: 🇭🇰 香港分流自动节点分组
     type: url-test
     interval: 300
-    tolerance: 80
+    tolerance: 600
     url: https://www.gstatic.com/generate_204
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Hong_Kong.png"
     proxies:
@@ -3706,7 +3705,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
       - 🇭🇰 v4哈哈7
       - 🇭🇰 v4哈哈8
       - 🇭🇰 v4哈哈9
-
+      - 🇭🇰 v4哈哈10 
 
 
 
@@ -3722,11 +3721,26 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Hong_Kong.png"
 
 
+  - name: 🎮 PUBG🇺🇸节点自动切换分组
+    type: fallback
+    include-all: true
+    exclude-type: direct
+    interval: 300
+    tolerance: 600
+    url: https://www.gstatic.com/generate_204
+    filter: "(?i)(嘿嘿|sea|sjc|美国|United States|US|🇺🇸|america|America|洛杉矶|西雅图|圣何塞|纽约|unitedstates|united states)"
+    # exclude-filter: "(?i)()"
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/United_States.png"
+
+
+
 
 
   - name: 🇺🇸 美国自动节点分组
     type: url-test
-    include-all: true            # 通用全量包含。明确包含所有订阅和包含所有代理节点。。include-all-proxies: true明确包含所有代理节点。。。include-all-providers: true明确包含所有订阅
+    include-all: true            # 通用全量包含。明确包含所有订阅和包含所有代理节点
+  # include-all-proxies: true明确包含所有代理节点
+  # include-all-providers: true明确包含所有订阅
     exclude-type: direct
     interval: 300
     tolerance: 50
@@ -3753,6 +3767,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
       - 🇺🇸 v4嘿嘿7
       - 🇺🇸 v4嘿嘿8
       - 🇺🇸 v4嘿嘿9
+      - 🇺🇸 v4嘿嘿10
 
 
 
@@ -3823,6 +3838,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(澳门|🇲🇴|Macao|MO)"
     exclude-filter: "(?i)(🇭🇰)"
+
 
 
 
@@ -3985,7 +4001,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     interval: 300
     tolerance: 180
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(美国|United States|US|🇺🇸|america|America|洛杉矶|西雅图|圣何塞|纽约|us|unitedstates|united states|US|🇨🇦|加拿大|Canada|CA|🇲🇽|墨西哥|Mexico|MX|🇺🇸|关岛|Guam|GU|🇺🇸|波多黎各|Puerto Rico|PR|🇨🇦|格陵兰|Greenland|GL|🇨🇺|古巴|Cuba|CU|🇩🇴|多米尼加共和国|Dominican Republic|DO|🇩🇲|多米尼克|Dominica|DM|🇻🇨|圣文森特和格林纳丁斯|VC|🇯🇲|牙买加|Jamaica|JM|🇧🇧|巴巴多斯|Barbados|BB|🇹🇹|特立尼达和多巴哥|TT|🇬🇩|格林纳达|Grenada|GD|🇻🇬|英属维尔京群岛|VG|🇬🇹|危地马拉|Guatemala|GT|🇨🇷|哥斯达黎加|Costa Rica|CR|🇵🇦|巴拿马|Panama|PA|🇭🇳|洪都拉斯|Honduras|HN|🇳🇮|尼加拉瓜|Nicaragua|NI|🇸🇻|萨尔瓦多|SV|🇧🇿|伯利兹|Belize|BZ|🇨🇱|智利|Chile|CL|🇧🇷|巴西|Brazil|BR|🇦🇷|阿根廷|Argentina|AR|🇨🇴|哥伦比亚|Colombia|CO|🇵🇪|秘鲁|Peru|PE|🇺🇾|乌拉圭|Uruguay|UY|🇪🇨|厄瓜多尔|Ecuador|EC|🇻🇪|委内瑞拉|Venezuela|VE|🇧🇴|玻利维亚|Bolivia|BO|🇵🇾|巴拉圭亚|Paraguay|PY|🇬🇾|圭亚那|Guyana|GY|🇸🇷|苏里南|Suriname|SR|🇫🇷|法属圭亚那|GF|🇨🇱|复活节岛|IC)"
+    filter: "(?i)(美国|United States|US|🇺🇸|america|America|洛杉矶|圣何塞|纽约|us|unitedstates|united states|US|🇨🇦|加拿大|Canada|CA|🇲🇽|墨西哥|Mexico|MX|🇺🇸|关岛|Guam|GU|🇺🇸|波多黎各|Puerto Rico|PR|🇨🇦|格陵兰|Greenland|GL|🇨🇺|古巴|Cuba|CU|🇩🇴|多米尼加共和国|Dominican Republic|DO|🇩🇲|多米尼克|Dominica|DM|🇻🇨|圣文森特和格林纳丁斯|VC|🇯🇲|牙买加|Jamaica|JM|🇧🇧|巴巴多斯|Barbados|BB|🇹🇹|特立尼达和多巴哥|TT|🇬🇩|格林纳达|Grenada|GD|🇻🇬|英属维尔京群岛|VG|🇬🇹|危地马拉|Guatemala|GT|🇨🇷|哥斯达黎加|Costa Rica|CR|🇵🇦|巴拿马|Panama|PA|🇭🇳|洪都拉斯|Honduras|HN|🇳🇮|尼加拉瓜|Nicaragua|NI|🇸🇻|萨尔瓦多|SV|🇧🇿|伯利兹|Belize|BZ|🇨🇱|智利|Chile|CL|🇧🇷|巴西|Brazil|BR|🇦🇷|阿根廷|Argentina|AR|🇨🇴|哥伦比亚|Colombia|CO|🇵🇪|秘鲁|Peru|PE|🇺🇾|乌拉圭|Uruguay|UY|🇪🇨|厄瓜多尔|Ecuador|EC|🇻🇪|委内瑞拉|Venezuela|VE|🇧🇴|玻利维亚|Bolivia|BO|🇵🇾|巴拉圭亚|Paraguay|PY|🇬🇾|圭亚那|Guyana|GY|🇸🇷|苏里南|Suriname|SR|🇫🇷|法属圭亚那|GF|🇨🇱|复活节岛|IC)"
     exclude-filter: "(?i)(🇹🇷|🇸🇬|🇹🇼|🇩🇪|法国|🇳🇱|🇰🇷|🇫🇷|HK|AU|shopify|Hong Kong|pages|japan|developers|icook|radar|悠哉|🇬🇧|fr|visa|hoog koog)"
 
 
@@ -4029,7 +4045,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
 
 
-  - name: Ⓜ️🍎📺🎵Ⓜ️
+  - name: Ⓜ️🍎📺🎵🐦💵⚙️▶️🤖🎯⛔🌈💰👛🏦📹✈️🌀🚀🎬💻
     type: url-test
     include-all: true
     exclude-type: direct
@@ -4070,7 +4086,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     strategy: consistent-hashing              # 分流策略（悠哉定义：一致性哈希策略，相同请求特征映射到同一个节点，保证会话稳定性）
     interval: 300
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(港|香港|HK|哈哈|🇭🇰)"   # 使用方法，多部署几个cf，然后 制作🇭🇰 香港自动节点分组，起名为哈哈1，这样排列。每个节点的uuid和域名不能重复，就是说一个🇭?? 香港自动节点分组只能用一套不同的uuid和域名。。。必须使用不同cf部署的节点。或是其他香港服务器部署的节点。或是使用目前默认的词汇。不过，在自定义添加前，去除目前里面写的关于香港的筛选所有词汇。只留哈哈。二字。
+    filter: "(?i)(港|香港|HK|哈哈|🇭🇰)"   # 使用方法，多部署几个cf，然后 制作🇭🇰 香港自动节点分组，起名为哈哈1，这样排列。每个节点的uuid和域名不能重复，就是说一个🇭🇰 香港自动节点分组只能用一套不同的uuid和域名。。。必须使用不同cf部署的节点。或是其他香港服务器部署的节点。或是使用目前默认的词汇。不过，在自定义添加前，去除目前里面写的关于香港的筛选所有词汇。只留哈哈。二字。
     exclude-filter: "(?i)(www|visa|icook)"
 
 
@@ -4102,7 +4118,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
 
 
-  - name: 🈲 广告自动拦截0    # 广告拦截分组（悠哉定义：所有匹配到该分组的流量直接被拒绝，不发起任何网络请求，适配屏蔽广告的场景）🔔悠哉备注📝telegram✈️悠哉TG账号@fuchenyouzaibot✈️——✈️ 分组名称（悠哉定义：标识“拦截广告”功能）
+  - name: 🈲 广告自动拦截⛔⛔⛔0    # 广告拦截分组（悠哉定义：所有匹配到该分组的流量直接被拒绝，不发起任何网络请求，适配屏蔽广告的场景）🔔悠哉备注📝telegram✈️悠哉TG账号@fuchenyouzaibot✈️——✈️ 分组名称（悠哉定义：标识“拦截广告”功能）
     type: select
     proxies:
       - REJECT             # 悠哉关键字：表示直接拒绝流量，不发送任何请求，实现拦截效果
@@ -4111,7 +4127,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
 
 
-  - name: 🈲 广告自动拦截1     # 广告拦截分组（悠哉定义：所有匹配到该分组的流量直接被拒绝，不发起任何网络请求，适配屏蔽广告的场景）🔔悠哉备注📝telegram✈️悠哉TG账号@fuchenyouzaibot✈️——✈️ 分组名称（悠哉定义：标识“拦截广告”功能）
+  - name: 🈲 广告自动拦截⛔⛔⛔1     # 广告拦截分组（悠哉定义：所有匹配到该分组的流量直接被拒绝，不发起任何网络请求，适配屏蔽广告的场景）🔔悠哉备注📝telegram✈️悠哉TG账号@fuchenyouzaibot✈️——✈️ 分组名称（悠哉定义：标识“拦截广告”功能）
     type: fallback
     proxies:
       - REJECT             # 悠哉关键字：表示直接拒绝流量，不发送任何请求，实现拦截效果
@@ -4125,7 +4141,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
 
 
-  - name: 🈲 广告自动拦截2
+  - name: 🈲 广告自动拦截⛔⛔⛔2
     type: fallback
     interval: 300               # 节点定期检测间隔（5分钟，无需调整）-  interval: 3600 （1小时检测）：这是节点定期健康检测间隔，作用是每1小时自动检查“全球直连”“美国自动节点分组”等节点是否可用，提前标记失效节点，避免后续使用时才发现节点不可用。它不影响“60秒切换”的核心逻辑，仅用于提前维护节点状态。
     timeout: 60000          # 核心参数：60秒超时（单位：毫秒），-  timeout: 60000 （60秒切换）：这是单次请求超时切换触发条件，悠哉逻辑核心——当“REJECT”拦截广告时，若60秒内请求无响应（符合广告正常等待时长），会立即自动切换到下一个节点（全球直连），和 5分钟的定期检测无关。
@@ -4140,7 +4156,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
       - DIRECT
 
 
-  - name: 🈲 广告自动拦截3
+  - name: 🈲 广告自动拦截⛔⛔⛔3
     type: fallback
     interval: 300       # 5分钟定期检测节点状态
     timeout: 60000      # 核心60秒超时后触发切换（单位：毫秒）
@@ -4156,24 +4172,24 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
 
 
-  - name: 🚫 全球自动拦截                 # 全局拦截分组（悠哉定义：用于屏蔽全局范围内的恶意/违规流量，所有匹配到的流量直接被拒绝）🔔悠哉备注📝telegram✈️悠哉TG账号@fuchenyouzaibot✈️——✈️ 分组名称（悠哉定义：标识“全局屏蔽”功能）
+  - name: 🚫 全球自动拦截⛔⛔⛔             # 全局拦截分组（悠哉定义：用于屏蔽全局范围内的恶意/违规流量，所有匹配到的流量直接被拒绝）🔔悠哉备注📝telegram✈️悠哉TG账号@fuchenyouzaibot✈️——✈️ 分组名称（悠哉定义：标识“全局屏蔽”功能）
     type: select
     proxies:
       - REJECT                          # 悠哉关键字：拒绝流量，实现全局屏蔽
 
 
 
-  - name: ❤️ 应用自动净化                    # 应用净化分组（悠哉定义：用于屏蔽特定应用的广告/垃圾流量，适配定向净化应用的场景）分组名称（悠哉定义：标识“定向净化应用”功能）
+  - name: ❤️ 应用自动净化 ❤️                 # 应用净化分组（悠哉定义：用于屏蔽特定应用的广告/垃圾流量，适配定向净化应用的场景）分组名称（悠哉定义：标识“定向净化应用”功能）
     type: select
     proxies:
       - REJECT                             # 关键字：拒绝应用的广告/垃圾流量    
 
 
 
-  - name: 🌏 全球自动直连节点分组
+  - name: 🐓 中国网络自动直连节点分组
     type: url-test
     interval: 300
-    tolerance:  5
+    tolerance:  3
     url: https://www.gstatic.com/generate_204
     proxies:     
       - 全球直连
@@ -4201,26 +4217,426 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
 
 
 
-# 分流规则（悠哉定义：根据流量的特征（如域名、IP、进程名），将流量路由到指定的代理分组，实现“按需代理”，核心遵循“自上而下匹配，命中即生效”原则）
-
-
 rules:
+  - PROCESS-NAME,com.tencent.ig,🎮 PUBG🇭🇰节点自动切换分组
+
   - DOMAIN-SUFFIX,ip.cn,🕹️ 手动选择节点分组
+  - DOMAIN-SUFFIX,whoer.net,🕹️ 手动选择节点分组
+  - DOMAIN-SUFFIX,whoer.com,🕹️ 手动选择节点分组
+  - DOMAIN-SUFFIX,ipcheck.ing,🕹️ 手动选择节点分组
+  - DOMAIN-SUFFIX,dns.whoer.cc,🕹️ 手动选择节点分组
+  - DOMAIN-KEYWORD,whoer.net,🕹️ 手动选择节点分组
+  - DOMAIN-KEYWORD,whoer.com,🕹️ 手动选择节点分组
+  - DOMAIN-KEYWORD,ipcheck.ing,🕹️ 手动选择节点分组
 
-  - PROCESS-NAME,com.tencent.ig,🎮 PUBG🇭🇰节点自动切换分组      # pubg 绝地求生 规则
+  - IP-CIDR,0.0.0.0/8,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR,10.0.0.0/8,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR,100.64.0.0/10,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR,127.0.0.0/8,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR,172.16.0.0/12,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR,192.168.0.0/16,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR,198.18.0.0/16,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR,224.0.0.0/4,🐓 中国网络自动直连节点分组,no-resolve
+
+  - IP-CIDR6,::1/128,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR6,fc00::/7,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR6,fd00::/8,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR6,fe80::/10,🐓 中国网络自动直连节点分组,no-resolve
+
+  - DOMAIN-SUFFIX,acl4.ss,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,ip6-localhos,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,ip6-loopbac,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,lan,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,loca,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,localhos,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,home.arpa,🐓 中国网络自动直连节点分组
+
+  - PROCESS-NAME,com.huawei.smarthom,🐓 中国网络自动直连节点分组
+  - PROCESS-NAME,com.cmri.universalap,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,hiwifi.co,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,leike.cc,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,miwifi.com,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,my.route,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,p.to,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,peiluyou.com,🐓 中国网络自动直连节点分组  
+  - DOMAIN-SUFFIX,phicomm.me,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,router.ctc,🐓 中国网络自动直连节点分组  
+  - DOMAIN-SUFFIX,routerlogin.com,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,tendawifi.com,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,zte.hom,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,tplogin.cn,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,wifi.cmcc,🐓 中国网络自动直连节点分组
+
+  - IP-CIDR,223.5.5.5/32,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR,119.29.29.29/32,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR,180.76.76.76/32,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR,114.114.114.114/32,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR,211.140.197.58/32,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR,211.137.32.178/32,🐓 中国网络自动直连节点分组,no-resolve
+
+  - IP-CIDR6,2400:3200::1/128,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR6,2400:3200:baba::1/128,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR6,2400:da00::6666/128,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR6,2409:8014:2000::1/128,🐓 中国网络自动直连节点分组,no-resolve
+  - IP-CIDR6,2409:8014:2000::2/128,🐓 中国网络自动直连节点分组,no-resolve
+
+  - IP-CIDR,1.1.1.1/32,🇭🇰 香港分流自动节点分组,no-resolve
+  - IP-CIDR,1.0.0.1/32,🇭🇰 香港分流自动节点分组,no-resolve
+  - IP-CIDR,8.8.8.8/32,🇭🇰 香港分流自动节点分组,no-resolve
+  - IP-CIDR,8.8.4.4/32,🇭🇰 香港分流自动节点分组,no-resolve
+  - IP-CIDR6,2001:4860:4860::8888/128,🇭🇰 香港分流自动节点分组,no-resolve
+  - IP-CIDR6,2001:4860:4860::8844/128,🇭🇰 香港分流自动节点分组,no-resolve
+  - IP-CIDR6,2606:4700:4700::1111/128,🇭🇰 香港分流自动节点分组,no-resolve
+  - IP-CIDR6,2606:4700:4700::1001/128,🇭🇰 香港分流自动节点分组,no-resolve
+
+  - DOMAIN,dns.alidns.com/dns-query,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,dns.alidns.com,🐓 中国网络自动直连节点分组
+  - DOMAIN,doh.pub/dns-query,🐓 中国网络自动直连节点分组
+  - DOMAIN,doh.baidu.com/dns-query,🐓 中国网络自动直连节点分组
+  - DOMAIN,223.5.5.5/dns-query,🐓 中国网络自动直连节点分组
+  - DOMAIN,[2400:3200::1]/dns-query,🐓 中国网络自动直连节点分组
+  - DOMAIN,[2400:3200:baba::1]/dns-query,🐓 中国网络自动直连节点分组
+  - DOMAIN,[2409:8014:2000::1]/dns-query,🐓 中国网络自动直连节点分组
+  - DOMAIN,[2409:8014:2000::2]/dns-query,🐓 中国网络自动直连节点分组
+  - DOMAIN,[2400:da00::6666]/dns-query ,🐓 中国网络自动直连节点分组
+
+  - DOMAIN,dns.cloudflare.com/dns-query,🇭🇰 香港分流自动节点分组
+  - DOMAIN,dns.google/dns-query,🇭🇰 香港分流自动节点分组
+  - DOMAIN,8.8.8.8/dns-query,🇭🇰 香港分流自动节点分组
+  - DOMAIN,1.1.1.1/dns-query,🇭🇰 香港分流自动节点分组
+  - DOMAIN,8.8.4.4/dns-query,🇭🇰 香港分流自动节点分组
   
-  - RULE-SET,wangluojianceshoudong,🕹️ 手动选择节点分组      # 网络测试ip和dns
+ 
 
-  - RULE-SET,ipv4ipv6PrivateAndLocal,DIRECT,no-resolve      # ipv4ipv6私有/特殊IP段
-  - RULE-SET,neiwangluyouqi,DIRECT                                        # 内网和路由器
-  - RULE-SET,jingneiDNSipDIRECT,DIRECT,no-resolve
-  - RULE-SET,jingwaiDNSipHKG,🇭🇰 香港分流自动节点分组,no-resolve
-  - RULE-SET,jingneiDNSyumingDIRECT,DIRECT
-  - RULE-SET,jingwaiDNSyumingHKG,🇭🇰 香港分流自动节点分组
-  - RULE-SET,guoneiIPbujiexiDIRECT,DIRECT,no-resolve         # 国内软件和手机系统和国内直连ip 不解析
-  - RULE-SET,guoneiDIRECT,DIRECT                        # 国内软件和手机系统和国内直连
+  # 1. vivo核心IP段
+  - IP-CIDR,113.108.0.0/16,🐓 中国网络自动直连节点分组,no-resolve           # vivo华南节点（广东机房）
+  - IP-CIDR,183.232.0.0/16,🐓 中国网络自动直连节点分组,no-resolve          # vivo华东节点（上海机房）
+  - IP-CIDR,220.173.0.0/16,🐓 中国网络自动直连节点分组,no-resolve             # vivo华中节点（湖南机房）
+  - IP-CIDR,58.20.0.0/16,🐓 中国网络自动直连节点分组,no-resolve                # vivo合作机房（云存储节点）
+  - IP-CIDR,183.230.0.0/16,🐓 中国网络自动直连节点分组,no-resolve              # vivo备用节点（数据同步备份）
+  - IP-CIDR,113.108.247.0/24,🐓 中国网络自动直连节点分组,no-resolve          # vivo PC端云服务节点（上海机房）
 
+  # 2. iQOO专属IP段
+  - IP-CIDR,120.232.0.0/16,🐓 中国网络自动直连节点分组,no-resolve             # iQOO游戏服务器节点（广东机房，游戏更新/对战低延迟）
+  - IP-CIDR,183.239.0.0/16,🐓 中国网络自动直连节点分组,no-resolve            # iQOO云服务备用节点（浙江机房，云同步备份）
+  - IP-CIDR,113.106.0.0/16,🐓 中国网络自动直连节点分组,no-resolve           # iQOO系统更新节点（广东机房，OriginOS升级包下载）
+  - IP-CIDR,183.57.0.0/16,🐓 中国网络自动直连节点分组,no-resolve           # iQOO游戏中心资源节点（湖南机房，游戏礼包/插件加载）
+  - IP-CIDR,27.17.0.0/16,🐓 中国网络自动直连节点分组,no-resolve              # iQOO账号安全节点（江苏机房，账号登录验证/风控）
+  - IP-CIDR,123.151.0.0/16,🐓 中国网络自动直连节点分组,no-resolve             # iQOO社区与客服节点（北京机房，社区发帖/在线客服）
   
+  # 豆包服务器IP段
+  - IP-CIDR,101.226.0.0/16,🐓 中国网络自动直连节点分组,no-resolve                            # 豆包常用服务器IP段1（百度/字节系）
+  - IP-CIDR,123.125.0.0/16,🐓 中国网络自动直连节点分组,no-resolve                              # 豆包常用服务器IP段2（百度系）
+  - IP-CIDR,180.101.0.0/16,🐓 中国网络自动直连节点分组,no-resolve                               # 豆包备用服务器IP段（覆盖更多节点）
+  - IP-CIDR,220.181.0.0/16,🐓 中国网络自动直连节点分组,no-resolve                                   # 豆包备用服务器IP段（北方节点）
+
+
+# 境内服务器IP段直接匹配出境易境内服务器IP，避免域名解析异常导致功能失效
+  - IP-CIDR,103.235.76.0/22,🐓 中国网络自动直连节点分组,no-resolve                           # 出境易上海境内服务器IP段（负责华东地区用户请求）
+  - IP-CIDR,120.241.16.0/20,🐓 中国网络自动直连节点分组,no-resolve                            # 出境易北京境内服务器IP段（主数据中心，存储用户核心信息）
+  - IP-CIDR,183.131.72.0/21,🐓 中国网络自动直连节点分组,no-resolve                             # 出境易杭州境内服务器IP段（备用数据中心，分担流量压力）
+
+
+
+
+# 1. 云服务与账号类（数据同步、登录验证）
+  - DOMAIN-SUFFIX,vivo.com,🐓 中国网络自动直连节点分组                                   # vivo主域名（云服务入口、账号验证）
+  - DOMAIN-SUFFIX,vivo.com.cn,🐓 中国网络自动直连节点分组                                 # vivo国内主域名（云同步核心接口）
+  - DOMAIN-SUFFIX,vivocloud.com,🐓 中国网络自动直连节点分组                                  # vivo云服务专属域名（数据同步、存储）
+  - DOMAIN-SUFFIX,vivoidc.com,🐓 中国网络自动直连节点分组                                     # vivo IDC数据中心（云服务服务器节点）
+  - DOMAIN-SUFFIX,vivocloudapi.com,🐓 中国网络自动直连节点分组                               # vivo云服务API域名（同步指令、状态查询）
+  - DOMAIN-SUFFIX,findphone.vivo.com,🐓 中国网络自动直连节点分组                           # vivo/iQOO查找手机专属域名
+  - DOMAIN-SUFFIX,iqoo.com,🐓 中国网络自动直连节点分组                                      # iQOO主域名（账号、社区、服务）
+  - DOMAIN-SUFFIX,iqoo.com.cn,🐓 中国网络自动直连节点分组                                   # iQOO国内主域名（云服务、系统接
+
+
+
+# 2. CDN与资源类（静态资源、大文件加速）
+  - DOMAIN-SUFFIX,vivocdn.com,🐓 中国网络自动直连节点分组                                     # vivo官方CDN（图标、样式、安装包）
+  - DOMAIN-SUFFIX,vivocdn.cn,🐓 中国网络自动直连节点分组                                      # vivo国内CDN（大文件同步加速）
+  - DOMAIN-SUFFIX,alivovo.com,🐓 中国网络自动直连节点分组                                     # vivo与阿里合作CDN（云资源分发）
+  - DOMAIN-SUFFIX,iqoocdn.com,🐓 中国网络自动直连节点分组                                     # iQOO专属CDN（游戏资源、系统更新）
+# 3. 系统功能类（应用商店、音乐、互传等）
+  - DOMAIN-SUFFIX,vivomarket.com,🐓 中国网络自动直连节点分组                                  # vivo/iQOO应用商店域名
+  - DOMAIN-SUFFIX,vivoame.com,🐓 中国网络自动直连节点分组                                     # vivo/iQOO音乐服务域名（i音乐）
+  - DOMAIN-SUFFIX,vivofiletransfer.com,🐓 中国网络自动直连节点分组                            # vivo/iQOO互传功能域名
+  - DOMAIN-SUFFIX,iqoogame.com,🐓 中国网络自动直连节点分组                                    # iQOO游戏中心专属域名（游戏更新、福利）
+  - DOMAIN-SUFFIX,pc.vivocloud.com,🐓 中国网络自动直连节点分组                                # PC端vivo云服务专属域名（登录、文件传输）
+  - DOMAIN-SUFFIX,suite.vivo.com,🐓 中国网络自动直连节点分组                                  # vivo手机助手PC端域名（驱动、数据管理）
+  - DOMAIN-SUFFIX,suite.iqoo.com,🐓 中国网络自动直连节点分组                                  # iQOO手机助手PC端域名（驱动、数据管理）
+# 4. 兜底匹配类（避免域名遗漏）
+  - DOMAIN-KEYWORD,vivoCloud,🐓 中国网络自动直连节点分组                                      # 兜底匹配vivo云服务相关请求
+  - DOMAIN-KEYWORD,iQOOCloud,🐓 中国网络自动直连节点分组                                      # 兜底匹配iQOO云服务相关请求
+  - DOMAIN-KEYWORD,云服务,🐓 中国网络自动直连节点分组                                         # 中文关键词兜底（覆盖云服务相关链接）
+  - DOMAIN-KEYWORD,vivo,🐓 中国网络自动直连节点分组                                           # 兜底匹配vivo全品类相关域名
+  - DOMAIN-KEYWORD,iqoo,🐓 中国网络自动直连节点分组                                           # 兜底匹配iQOO全品类相关域名
+
+
+# 1. 手机端 - vivo专属进程
+  - PROCESS-NAME,com.vivo.vivocloud,🐓 中国网络自动直连节点分组                               # vivo云服务核心APP进程
+  - PROCESS-NAME,com.vivo.account,🐓 中国网络自动直连节点分组                                 # vivo账号进程（云服务登录依赖）
+  - PROCESS-NAME,com.vivo.findphone,🐓 中国网络自动直连节点分组                               # vivo查找手机进程
+  - PROCESS-NAME,com.vivo.backup,🐓 中国网络自动直连节点分组                                  # vivo云备份进程
+  - PROCESS-NAME,com.bbk.cloud,🐓 中国网络自动直连节点分组                                    # vivo云服务历史进程（老机型）
+  - PROCESS-NAME,com.vivo.cloud,🐓 中国网络自动直连节点分组                                   # vivo云服务后台进程（新机型）
+  - PROCESS-NAME,com.vivo.cloudservice,🐓 中国网络自动直连节点分组                            # vivo云服务后台同步进程
+  - PROCESS-NAME,com.vivo.disk,🐓 中国网络自动直连节点分组                                    # vivo云盘进程
+  - PROCESS-NAME,com.vivo.cloud.disk,🐓 中国网络自动直连节点分组                              # vivo云盘后台进程
+  - PROCESS-NAME,com.bbk.appstore,🐓 中国网络自动直连节点分组                                 # vivo应用商店进程
+  - PROCESS-NAME,com.android.bbkmusic,🐓 中国网络自动直连节点分组                             # vivo i音乐进程
+  - PROCESS-NAME,com.vivo.easyshare,🐓 中国网络自动直连节点分组                               # vivo互传进程
+  - PROCESS-NAME,com.vivo.pushservice,🐓 中国网络自动直连节点分组                             # vivo推送引擎（系统通知）
+  - PROCESS-NAME,com.vivo.wallet,🐓 中国网络自动直连节点分组                                  # vivo钱包进程（支付、门禁卡）
+  - PROCESS-NAME,com.vivo.game,🐓 中国网络自动直连节点分组                                    # vivo游戏中心进程
+  - PROCESS-NAME,com.vivo.agent,🐓 中国网络自动直连节点分组                                   # vivo Jovi语音进程
+  - PROCESS-NAME,com.vivo.assistant,🐓 中国网络自动直连节点分组                               # vivo智能助手进程
+  - PROCESS-NAME,com.vivo.gallery,🐓 中国网络自动直连节点分组                                 # vivo相册进程（云相册同步）
+  - PROCESS-NAME,com.android.filemanager,🐓 中国网络自动直连节点分组                           # vivo文件管理进程（云盘访问）
+  - PROCESS-NAME,com.bbk.updater,🐓 中国网络自动直连节点分组                                  # vivo系统升级进程（OTA更新）
+  - PROCESS-NAME,com.vivo.email,🐓 中国网络自动直连节点分组                                   # vivo电子邮件进程（账号同步）
+  - PROCESS-NAME,com.vivo.calendar,🐓 中国网络自动直连节点分组                                # vivo日历进程（日程同步）
+  - PROCESS-NAME,com.vivo.notes,🐓 中国网络自动直连节点分组                                   # vivo便签进程（便签同步）
+  - PROCESS-NAME,com.bbk.account,🐓 中国网络自动直连节点分组                                  # vivo账号历史进程（老机型）
+  - PROCESS-NAME,com.bbk.launcher2,🐓 中国网络自动直连节点分组                                # vivo桌面进程
+  - PROCESS-NAME,com.vivo.browser,🐓 中国网络自动直连节点分组                                 # vivo浏览器进程
+  - PROCESS-NAME,com.vivo.space,🐓 中国网络自动直连节点分组                                   # vivo官网进程
+  - PROCESS-NAME,com.vivo.hybrid,🐓 中国网络自动直连节点分组                                  # vivo快应用进程
+  - PROCESS-NAME,com.vivo.abe,🐓 中国网络自动直连节点分组                                     # vivo智慧引擎进程
+  - PROCESS-NAME,com.vivo.hiboard,🐓 中国网络自动直连节点分组                                 # vivo智慧桌面进程
+  - PROCESS-NAME,com.vivo.appfilter,🐓 中国网络自动直连节点分组                               # vivo管家服务插件
+  - PROCESS-NAME,com.vivo.numbermark,🐓 中国网络自动直连节点分组                              # vivo陌生来电识别
+  - PROCESS-NAME,com.vivo.faceunlock,🐓 中国网络自动直连节点分组                              # vivo面部识别进程
+  - PROCESS-NAME,com.vivo.aitranslate,🐓 中国网络自动直连节点分组                             # vivo语音翻译进程
+  - PROCESS-NAME,com.vivo.weather,🐓 中国网络自动直连节点分组                                 # vivo天气进程
+  - PROCESS-NAME,com.vivo.weather.provider,🐓 中国网络自动直连节点分组                           # vivo天气存储进程
+  - PROCESS-NAME,com.vivo.sim.contacts,🐓 中国网络自动直连节点分组                             # vivo SIM卡联系人服务
+  - PROCESS-NAME,com.android.bbksoundrecorder,🐓 中国网络自动直连节点分组                           # vivo录音机进程
+  - PROCESS-NAME,com.vivo.scanner,🐓 中国网络自动直连节点分组                                 # vivo扫一扫进程
+  - PROCESS-NAME,com.vivo.videoeditor,🐓 中国网络自动直连节点分组                             # vivo照片电影进程
+  - PROCESS-NAME,com.vivo.upnpserver,🐓 中国网络自动直连节点分组                              # vivo智慧投屏进程
+  - PROCESS-NAME,com.vivo.magazine,🐓 中国网络自动直连节点分组                                # vivo阅图锁屏服务
+  - PROCESS-NAME,com.vivo.video.floating,🐓 中国网络自动直连节点分组                           # vivo视频通话美颜
+  - PROCESS-NAME,com.vivo.safecente,🐓 中国网络自动直连节点分组                               # vivo安全中心进程
+  - PROCESS-NAME,com.vivo.doubleinstance,🐓 中国网络自动直连节点分组                           # vivo应用分身进程
+  - PROCESS-NAME,com.vivo.vivokaraoke,🐓 中国网络自动直连节点分组                             # vivo移动KTV进程
+  - PROCESS-NAME,com.vivo.favorite,🐓 中国网络自动直连节点分组                                # vivo收藏进程
+  - PROCESS-NAME,com.android.bbklog,🐓 中国网络自动直连节点分组                               # vivo Log信息采集进程
+  - PROCESS-NAME,com.yozo.vivo.officevivo,🐓 中国网络自动直连节点分组                           # vivo文档阅读器进程
+  - PROCESS-NAME,com.vivo.globalsearch,🐓 中国网络自动直连节点分组                            # vivo全局搜索进程
+  - PROCESS-NAME,com.vlife.vivo.wallpaper,🐓 中国网络自动直连节点分组                           # vivo动态锁屏服务
+  - PROCESS-NAME,com.sohu.inputmethod.sogou.vivo,🐓 中国网络自动直连节点分组                           # vivo搜狗输入法定制版
+  - PROCESS-NAME,com.vivo.widget.calendar,🐓 中国网络自动直连节点分组                           # vivo日历挂件进程
+  - PROCESS-NAME,com.vivo.smartshot,🐓 中国网络自动直连节点分组                               # vivo超级截屏进程
+  - PROCESS-NAME,com.vivo.aiengine,🐓 中国网络自动直连节点分组                                # vivo AI服务引擎进程
+  - PROCESS-NAME,com.vivo.contentcatcher,🐓 中国网络自动直连节点分组                           # vivo全局内容识别进程
+  - PROCESS-NAME,com.yuchuang.xycapkshare,🐓 中国网络自动直连节点分组                           # vivo APK提取与分享进程
+  - PROCESS-NAME,com.vivo.sdkplugin,🐓 中国网络自动直连节点分组                               # vivo服务安全插件进程
+  - PROCESS-NAME,com.vivo.vtouch,🐓 中国网络自动直连节点分组                                  # vivo智慧视觉进程
+  - PROCESS-NAME,com.mobile.iroaming,🐓 中国网络自动直连节点分组                              # vivo流量商店进程
+  - PROCESS-NAME,com.vivo.gamewatch,🐓 中国网络自动直连节点分组                               # vivo游戏监控进程
+  - PROCESS-NAME,com.vivo.daemonService,🐓 中国网络自动直连节点分组                           # vivo后台服务进程
+  - PROCESS-NAME,com.vivo.vms,🐓 中国网络自动直连节点分组                                     # vivo移动服务
+
+
+
+# 2. 手机端 - iQOO专属进程
+  - PROCESS-NAME,com.iqoo.vivocloud,🐓 中国网络自动直连节点分组                               # iQOO云服务核心进程（部分机型）
+  - PROCESS-NAME,com.iqoo.account,🐓 中国网络自动直连节点分组                                 # iQOO账号进程（独立账号机型）
+  - PROCESS-NAME,com.iqoo.findphone,🐓 中国网络自动直连节点分组                               # iQOO查找手机进程
+  - PROCESS-NAME,com.iqoo.secure,🐓 中国网络自动直连节点分组                                  # iQOO管家进程（系统安全）
+  - PROCESS-NAME,com.iqoo.game,🐓 中国网络自动直连节点分组                                    # iQOO游戏中心进程
+  - PROCESS-NAME,com.iqoo.gamewatch,🐓 中国网络自动直连节点分组                               # iQOO游戏监控进程（性能调节）
+  - PROCESS-NAME,com.iqoo.ui,🐓 中国网络自动直连节点分组                                      # iQOO桌面进程（OriginOS专属）
+  - PROCESS-NAME,com.iqoo.neo.game,🐓 中国网络自动直连节点分组                                # iQOO Neo系列游戏优化进程
+# 3. 手机端 - 通用系统进程（vivo/iQOO共需）
+  - PROCESS-NAME,org.codeaurora.bluetooth,🐓 中国网络自动直连节点分组                           # 蓝牙核心进程
+  - PROCESS-NAME,org.codeaurora.btmultisim,🐓 中国网络自动直连节点分组                           # 蓝牙多SIM卡适配进程
+  - PROCESS-NAME,org.codeaurora.ims,🐓 中国网络自动直连节点分组                                # VoLTE网络通信进程
+  - PROCESS-NAME,com.ibimuyu.lockscreen,🐓 中国网络自动直连节点分组                            # 通用锁屏服务进程
+  - PROCESS-NAME,com.sohu.inputmethod.sogou,🐓 中国网络自动直连节点分组                           # 搜狗输入法通用进程
+  - PROCESS-NAME,com.quark.browser,🐓 中国网络自动直连节点分组                                 # 夸克浏览器进程
+  - PROCESS-NAME,com.ucmobile.lite,🐓 中国网络自动直连节点分组                                 # UC浏览器进程
+  - PROCESS-NAME,com.unionpay,🐓 中国网络自动直连节点分组                                      # 云闪付进程
+  - PROCESS-NAME,com.unionpay.tsmservice,🐓 中国网络自动直连节点分组                           # 银联可信服务组件
+  - PROCESS-NAME,com.chinamobile.mcloud,🐓 中国网络自动直连节点分组                            # 中国移动云盘进程
+  - PROCESS-NAME,com.vkontakte.android,🐓 中国网络自动直连节点分组                             # VK社交软件进程
+  - PROCESS-NAME,com.liteapks.androidapps,🐓 中国网络自动直连节点分组                           # 破解商店进程
+  - PROCESS-NAME,com.azure.authenticator,🐓 中国网络自动直连节点分组                           # 二次验证进程
+# 4. 电脑端 - vivo/iQOO通用进程
+  - PROCESS-NAME,vivoCloud.exe,🐓 中国网络自动直连节点分组                                    # vivo云服务PC客户端主进程
+  - PROCESS-NAME,vivoCloudService.exe,🐓 中国网络自动直连节点分组                             # vivo云服务PC后台同步进程
+  - PROCESS-NAME,iQOOCloud.exe,🐓 中国网络自动直连节点分组                                    # iQOO云服务PC客户端主进程
+  - PROCESS-NAME,vivoSuite.exe,🐓 中国网络自动直连节点分组                                    # vivo手机助手PC端进程
+  - PROCESS-NAME,iQOOSuite.exe,🐓 中国网络自动直连节点分组                                    # iQOO手机助手PC端进程
+  - PROCESS-NAME,vivoDriverInstaller.exe,🐓 中国网络自动直连节点分组                           # vivo PC端驱动安装进程
+# 三星手机规则
+  - DOMAIN-SUFFIX,galaxy.store,🐓 中国网络自动直连节点分组                                                 # 商店
+  - DOMAIN-SUFFIX,samsung.com,🐓 中国网络自动直连节点分组                                                 # 官网
+
+
+
+ # 华为手机分流规则                         
+  - DOMAIN-SUFFIX,appgallery.huawei.com,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,huaweicloud.com,🐓 中国网络自动直连节点分组
+  - PROCESS-NAME,cn.cj.pe,🐓 中国网络自动直连节点分组 # 139邮箱
+  - PROCESS-NAME,com.baidu.BaiduMap,🐓 中国网络自动直连节点分组 # 百度
+  - PROCESS-NAME,com.huawei.hiskytone,🐓 中国网络自动直连节点分组 # 天际通
+  - PROCESS-NAME,com.mt.mtxx.mtxx,🐓 中国网络自动直连节点分组 # 美图秀秀
+  - PROCESS-NAME,com.sohu.inputmethod.sogou,🐓 中国网络自动直连节点分组 # 搜狗输入法
+  - PROCESS-NAME,com.smile.gifmaker,🐓 中国网络自动直连节点分组 # 快手
+  - PROCESS-NAME,cn.android.sia.exitentrypermit,🐓 中国网络自动直连节点分组 # 移民局app
+  - PROCESS-NAME,cn.cyberIdentity.certification,🐓 中国网络自动直连节点分组 # 国家网络身份认证
+  - PROCESS-NAME,cn.wps.moffice_eng,🐓 中国网络自动直连节点分组 # wps办公
+  - PROCESS-NAME,com.MobileTicket,🐓 中国网络自动直连节点分组 # 铁路12306
+  - PROCESS-NAME,com.cmcc.cmvideo,🐓 中国网络自动直连节点分组 # 咪咕视频
+  - PROCESS-NAME,com.dlmetro.app,🐓 中国网络自动直连节点分组 # 公交卡
+  - PROCESS-NAME,com.cmcc.hebao,🐓 中国网络自动直连节点分组 # 移动和包
+  - PROCESS-NAME,com.greenpoint.android.mc10086.activity,🐓 中国网络自动直连节点分组 # 中国移动app
+  - PROCESS-NAME,com.haier.uhome.uplus,🐓 中国网络自动直连节点分组 # 海尔智家
+  - PROCESS-NAME,com.jingdong.app.mall,🐓 中国网络自动直连节点分组 # 京东
+  - PROCESS-NAME,com.mzk.android,🐓 中国网络自动直连节点分组 # 公交通行
+  - PROCESS-NAME,com.ss.android.ugc.aweme,🐓 中国网络自动直连节点分组 # 抖音
+  - PROCESS-NAME,com.sdu.didi.psnger,🐓 中国网络自动直连节点分组 # 滴滴出行
+  - PROCESS-NAME,com.tmri.app.main,🐓 中国网络自动直连节点分组 # 交管12123
+  - PROCESS-NAME,com.umetrip.android.msky.app,🐓 中国网络自动直连节点分组 # 航旅纵横
+  - PROCESS-NAME,com.ygkj.chelaile.standard,🐓 中国网络自动直连节点分组 # 车来了
+  - PROCESS-NAME,com.android.browser,🐓 中国网络自动直连节点分组 # 华浏览器
+  - PROCESS-NAME,com.android.calendar,🐓 中国网络自动直连节点分组 # 华日历
+  - PROCESS-NAME,com.android.contacts,🐓 中国网络自动直连节点分组 # 华联系人
+  - PROCESS-NAME,com.android.contacts,🐓 中国网络自动直连节点分组 # 华电话
+  - PROCESS-NAME,com.android.deskclock,🐓 中国网络自动直连节点分组 # 华时钟
+  - PROCESS-NAME,com.android.gallery3d,🐓 中国网络自动直连节点分组 # 华图库
+  - PROCESS-NAME,com.android.mediacenter,🐓 中国网络自动直连节点分组 # 华音乐
+  - PROCESS-NAME,com.android.mms,🐓 中国网络自动直连节点分组 # 华信息
+  - PROCESS-NAME,com.android.settings,🐓 中国网络自动直连节点分组 # 华设置
+  - PROCESS-NAME,com.android.soundrecorder,🐓 中国网络自动直连节点分组 # 华录音
+  - PROCESS-NAME,com.android.stk,🐓 中国网络自动直连节点分组 # 华sim卡应用
+  - PROCESS-NAME,com.example.android.notepad,🐓 中国网络自动直连节点分组 # 华备忘录
+  - PROCESS-NAME,com.huawei.android.findmyphone,🐓 中国网络自动直连节点分组 # 华查找设备
+  - PROCESS-NAME,com.huawei.camera,🐓 中国网络自动直连节点分组 # 华相机
+  - PROCESS-NAME,com.huawei.hidisk,🐓 中国网络自动直连节点分组 # 华文件管理
+  - PROCESS-NAME,com.huawei.himovie,🐓 中国网络自动直连节点分组 # 华视频
+  - PROCESS-NAME,com.huawei.vassistant,🐓 中国网络自动直连节点分组 # 华智慧语音
+  - PROCESS-NAME,com.huawei.android.hwouc,🐓 中国网络自动直连节点分组 # 华软件更新
+  - PROCESS-NAME,com.huawei.android.thememanager,🐓 中国网络自动直连节点分组 # 主题
+  - PROCESS-NAME,com.huawei.android.totemweather,🐓 中国网络自动直连节点分组 # 华天气
+  - PROCESS-NAME,com.huawei.appmarket,🐓 中国网络自动直连节点分组 # 华应用商店
+  - PROCESS-NAME,com.huawei.gameassistant,🐓 中国网络自动直连节点分组 # 华应用助手
+  - PROCESS-NAME,com.huawei.health,🐓 中国网络自动直连节点分组 # 华为健康
+  - PROCESS-NAME,com.huawei.hicloud,🐓 中国网络自动直连节点分组 # 华为云空间
+  - PROCESS-NAME,com.huawei.meetime,🐓 中国网络自动直连节点分组 # 华为畅联
+  - PROCESS-NAME,com.huawei.phoneservice,🐓 中国网络自动直连节点分组 # 我的华为
+  - PROCESS-NAME,com.huawei.systemmanager,🐓 中国网络自动直连节点分组 # 华手机管家
+  - PROCESS-NAME,com.huawei.wallet,🐓 中国网络自动直连节点分组 # 华钱包
+  - PROCESS-NAME,com.vmall.client,🐓 中国网络自动直连节点分组 # 华商城
+  - PROCESS-NAME,com.dangbei.ai,🐓 中国网络自动直连节点分组                                            # 当贝ai
+  - PROCESS-NAME,com.baidu.duer.superapp,🐓 中国网络自动直连节点分组                                             # 小度
+  - PROCESS-NAME,cmccwm.mobilemusic,🐓 中国网络自动直连节点分组                                             # 咪咕音乐
+  - PROCESS-NAME,com.baidu.searchbox,🐓 中国网络自动直连节点分组                                            # 百度
+  - PROCESS-NAME,com.baidu.wenku,🐓 中国网络自动直连节点分组                                              # 百度文库
+  - PROCESS-NAME,com.dangbei.ai,🐓 中国网络自动直连节点分组                                             # 当贝ai
+  - PROCESS-NAME,com.dangbei.remotecontroller,🐓 中国网络自动直连节点分组                                             # 当贝家
+  - PROCESS-NAME,com.cmic.heduohao,🐓 中国网络自动直连节点分组                                              # 和多号
+  - PROCESS-NAME,com.huawei.android.pushagent,🐓 中国网络自动直连节点分组                                             # 华为手机的系统推送服务进程
+  - PROCESS-NAME,data.hicloud.com,🐓 中国网络自动直连节点分组                                              # 华为云服务的核心数据域名
+  - PROCESS-NAME,com.huawei.rcsserviceapplication,🐓 中国网络自动直连节点分组                                            # 华为手机通讯服务
+  - PROCESS-NAME,com.huawei.hiaction.share_user,🐓 中国网络自动直连节点分组                                              # 华为设备间快捷分享功能的核心组件
+  - PROCESS-NAME,channel.hitouch.hicloud.com,🐓 中国网络自动直连节点分组                                             # 华为手机一碰传互传互联云端支持
+  - PROCESS-NAME,com.huawei.hwid,🐓 中国网络自动直连节点分组                                            # 华为账号（Huawei ID）的核心服务组件
+  - PROCESS-NAME,grs.dbankcloud.eu,🐓 中国网络自动直连节点分组                                              # 华为面向欧洲地区的全球资源调度（GRS）域名
+
+
+# deepseek 规则
+  - DOMAIN-SUFFIX,deepseek.com,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,deepseek.ai,🐓 中国网络自动直连节点分组
+  - DOMAIN-KEYWORD,deepseek,🐓 中国网络自动直连节点分组
+  - DOMAIN-KEYWORD,deepseek.chat,🐓 中国网络自动直连节点分组
+  - PROCESS-NAME,com.deepseek.chat,🐓 中国网络自动直连节点分组                        
+# 豆包核心业务域名（全量覆盖，含主站、API、资源）
+  - DOMAIN-SUFFIX,doubao.com,🐓 中国网络自动直连节点分组                                  # 豆包主域名（如web端、官网）
+  - DOMAIN-SUFFIX,doubaoapis.com,🐓 中国网络自动直连节点分组                              # 豆包核心API接口域名（对话、功能调用）
+  - DOMAIN-SUFFIX,doubaoimg.com,🐓 中国网络自动直连节点分组                                # 豆包资源域名（图片、表情、附件）
+  - DOMAIN-SUFFIX,doubaocdn.com,🐓 中国网络自动直连节点分组                               # 豆包CDN加速域名（静态资源加载）
+# 豆包CDN及资源域名 豆包依赖的第三方资源域名（避免代理拦截静态资源）
+  - DOMAIN-SUFFIX,bdimg.com,🐓 中国网络自动直连节点分组                                 # 百度系CDN（豆包部分图片/图标依赖）
+  - DOMAIN-SUFFIX,bdstatic.com,🐓 中国网络自动直连节点分组                                # 百度系静态资源（豆包样式/脚本依赖）
+  - DOMAIN-SUFFIX,qianfanapi.com,🐓 中国网络自动直连节点分组                              # 百度千帆API（豆包部分AI能力依赖）
+  - DOMAIN-SUFFIX,qianfancdn.com,🐓 中国网络自动直连节点分组                               # 百度千帆CDN（AI能力相关资源）
+  - DOMAIN-SUFFIX,bytedance.com,🐓 中国网络自动直连节点分组
+  - PROCESS-NAME,com.larus.nova,🐓 中国网络自动直连节点分组                                                # 豆包
+  - PROCESS-NAME,com.bytedance.doubao,🐓 中国网络自动直连节点分组                                  # 豆包APP进程（精准匹配手机端APP，优先于其他规则）
+  - DOMAIN-KEYWORD,Doubao,🐓 中国网络自动直连节点分组                                # 豆包专属UA标识（覆盖网页端、小程序端请求）
+# 腾讯元宝
+  - PROCESS-NAME,com.tencent.hunyuan.app.chat,🐓 中国网络自动直连节点分组
+# 腾讯规则微信QQ
+  - DOMAIN-SUFFIX,qq.com,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,wx.qq.com,🐓 中国网络自动直连节点分组                                               # 微信相关域名
+  - DOMAIN-SUFFIX,im.qq.com,🐓 中国网络自动直连节点分组                                                # QQ即时通讯相关域名
+  - PROCESS-NAME,com.tencent.mm,🐓 中国网络自动直连节点分组                                 # 微信进程
+  - PROCESS-NAME,com.tencent.mobileqq,🐓 中国网络自动直连节点分组                             # QQ进程
+  - PROCESS-NAME,WeChat.exe,🐓 中国网络自动直连节点分组
+  - PROCESS-NAME,QQ.exe,🐓 中国网络自动直连节点分组
+  - PROCESS-NAME,com.tencent.androidqqmailr,🐓 中国网络自动直连节点分组                                                # 手机qq邮箱
+  - DOMAIN-KEYWORD,qq,🐓 中国网络自动直连节点分组                                                    # 关键词qq直播
+  - DOMAIN-KEYWORD,weixin,🐓 中国网络自动直连节点分组
+ # 百度网盘
+  - PROCESS-NAME,BaiduNetdisk.exe,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,pan.baidu.com,🐓 中国网络自动直连节点分组                                    # 百度网盘主域名
+  - DOMAIN-SUFFIX,baidupcs.com,🐓 中国网络自动直连节点分组                             # 百度网盘相关存储域名
+# 腾讯视频TV版（极光TV）
+  - PROCESS-NAME,com.tencent.tv,🐓 中国网络自动直连节点分组                                          # 安卓端包名，PC端若有客户端可类似查找进程名
+  - DOMAIN-SUFFIX,qq.com,🐓 中国网络自动直连节点分组                                                    # 腾讯相关服务
+  - DOMAIN-SUFFIX,v.qq.com,🐓 中国网络自动直连节点分组                                              # 腾讯视频域名
+ # 爱奇艺TV版（银河奇异果）
+  - PROCESS-NAME,com.qiyi.video.tv,🐓 中国网络自动直连节点分组                                      # 安卓端包名
+  - DOMAIN-SUFFIX,qiyi.com,🐓 中国网络自动直连节点分组                                             # 爱奇艺基础服务域名
+  - DOMAIN-SUFFIX,tv.qiyi.com,🐓 中国网络自动直连节点分组                                           # 爱奇艺TV版相关域名
+# 优酷TV版（CIBN酷喵影视）
+  - PROCESS-NAME,com.youku.tv,🐓 中国网络自动直连节点分组                                      # 安卓端包名
+  - DOMAIN-SUFFIX,youku.com,🐓 中国网络自动直连节点分组                                         # 优酷基础服务域名
+  - DOMAIN-SUFFIX,tv.youku.com,🐓 中国网络自动直连节点分组                                        # 优酷TV版相关域名
+# 咪咕规则
+  - DOMAIN-SUFFIX,migu.cn,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,miguvideo.com,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,cmvideo.com,🐓 中国网络自动直连节点分组
+  - DOMAIN-KEYWORD,migu,🐓 中国网络自动直连节点分组
+  - DOMAIN-KEYWORD,cmvideo,🐓 中国网络自动直连节点分组
+  - DOMAIN-KEYWORD,miguvideo,🐓 中国网络自动直连节点分组
+# PayPal 规则
+  - DOMAIN-KEYWORD,paypal,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,paypal.com,🐓 中国网络自动直连节点分组
+  - PROCESS-NAME,com.paypal.android.p2pmobile,🐓 中国网络自动直连节点分组
+# 币安
+  - PROCESS-NAME,com.binance.dev,🐓 中国网络自动直连节点分组                                  # 币安
+# 欧易
+  - PROCESS-NAME,com.okinc.okex.gp,🐓 中国网络自动直连节点分组                                # 欧易
+#惠普
+  - DOMAIN-SUFFIX,arubanetworks.com,🐓 中国网络自动直连节点分组                                    # Aruba Networks（属于惠普公司）提供的网络设备和解决方案域名，用于管理企业无线网络和交换机系统
+ #华硕
+  - DOMAIN-SUFFIX,asus.com,🐓 中国网络自动直连节点分组                                                      # 华硕公司的官方网站，用于销售和支持其电子产品，包括主板、笔记本、路由器等。
+  - DOMAIN-SUFFIX,asusrouter.com,🐓 中国网络自动直连节点分组                                            # 与华硕路由器相关的域名，用于路由器设备的管理和支持
+
+# 出境易 分流规则
+  - DOMAIN-SUFFIX,chujingyi.com,🐓 中国网络自动直连节点分组                             # 出境易主域名（境内功能入口，如APP首页、用户中心）
+  - DOMAIN-SUFFIX,chujingyi.cn,🐓 中国网络自动直连节点分组                             # 出境易境内备用域名（主域名解析异常时兜底）
+  - DOMAIN-SUFFIX,chujingyi.net,🐓 中国网络自动直连节点分组                            # 出境易数据同步域名（本地行程云备份、配置同步）
+  - DOMAIN-SUFFIX,chujingyi.com,🐓 中国网络自动直连节点分组                          # 置顶主域名规则，防止被其他通用域名规则拦截
+  - DOMAIN-KEYWORD,chujingyi-api,🐓 中国网络自动直连节点分组                         # 出境易境内API接口（如验证码发送、登录验证请求）
+  - DOMAIN-KEYWORD,chujingyi,🐓 中国网络自动直连节点分组                               # 置顶关键词规则，所有含“chujingyi”的请求优先匹配专属规则
+
+# 关联第三方服务，对接境内外支付、运营商等第三方，按属性匹配路由
+  - DOMAIN-SUFFIX,chujingyi-alipay.com,🐓 中国网络自动直连节点分组                          # 境内支付宝支付对接（境内支付通道，直连更稳定）
+  - DOMAIN-SUFFIX,chujingyi-wechatpay.com,🐓 中国网络自动直连节点分组                         # 境内微信支付对接（境内支付通道，避免代理延迟）
+  - DOMAIN-SUFFIX,chujingyi-10086.com,🐓 中国网络自动直连节点分组                       # 境内中国移动漫游对接（境内运营商服务，直连保畅通）
+  - DOMAIN-SUFFIX,chujingyi-paypal.com,🐓 中国网络自动直连节点分组                        # 境外PayPal支付对接（境外支付通道，需代理访问）
+
+# open ai 和ChatGPT  相互的，监控 / 时间 / 常用第三方直连（避免走代理影响延迟/计费）
+  - DOMAIN-SUFFIX,datadoghq.com,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,datadog.com,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,pool.ntp.org,🐓 中国网络自动直连节点分组
+  - DOMAIN-SUFFIX,ntp.org,🐓 中国网络自动直连节点分组
+
+   
   - GEOIP,LAN,DIRECT,no-resolve             # 悠哉规则类型：GEOIP（基于IP归属地匹配）；值：LAN（内网IP归属地）；参数：no-resolve；目标分组：DIRECT
   - GEOIP,CN,DIRECT,no-resolve                # 悠哉规则类型：GEOIP；值：CN（中国IP归属地）；参数：no-resolve；目标分组：DIRECT
   - GEOSITE,cn,DIRECT                                # 悠哉规则类型：GEOSITE（基于域名归属地分类匹配）；值：cn（中国大陆域名分类）；目标分组：DIRECT
@@ -4236,110 +4652,172 @@ rules:
 
 # 广告试点工程
 
-  - DOMAIN-SUFFIX,doubleclick.net,🈲 广告自动拦截0                   # 谷歌广告投放域名，视频前贴片广告常通过该域名加载广告相关 是谷歌旗下的广告服务域名，许多广告投放会依赖该域名或其相关子域名，通过此设置可阻止与之相关的广告请求，能提升网络浏览体验，加快网页加载速度，减少带宽占用，还可在一定程度上增强隐私保护。
-  - DOMAIN-SUFFIX,googleadservices.com,🈲 广告自动拦截0     # YouTube广告核心服务域名，多数开头广告请求依赖此后缀
-  - DOMAIN,googleads.g.doubleclick.net,🈲 广告自动拦截0       # 定向拦截YouTube广告相关的点击与数据统计域名
-  - DOMAIN,pubads.g.doubleclick.net,🈲 广告自动拦截0           # 拦截YouTube视频广告的投放脚本加载域名
-  - DOMAIN-KEYWORD,googleads,🈲 广告自动拦截0              # 谷歌广告核心域名
-  - DOMAIN-KEYWORD,doubleclick,🈲 广告自动拦截0               # 谷歌双击广告
-
-
-
-   # 中国 境外 分流 规则   
-
-  - RULE-SET,YouTube,⚖️ 香港自动负载均衡轮询节点分组
-  - RULE-SET,Google,⚠️ 谷歌GV专用节点分组
-  - RULE-SET,jingwaiHK,🇭🇰 香港分流自动节点分组
-  - RULE-SET,tiktokzoutaiwan,🇹🇼 台湾自动节点分组
-
-  # bigo 直播规则
-
-  - PROCESS-NAME,sg.bigo.live,⚖️ 香港自动负载均衡散列节点分组                   # BIGOLIVE
+  - DOMAIN-SUFFIX,doubleclick.net,🈲 广告自动拦截⛔⛔⛔0                   # 谷歌广告投放域名，视频前贴片广告常通过该域名加载广告相关 是谷歌旗下的广告服务域名，许多广告投放会依赖该域名或其相关子域名，通过此设置可阻止与之相关的广告请求，能提升网络浏览体验，加快网页加载速度，减少带宽占用，还可在一定程度上增强隐私保护。
+  - DOMAIN-SUFFIX,googleadservices.com,🈲 广告自动拦截⛔⛔⛔0     # YouTube广告核心服务域名，多数开头广告请求依赖此后缀
+  - DOMAIN,googleads.g.doubleclick.net,🈲 广告自动拦截⛔⛔⛔0       # 定向拦截YouTube广告相关的点击与数据统计域名
+  - DOMAIN,pubads.g.doubleclick.net,🈲 广告自动拦截⛔⛔⛔0           # 拦截YouTube视频广告的投放脚本加载域名
+  - DOMAIN-KEYWORD,googleads,🈲 广告自动拦截⛔⛔⛔0              # 谷歌广告核心域名
+  - DOMAIN-KEYWORD,doubleclick,🈲 广告自动拦截⛔⛔⛔0               # 谷歌双击广告
 
 
 
 
-  # Twitter 规则
+  - DOMAIN,youtubei.googleapis.com,⚖️ 香港自动负载均衡轮询节点分组      # YouTube 核心接口域名  
+  - DOMAIN-SUFFIX,googlevideo.com,⚖️ 香港自动负载均衡轮询节点分组     # YouTube 视频资源域名后缀
+  - DOMAIN-SUFFIX,ytimg.com,⚖️ 香港自动负载均衡轮询节点分组                    # YouTube 图片资源域名后缀
+  - DOMAIN-SUFFIX,youtube.com,⚖️ 香港自动负载均衡轮询节点分组                 # YouTube 主域名后缀
+  - DOMAIN-SUFFIX,ggpht.com,⚖️ 香港自动负载均衡轮询节点分组                 # 获取视频播放所需的资源、视频封面图等  
+  - PROCESS-NAME,com.google.android.youtube,⚖️ 香港自动负载均衡轮询节点分组                         # YouTube 安卓端进程名
+  - PROCESS-NAME,com.google.android.apps.youtube.music,⚖️ 香港自动负载均衡轮询节点分组     # 谷歌音乐安卓端进程名
+  - PROCESS-NAME,app.revanced.android.apps.youtube.music,⚖️ 香港自动负载均衡轮询节点分组 # 谷歌音乐修改进程名  
+  - DOMAIN-KEYWORD,youtube,⚖️ 香港自动负载均衡轮询节点分组            # 域名含youtube关键字
+  - DOMAIN-KEYWORD,googlevideo,⚖️ 香港自动负载均衡轮询节点分组         # YouTube 视频资源域名关键字
+  - DOMAIN-KEYWORD,youtubei,⚖️ 香港自动负载均衡轮询节点分组               # YouTube 接口域名关键字
+
+
+
+
+# 谷歌服务规则（悠哉定义：按服务敏感度分级，低敏感服务走香港节点（低延迟），高敏感服务走美国节点（适配性））
+# 谷歌低敏感服务（悠哉用途：日常工具类服务，对节点地域无强要求，优先低延迟）
+  - PROCESS-NAME,com.google.android.apps.authenticator2,⚠️ 谷歌GV专用节点分组          # 谷歌身份验证器进程名
+  - PROCESS-NAME,com.google.android.apps.maps,⚠️ 谷歌GV专用节点分组                         # 谷歌地图进程名
+  - PROCESS-NAME,com.google.ar.lens,⚠️ 谷歌GV专用节点分组                                              # 谷歌智能镜头进程名
+  - PROCESS-NAME,com.google.android.apps.translate,⚠️ 谷歌GV专用节点分组                    # 谷歌翻译进程名
+  - PROCESS-NAME,com.google.android.apps.docs,⚠️ 谷歌GV专用节点分组                          # 谷歌云端硬盘进程名
+  - PROCESS-NAME,com.google.android.gm,⚠️ 谷歌GV专用节点分组                                      # 谷歌邮箱进程名
+  - PROCESS-NAME,com.google.android.inputmethod.latin,⚠️ 谷歌GV专用节点分组               # 谷歌输入法进程名
+  - PROCESS-NAME,com.google.android.syncadapters.contacts,⚠️ 谷歌GV专用节点分组       # 谷歌通讯录同步进程名
+  - PROCESS-NAME,com.google.android.syncadapters.calendar,⚠️ 谷歌GV专用节点分组       # 谷歌日历同步进程名
+
+# 谷歌中敏感服务（悠哉用途：合作伙伴服务/通信服务，需稳定节点 ）
+  - PROCESS-NAME,com.google.android.contactkeys,⚠️ 谷歌GV专用节点分组                         # 谷歌联系人密钥进程名
+  - PROCESS-NAME,com.google.android.ims,⚠️ 谷歌GV专用节点分组                                        # 谷歌运营商通信服务进程名
+  - PROCESS-NAME,com.google.android.partnersetup,⚠️ 谷歌GV专用节点分组           # 谷歌合作伙伴设置进程名
+
+# 谷歌 高风险验证 规则，例如google voice gv规则等,逐步完善中.谷歌高敏感服务（悠哉用途：账号验证、GV 等服务，对节点地域有强要求，需美国节点）
+  - DOMAIN,voice.googleapis.com,⚠️ 谷歌GV专用节点分组
+  - DOMAIN,voice.google.com,⚠️ 谷歌GV专用节点分组
+  - DOMAIN,peoplestack-pa.googleapis.com,⚠️ 谷歌GV专用节点分组  
+  - DOMAIN,www.google-analytics.com,⚠️ 谷歌GV专用节点分组
+  - DOMAIN,ogads-pa.clients6.google.com,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-SUFFIX,gvt1.com,⚠️ 谷歌GV专用节点分组                         # 属于Google用于各种服务的检测和数据收集
+  - DOMAIN-SUFFIX,gvt2.com,⚠️ 谷歌GV专用节点分组                        # 谷歌CDN域视频音频内容分发大或大规模分发内容通过这个来加速
+  - DOMAIN-SUFFIX,gstatic.com,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-SUFFIX,googleapis.com,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-SUFFIX,withgoogle.com,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-SUFFIX,googleusercontent.com,⚠️ 谷歌GV专用节点分组          # 涉及Google应用的内容和功能服务。
+  - DOMAIN-SUFFIX,doubleclick.net,⚠️ 谷歌GV专用节点分组
+
+# 谷歌高风险进程
+  - PROCESS-NAME,com.google.android.gms,⚠️ 谷歌GV专用节点分组            # GooglePlay服务
+  - PROCESS-NAME,com.google.android.gsf,⚠️ 谷歌GV专用节点分组              # Google服务框架
+  - PROCESS-NAME,com.android.vending,⚠️ 谷歌GV专用节点分组                  # 谷歌商店
+  - PROCESS-NAME,com.android.chrome,⚠️ 谷歌GV专用节点分组                  # 谷歌浏览器  
+  - PROCESS-NAME,com.google.android.apps.googlevoice,⚠️ 谷歌GV专用节点分组        # GV  voice
+  - PROCESS-NAME,com.google.uid.shared,⚠️ 谷歌GV专用节点分组     # 是谷歌相关的共享用户ID服务，通常与谷歌账号验证、应用授权等功能有关。该连接指向 Google Play 商店的安全端口，可能是用于验证、下载应用或同步数据
+  - PROCESS-NAME,com.google.android.googlequicksearchbox,⚠️ 谷歌GV专用节点分组           # Google 搜索应用的核心进程，主要负责提供快速搜索、语音识别和搜索建议等功能。通常由 Google LLC 维护，是 Android 系统中重要的预装应用之一。
+
+# 谷歌高风险关键词兜底
+  - DOMAIN-KEYWORD,voice,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-KEYWORD,googleapis,⚠️ 谷歌GV专用节点分组                       # 通常用于谷歌提供的API服务
+  - DOMAIN-KEYWORD,peoplestack,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-KEYWORD,accounts.google,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-KEYWORD,googleusercontent,⚠️ 谷歌GV专用节点分组
+
+# 谷歌google.com域名后缀兜底 太广泛
+  - DOMAIN-SUFFIX,google.com,⚠️ 谷歌GV专用节点分组
+
+# google 关键词，太广泛需要垫底，与出境易中的谷歌内容呼应，出境易进程垫底兜底。
+  - DOMAIN-KEYWORD,google,⚠️ 谷歌GV专用节点分组
+
+# 谷歌兜底结束。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+
+# open ai 规则  ChatGPT
+  - PROCESS-NAME,com.openai.chatgpt,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-KEYWORD,openai.chatgpt,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-KEYWORD,openai,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-SUFFIX,openai.com,⚠️ 谷歌GV专用节点分组 
+  - DOMAIN,android.chat.openai.com,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-SUFFIX,openaiapis.com,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-SUFFIX,api.openai.com,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-SUFFIX,platform.openai.com,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-SUFFIX,cdn.openai.com,⚠️ 谷歌GV专用节点分组
+  - DOMAIN-SUFFIX,relay.openai.com,⚠️ 谷歌GV专用节点分组
+
+
+
+# gps 虚拟定位规则
+  - PROCESS-NAME,com.rosteam.gpsemulator,🇭🇰 香港分流自动节点分组
+  # 电视商店和桌面
+  - PROCESS-NAME,com.oversea.aslauncher,🇭🇰 香港分流自动节点分组
+  - PROCESS-NAME,com.overseas.store.appstore,🇭🇰 香港分流自动节点分组
+  # instagram
+  - DOMAIN-SUFFIX,instagram.com,🇭🇰 香港分流自动节点分组 
+  - DOMAIN-KEYWORD,instagram,🇭🇰 香港分流自动节点分组
+  - PROCESS-NAME,com.instagram.android,🇭🇰 香港分流自动节点分组                      # ig视频
+  - PROCESS-NAME,com.instagram.barcelona,🇭🇰 香港分流自动节点分组             # Instagram推出的Threads应用
+  # discord  聊天室规则
+  - PROCESS-NAME,com.discord,🇭🇰 香港分流自动节点分组                        # Discord
+  # whatsapp 规则
+  - DOMAIN-SUFFIX,whatsapp.com,🇭🇰 香港分流自动节点分组
+  - DOMAIN-SUFFIX,whatsapp.net,🇭🇰 香港分流自动节点分组
+  - DOMAIN-KEYWORD,whatsapp,🇭🇰 香港分流自动节点分组
+  - PROCESS-NAME,com.whatsapp,🇭🇰 香港分流自动节点分组
+  # twitch 规则
+  - DOMAIN-SUFFIX,twitch.com,🇭🇰 香港分流自动节点分组
+  - DOMAIN-KEYWORD,twitch,🇭🇰 香港分流自动节点分组
+  - PROCESS-NAME,tv.twitch.android.app,🇭🇰 香港分流自动节点分组
+  # Facebook 规则
+  - DOMAIN-SUFFIX,facebook.com,🇭🇰 香港分流自动节点分组
+  - DOMAIN-KEYWORD,facebook,🇭🇰 香港分流自动节点分组
+  - PROCESS-NAME,com.facebook.orca,🇭🇰 香港分流自动节点分组             # 脸书短信
+  - PROCESS-NAME,com.facebook.katana,🇭🇰 香港分流自动节点分组
+
+
+
+# tiktok和.lite极速版 规则
+  - DOMAIN-SUFFIX,tiktok.com,🇹🇼 台湾自动节点分组
+  - DOMAIN-SUFFIX,tiktokcdn.com,🇹🇼 台湾自动节点分组
+  - DOMAIN-SUFFIX,tiktokv.com,🇹🇼 台湾自动节点分组              # 视频流与资源加载核心域名
+  - DOMAIN-SUFFIX,muscdn.com,🇹🇼 台湾自动节点分组
+  - DOMAIN-SUFFIX,akamaized.net,🇹🇼 台湾自动节点分组      # CDN 子域名
+  - DOMAIN-SUFFIX,musicaly.ly,🇹🇼 台湾自动节点分组             # 历史遗留的相关域名
+  - DOMAIN-SUFFIX,byteoversea.com,🇹🇼 台湾自动节点分组
+  - DOMAIN-SUFFIX,tiktokcdn-us.com,🇹🇼 台湾自动节点分组       # 海外CDN节点（美洲区域）
+  - DOMAIN-SUFFIX,tiktokcdn-eu.com,🇹🇼 台湾自动节点分组        # 海外CDN节点（欧洲区域）
+  - DOMAIN-SUFFIX,tiktokshop.com,🇹🇼 台湾自动节点分组
+  - DOMAIN-SUFFIX,seller.us.tiktokshopglobalselling.com,🇹🇼 台湾自动节点分组
+  - DOMAIN-SUFFIX,seller.uk.tiktokshopglobalselling.com,🇹🇼 台湾自动节点分组
+  - DOMAIN-SUFFIX,tiktok-shops.com,🇹🇼 台湾自动节点分组
+  - DOMAIN-SUFFIX,tiktokads.com,🇹🇼 台湾自动节点分组 
+  - DOMAIN-SUFFIX,live-tiktok.com,🇹🇼 台湾自动节点分组 
+  - DOMAIN-SUFFIX,larksuite.com,🇹🇼 台湾自动节点分组        # Lark
+  - DOMAIN-KEYWORD,tiktok,🇹🇼 台湾自动节点分组
+  - DOMAIN-KEYWORD,zhiliaoapp,🇹🇼 台湾自动节点分组
+  - DOMAIN-KEYWORD,zhiliaoapp.musically,🇹🇼 台湾自动节点分组  
+  - PROCESS-NAME,com.tiktok.lite.go,🇹🇼 台湾自动节点分组                 # tiktok极速版
+  - PROCESS-NAME,com.zhiliaoapp.musically,🇹🇼 台湾自动节点分组      # 全球版本和非洲版本
+  - PROCESS-NAME,com.ss.android.ugc.trill,🇹🇼 台湾自动节点分组       # 亚洲和东南亚版本
+  - PROCESS-NAME,com.tiktokshop.serller,🇹🇼 台湾自动节点分组         # 商店
+
+  - PROCESS-NAME,sg.bigo.live,⚖️ 香港自动负载均衡散列节点分组
   - DOMAIN-SUFFIX,twitter.com,🕹️ 手动选择节点分组
   - DOMAIN-KEYWORD,twitter,🕹️ 手动选择节点分组
   - PROCESS-NAME,com.twitter.android,🕹️ 手动选择节点分组
-
-# 微软
-  - PROCESS-NAME,com.microsoft.emmx,🕹️ 手动选择节点分组      # Android端Edge浏览器
-
-
-
- # 地域兜底分流规则，客户端，内置数据，按IP地域匹配，补充未被域名/IP段覆盖的关联请求
-  - GEOIP,HK,🇭🇰 香港分流自动节点分组                      # 中国香港IP → 🇭🇰 香港自动节点分组（适配香港本地服务、跨境中转）
-  - GEOIP,TW,🇹🇼 台湾自动节点分组                       # 中国台湾地区IP → 🇹🇼 台湾自动节点分组（覆盖台湾地区本地服务）
-  - GEOIP,SG,🇸🇬 新加坡自动节点分组                   # 新加坡IP → 🇸🇬 新加坡自动节点分组（东南亚核心节点，覆盖东南亚服务低延迟）
-  - GEOIP,JP,🇯🇵 日本自动节点分组                        # 日本IP → 🇯🇵 日本自动节点分组（适配日韩娱乐、电商、本地服务）
-  - GEOIP,KR,🇰🇷 韩国自动节点分组                       # 韩国IP → 🇰🇷 韩国自动节点分组（覆盖韩国流媒体、购物平台）
-  - GEOIP,US,🇺🇸 美国分流自动节点分组                      # 美国IP → 🇺🇸 美国自动节点分组（适配北美流媒体、谷歌服务、美国本土平台）
-
-
-
-  # telegram 规则
-  - PROCESS-NAME,org.telegram.messenger.web,🕹️ 手动选择节点分组                # 🕹️ 手动选择节点分组
-
-
-# 微软
-
-  - PROCESS-NAME,com.microsoft.office.outlook,🕹️ 手动选择节点分组            # Android端Outlook邮箱  
+  - PROCESS-NAME,com.microsoft.emmx,🕹️ 手动选择节点分组
+  - GEOIP,HK,🇭🇰 香港分流自动节点分组
+  - GEOIP,TW,🇹🇼 台湾自动节点分组
+  - GEOIP,SG,🇸🇬 新加坡自动节点分组
+  - GEOIP,JP,🇯🇵 日本自动节点分组
+  - GEOIP,KR,🇰🇷 韩国自动节点分组
+  - GEOIP,US,🇺🇸 美国分流自动节点分组
+  - PROCESS-NAME,org.telegram.messenger.web,🕹️ 手动选择节点分组
+  - PROCESS-NAME,com.microsoft.office.outlook,🕹️ 手动选择节点分组
   - DOMAIN,fuchenyouzai.dpdns.org,⚖️ 香港自动负载均衡散列节点分组
-
-
-# 出境易app总进程 出境易客户端没有多个地区内容需要走完所有分流后用这个兜底一下并选择最快的节点连接
-  - PROCESS-NAME,com.easy.abroad,🇭🇰 香港自动节点分组      # 出境易 使用gv时需要改为，⚠️ 谷歌GV专用节点分组
-  - PROCESS-NAME,com.fongmi.android.tv,DIRECT   # TVBox进程
-
-
-  - GEOSITE,geolocation-!cn,🇭🇰 香港自动节点分组                   # 仅当流量/请求的地理定位不属于中国时走🇭🇰 香港自动节点分组
-
-
-
- # 未匹配到的请求都通过🐟 漏网之鱼的🕹️ 手动选择节点分组，的当前选择的节点代理流量！！！🐟 漏网之鱼设置有保底会自动切换到能用的网络节点。
-
+  - PROCESS-NAME,com.easy.abroad,🇭🇰 香港自动节点分组
+  - PROCESS-NAME,com.fongmi.android.tv,🐓 中国网络自动直连节点分组
+  - GEOSITE,geolocation-!cn,🇭🇰 香港自动节点分组
   - MATCH,🐟 漏网之鱼
-
-
-
- 
-rule-providers:
-# 境内分流规则
-  ipv4ipv6PrivateAndLocal: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/ipv4ipv6PrivateAndLocal.yaml', interval: 86400, path: ./ruleset/3/ipv4ipv6PrivateAndLocal.yaml }
-  neiwangluyouqi: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/neiwangluyouqi.yaml', interval: 86400, path: ./ruleset/3/neiwangluyouqi.yaml }
-  jingneiDNSipDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingneiDNSipDIRECT.yaml', interval: 86400, path: ./ruleset/3/jingneiDNSipDIRECT.yaml }
-  guoneiIPbujiexiDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/guoneiIPbujiexiDIRECT.yaml', interval: 86400, path: ./ruleset/3/guoneiIPbujiexiDIRECT.yaml }
-  jingwaiDNSipHKG: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiDNSipHKG.yaml', interval: 86400, path: ./ruleset/3/jingwaiDNSipHKG.yaml }
-  jingneiDNSyumingDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingneiDNSyumingDIRECT.yaml', interval: 86400, path: ./ruleset/3/jingneiDNSyumingDIRECT.yaml }
-  jingwaiDNSyumingHKG: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiDNSyumingHKG.yaml', interval: 86400, path: ./ruleset/3/ingwaiDNSyumingHKG.yaml }
-  guoneiDIRECT: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/guoneiDIRECT.yaml', interval: 86400, path: ./ruleset/3/guoneiDIRECT.yaml }
-  wangluojianceshoudong: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/wangluojianceshoudong.yaml', interval: 86400, path: ./ruleset/3/wangluojianceshoudong.yaml }
-# 境外分流规则
-  YouTube: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/YouTube.yaml', interval: 86400, path: ./ruleset/3/YouTube.yaml }
-  Google: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/Google.yaml', interval: 86400, path: ./ruleset/3/Google.yaml }
-  jingwaiHK: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/jingwaiHK.yaml', interval: 86400, path: ./ruleset/3/jingwaiHK.yaml }
-  tiktokzoutaiwan: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/tiktokzoutaiwan.yaml', interval: 86400, path: ./ruleset/3/tiktokzoutaiwan.yaml }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
