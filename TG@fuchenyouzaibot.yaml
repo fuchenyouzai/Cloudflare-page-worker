@@ -3360,8 +3360,7 @@ PProviders: &PProviders
     enable: true
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
-  filter: '^(?!.*(超时请重新订阅|代表|分割线|网址发布|网站注册地址|注|防失联地址|您当前是试用套餐|满意请购买|🇦🇶|使用|邀请返佣|TG频道|TG群组|qq号码|qq群|微信|WeChat|仅供个人使用|返利|机场|VPN|剩余流量|节点分享|电报群|TG群@|订阅进群|流量剩余 ≫|套餐到期|127.0.0.1|有效期|https://t.me|距离下次重置剩余|sufujia|只有爱懂的人才能用|线路少请更换软件看公告|您已到期|流量用完|请续费使用|续费后更新订阅|备用地址|永久地址|网址|官网|加入我的频道|加入我的群组|LSMOO|解锁更多优选节点|TG: @|telegram|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic))'
-
+  filter: '^(?!.*(永久|全场|69云|时间|折扣码|超时请重新订阅|代表|分割线|网址发布|网站注册地址|注|防失联地址|您当前是试用套餐|满意请购买|🇦🇶|使用|邀请返佣|TG频道|TG群组|qq号码|qq群|微信|WeChat|仅供个人使用|返利|机场|VPN|剩余流量|节点分享|电报群|TG群@|订阅进群|流量剩余 ≫|套餐到期|127.0.0.1|有效期|https://t.me|距离下次重置剩余|sufujia|只有爱懂的人才能用|线路少请更换软件看公告|您已到期|流量用完|请续费使用|续费后更新订阅|备用地址|永久地址|网址|官网|加入我的频道|加入我的群组|LSMOO|解锁更多优选节点|TG: @|telegram|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic))'
 
 
   # 上个是正向匹配,另一种写法反向排除exclude-filter: "(?i)(流量|到期|重置|扣费|客服|更新|检查|fengwo)"
@@ -3389,10 +3388,10 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   ✈️机场名1:
     <<: *PProviders
     proxy: "全球直连"
-    url: "https://2.luolicon.ru/oosaka/11fff967ea7887cade40b773e4481c46"
+    url: "https://checkhere.top/link/JQGnNSpWF2HfZS3q?clash=1"
     path: ./proxies/3/机场名1.yaml    
     override:
-      additional-prefix: '[✈️Kitty1]'
+      additional-prefix: '[✈️69机场1]'
       skip-cert-verify: true
       udp: true
 
