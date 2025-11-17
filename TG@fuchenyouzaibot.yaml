@@ -4158,7 +4158,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(香港|🇭🇰|hk|哈哈)"
     exclude-filter: "(?i)(cn|www|visa|icook)"
-    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Netflix.png"
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/YouTube.png"
 
 
 
