@@ -1,3 +1,4 @@
+# ⚙️ 功能设置与覆写 悠哉配置文件 2025/11/17/21:28 悠哉TG反馈更新方式  https://t.me/fuchenyouzaibot
 mode: rule # 流量处理模式，决定流量路由策略的核心配置项） 可选值：rule（规则模式）、global（全局模式）、direct（直连模式）。当前值：rule（悠哉定义：根据预设规则列表（域名、IP、端口等）判断流量，决定走代理、直连或拒绝，实现精细化控制）
 log-level: info   # 日志级别 info 会输出普通流程，状态，debug 详细的调试信息帮助开发者排查问题通常在开发或调试阶段开启，减少日志可用 warning，error ，silent，# error 只记录错误信息，通常表示发生了严重问题需要关注，warning 记录警告信息提示可能的问题但不影响程序正常运行。日志输出级别（悠哉定义：控制代理服务日志的输出详细程度，用于调试或监控服务运行状态）可选值：debug（调试，输出最详细日志）、info（信息，输出常规运行日志）、warning（警告，仅输出潜在问题日志）、error（错误，仅输出功能异常日志）、silent（静默，不输出任何日志）当前值：info（悠哉定义：仅输出代理启动状态、规则匹配结果、连接建立/断开等常规流程日志，兼顾信息完整性与日志体积）
 global-client-fingerprint: chrome # 全局 TLS 客户端指纹设置 (chrome)。为 VLESS/Vmess/Trojan 等带 TLS 的协议设置“伪装”浏览器指纹。比起每个代理里的 client-fingerprint 设置优先级低。。。设置了全局客户端指纹为chrome。全局TLS客户端指纹（悠哉定义：为所有支持TLS协议的代理节点（VLESS、VMess、Trojan等）设置统一的TLS握手特征，用于模拟主流浏览器的TLS行为，提升连接兼容性）可选值：chrome、firefox、safari、ios、android等（对应不同浏览器/设备的TLS指纹）当前值：chrome（悠哉定义：模拟Chrome浏览器的TLS握手特征，优先级低于单个代理节点内单独配置的client-fingerprint参数）
