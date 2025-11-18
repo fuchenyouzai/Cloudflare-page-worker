@@ -3673,7 +3673,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     exclude-type: direct 
     interval: 300
     tolerance: 50
-    url: https://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204
     filter: "(?i)(嘿嘿)"
     exclude-filter: "(?i)(🇭🇰|🇯🇵|🇸🇬|🇰🇷)"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Google.png"
@@ -3688,7 +3688,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     exclude-type: direct
     interval: 300
     tolerance: 600
-    url: https://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204
     filter: "(?i)(哈哈|港|香港|hk|🇭🇰|hongkong|hong kong)"
     exclude-filter: "(?i)(www|visa|icook)"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Hong_Kong.png"
@@ -3701,7 +3701,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     type: url-test
     interval: 300
     tolerance: 600
-    url: https://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Hong_Kong.png"
     proxies:
       - 🇭🇰 v4哈哈1
@@ -3752,7 +3752,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     exclude-type: direct
     interval: 300
     tolerance: 50
-    url: https://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204
     filter: "(?i)(嘿嘿|sea|sjc|美国|United States|US|🇺🇸|america|America|洛杉矶|西雅图|圣何塞|纽约|unitedstates|united states)"
     exclude-filter: "(?i)(🇸🇬)"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/United_States.png"
@@ -3763,7 +3763,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     type: url-test
     interval: 300
     tolerance: 80
-    url: https://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/United_States.png"
     proxies:
       - 🇺🇸 v4嘿嘿1
@@ -3832,7 +3832,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(新加坡|🇸🇬|sg|狮城|xinjiapo|singapore)"
     exclude-filter: "(?i)(visa)"
-
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Singapore.png"
 
 
 
@@ -3846,7 +3846,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(澳门|🇲🇴|Macao|MO)"
     exclude-filter: "(?i)(🇭🇰)"
-
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Macao.png"
 
 
 
@@ -3883,7 +3883,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(🇫🇷|France|FR|法国|fra|fr)"
     exclude-filter: "(?i)(🐥|🇺🇸|美国|America|Germany)"
-
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/France.png"
 
 
 
@@ -3896,7 +3896,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(🇬🇧|英国|GB|UK|Britian|伦敦|英格兰|United Kingdom|yingguo|lhr|uk)"
     exclude-filter: "(?i)(🇸🇬|visa)"
-
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/United_Kingdom.png"
 
 
 
@@ -3909,7 +3909,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(DE|🇩🇪|德国|Germany)"
     exclude-filter: "(?i)(日本|🇳🇱|developers)"
-
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Germany.png"
 
 
 
@@ -3922,6 +3922,7 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     url: https://www.gstatic.com/generate_204
     filter: "(?i)(🇳🇱|荷兰|NL|Netherlands)"
     # exclude-filter: "(?i)()"
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Netherlands.png"
 
 
 
