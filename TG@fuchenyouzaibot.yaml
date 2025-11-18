@@ -3661,6 +3661,13 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
       - 📺 Netflix 奈飞
       - 📺 YouTube 油管
       - ✈️ Telegram 电报
+      - 🎵 Tik Tok 抖音
+      - Ⓜ️ Microsoft 微软
+      - 🤖 openAi 智能
+      - 🎮 Steam 游戏
+      - 🎵 Spotify 音乐
+      - 🐦 Twitter X 推特
+      - ☁️ OneDrive 云盘
       - ⭐ 中国网络自动直连节点分组
       - DIRECT
 
@@ -4175,6 +4182,105 @@ proxy-groups:               # 代理节点分组（悠哉定义：将多个代�
     filter: "(?i)(日本|🇯🇵|jp|japan|东京|Tokyo|韩|kr|South Korea|KR|韩国|korea|🇰🇷|香港|🇭🇰|hk|哈哈|嘿嘿|sea|sjc|美国|United States|US|🇺🇸|america|America|洛杉矶|西雅图|圣何塞|纽约|unitedstates|united states|新加坡|🇸🇬|sg|狮城|xinjiapo|singapore)"
     exclude-filter: "(?i)(cn|www|visa|icook|visa)"
     icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Telegram.png"
+
+
+
+
+  - name: 🎵 Tik Tok 抖音
+    type: url-test
+    include-all: true
+    exclude-type: direct
+    interval: 300
+    tolerance: 500
+    url: https://www.gstatic.com/generate_204
+    filter: "(?i)(日本|🇯🇵|jp|japan|东京|Tokyo|韩|kr|South Korea|KR|韩国|korea|🇰🇷|sea|sjc|美国|United States|US|🇺🇸|america|America|洛杉矶|西雅图|圣何塞|纽约|unitedstates|united states|新加坡|🇸🇬|sg|狮城|xinjiapo|singapore)"
+    exclude-filter: "(?i)(cn|www|visa|icook|visa)"
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/TikTok.png"
+
+
+
+  - name: Ⓜ️ Microsoft 微软
+    type: url-test
+    include-all: true
+    exclude-type: direct
+    interval: 300
+    tolerance: 500
+    url: https://www.gstatic.com/generate_204
+    filter: "(?i)(日本|🇯🇵|jp|japan|东京|Tokyo|韩|kr|South Korea|KR|韩国|korea|🇰🇷|sea|sjc|美国|United States|US|🇺🇸|america|America|洛杉矶|西雅图|圣何塞|纽约|unitedstates|united states|新加坡|🇸🇬|sg|狮城|xinjiapo|singapore)"
+    exclude-filter: "(?i)(cn|www|visa|icook|visa)"
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Microsoft.png"
+
+
+
+  - name: 🤖 openAi 智能
+    type: url-test
+    include-all: true
+    exclude-type: direct
+    interval: 300
+    tolerance: 500
+    url: https://www.gstatic.com/generate_204
+    filter: "(?i)(日本|🇯🇵|jp|japan|东京|Tokyo|韩|kr|South Korea|KR|韩国|korea|🇰🇷|sea|sjc|美国|United States|US|🇺🇸|america|America|洛杉矶|西雅图|圣何塞|纽约|unitedstates|united states|新加坡|🇸🇬|sg|狮城|xinjiapo|singapore)"
+    exclude-filter: "(?i)(cn|www|visa|icook|visa)"
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/openai.png"
+
+
+
+
+  - name: 🎮 Steam 游戏
+    type: url-test
+    include-all: true
+    exclude-type: direct
+    interval: 300
+    tolerance: 500
+    url: https://www.gstatic.com/generate_204
+    filter: "(?i)(日本|🇯🇵|jp|japan|东京|Tokyo|韩|kr|South Korea|KR|韩国|korea|🇰🇷|sea|sjc|美国|United States|US|🇺🇸|america|America|洛杉矶|西雅图|圣何塞|纽约|unitedstates|united states|新加坡|🇸🇬|sg|狮城|xinjiapo|singapore)"
+    exclude-filter: "(?i)(cn|www|visa|icook|visa)"
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Steam.png"
+
+
+
+
+
+
+  - name: 🎵 Spotify 音乐
+    type: url-test
+    include-all: true
+    exclude-type: direct
+    interval: 300
+    tolerance: 500
+    url: https://www.gstatic.com/generate_204
+    filter: "(?i)(日本|🇯🇵|jp|japan|东京|Tokyo|韩|kr|South Korea|KR|韩国|korea|🇰🇷|sea|sjc|美国|United States|US|🇺🇸|america|America|洛杉矶|西雅图|圣何塞|纽约|unitedstates|united states|新加坡|🇸🇬|sg|狮城|xinjiapo|singapore)"
+    exclude-filter: "(?i)(cn|www|visa|icook|visa)"
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Spotify.png"
+
+
+
+
+
+  - name: 🐦 Twitter X 推特
+    type: url-test
+    include-all: true
+    exclude-type: direct
+    interval: 300
+    tolerance: 500
+    url: https://www.gstatic.com/generate_204
+    filter: "(?i)(日本|🇯🇵|jp|japan|东京|Tokyo|韩|kr|South Korea|KR|韩国|korea|🇰🇷|sea|sjc|美国|United States|US|🇺🇸|america|America|洛杉矶|西雅图|圣何塞|纽约|unitedstates|united states|新加坡|🇸🇬|sg|狮城|xinjiapo|singapore)"
+    exclude-filter: "(?i)(cn|www|visa|icook|visa)"
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/Twitter.png"
+
+
+ 
+  - name: ☁️ OneDrive 云盘
+    type: url-test
+    include-all: true
+    exclude-type: direct
+    interval: 300
+    tolerance: 500
+    url: https://www.gstatic.com/generate_204
+    filter: "(?i)(日本|🇯🇵|jp|japan|东京|Tokyo|韩|kr|South Korea|KR|韩国|korea|🇰🇷|sea|sjc|美国|United States|US|🇺🇸|america|America|洛杉矶|西雅图|圣何塞|纽约|unitedstates|united states|新加坡|🇸🇬|sg|狮城|xinjiapo|singapore)"
+    exclude-filter: "(?i)(cn|www|visa|icook|visa)"
+    icon: "https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/OneDrive.png"
+
 
 
 
