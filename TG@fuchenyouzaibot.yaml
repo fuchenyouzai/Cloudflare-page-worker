@@ -3389,10 +3389,10 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   ✈️机场名1:
     <<: *PProviders
     proxy: "全球直连"
-    url: "https://checkhere.top/link/JQGnNSpWF2HfZS3q?clash=1"
+    url: "https://conf1.hokkaido-toyoni.com/oosaka/6a07bcac751a16ef23defb1d69878aa0"
     path: ./proxies/3/机场名1.yaml    
     override:
-      additional-prefix: '[✈️69机场1]'
+      additional-prefix: '[✈️kitty1]'
       skip-cert-verify: true
       udp: true
 
@@ -3420,10 +3420,10 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   ✈️机场名3:
     <<: *PProviders
     proxy: "全球直连"
-    url: "填写你的订阅链接"
+    url: "https://eue-l8br0hnh515w.api-biubiu.sbs/biu/subscribe?token=b9b34ce99c9ae3f7b9e014e7fa4ddd1b"
     path: ./proxies/3/机场名3.yaml
     override:
-      additional-prefix: '[✈️节点前缀3]'
+      additional-prefix: '[✈️biubiu3]'
       skip-cert-verify: true 
       udp: true
 
@@ -3434,10 +3434,10 @@ proxy-providers:                       # 代理订阅源管理模块：用于批
   ✈️机场名4:
     <<: *PProviders
     proxy: "全球直连"
-    url: "填写你的订阅链接"
+    url: "https://sub.npc-club.org:108/api/v1/client/subscribe?token=d2c6fe9f36c2a61049ee477ba5abbc62
     path: ./proxies/3/机场名4.yaml
     override:
-      additional-prefix: '[✈️机场名4]'
+      additional-prefix: '[✈️啥玩应4]'
       skip-cert-verify: true
       udp: true
 
