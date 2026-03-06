@@ -5819,6 +5819,15 @@ rules:
   - GEOIP,JP,🇯🇵 日本自动节点分组
   - GEOIP,KR,🇰🇷 韩国自动节点分组
 
+  # 直播规则
+  - DOMAIN-SUFFIX,stream-link.org,🇭🇰 香港分流自动节点分组
+  - DOMAIN-KEYWORD,stream-link,🇭🇰 香港分流自动节点分组
+
+  - DOMAIN-SUFFIX,4gtv.tv,🇭🇰 香港分流自动节点分组
+  - DOMAIN-KEYWORD,4gtv,🇭🇰 香港分流自动节点分组
+
+  - DOMAIN-SUFFIX,serv00.net,⚖️ 香港自动负载均衡轮询节点分组
+  - DOMAIN-KEYWORD,serv00,⚖️ 香港自动负载均衡轮询节点分组
 
 
   - PROCESS-NAME,org.telegram.messenger.web,✈️ Telegram 电报
