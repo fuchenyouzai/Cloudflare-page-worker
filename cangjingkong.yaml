@@ -5105,7 +5105,7 @@ rules:
   - PROCESS-NAME,com.ss.android.ugc.trill,🇹🇼 台湾自动节点分组       # 亚洲和东南亚版本
   - PROCESS-NAME,com.tiktokshop.serller,🇹🇼 台湾自动节点分组         # 商店
 
-
+  - DOMAIN-SUFFIX,bad.news,🕹️ 手动选择节点分组
 
   - PROCESS-NAME,sg.bigo.live,⚖️ 香港自动负载均衡散列节点分组   # Bigo直播平台
 
