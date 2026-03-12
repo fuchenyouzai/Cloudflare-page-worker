@@ -5092,8 +5092,12 @@ rules:
 
 # tiktok和.lite极速版 规则
   - DOMAIN-SUFFIX,tiktok.com,🇹🇼 台湾自动分流
-  - DOMAIN-SUFFIX,tiktokcdn.com,??🇼 台湾自动分流
-  - DOMAIN-SUFFIX,tiktokv.com,🇹🇼 台湾自动分流              # 视频流与资源加载核心域名
+
+
+
+  - DOMAIN-SUFFIX,tiktokv.com,🇹🇼 台湾自动分流                         # 视频流与资源加载核心域名
+  - DOMAIN-SUFFIX,tiktokcdn.com,🇹🇼 台湾自动分流
+
   - DOMAIN-SUFFIX,muscdn.com,🇹🇼 台湾自动分流
   - DOMAIN-SUFFIX,akamaized.net,🇹🇼 台湾自动分流      # CDN 子域名
   - DOMAIN-SUFFIX,musicaly.ly,🇹🇼 台湾自动分流             # 历史遗留的相关域名
