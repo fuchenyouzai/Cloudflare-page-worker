@@ -4600,7 +4600,11 @@ rules:
   - DOMAIN-KEYWORD,netflix,📺 Netflix
 
 
+# 域名
+  - DOMAIN-SUFFIX,dash.domain.digitalplat.org,DIRECT
+  - DOMAIN-KEYWORD,digitalplat.org,DIRECT
 
+# it之家
   - DOMAIN-SUFFIX,ithome.com,DIRECT
   - DOMAIN-SUFFIX,m.ithome.com,DIRECT
   - DOMAIN-SUFFIX,api.ithome.com,DIRECT
