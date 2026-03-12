@@ -4601,7 +4601,12 @@ rules:
 
 
 
-
+  - DOMAIN-SUFFIX,ithome.com,DIRECT
+  - DOMAIN-SUFFIX,m.ithome.com,DIRECT
+  - DOMAIN-SUFFIX,api.ithome.com,DIRECT
+  - DOMAIN-SUFFIX,img.ithome.com,DIRECT
+  - DOMAIN-SUFFIX,static.ithome.com,DIRECT
+  - DOMAIN-KEYWORD,ithome,DIRECT
 
 
 
