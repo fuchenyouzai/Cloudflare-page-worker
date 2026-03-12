@@ -4,7 +4,7 @@ log-level: info   # 日志级别 info 会输出普通流程，状态，debug 详
 global-client-fingerprint: chrome # 全局 TLS 客户端指纹设置 (chrome)。为 VLESS/Vmess/Trojan 等带 TLS 的协议设置“伪装”浏览器指纹。比起每个代理里的 client-fingerprint 设置优先级低。。。设置了全局客户端指纹为chrome。全局TLS客户端指纹（悠哉定义：为所有支持TLS协议的代理节点（VLESS、VMess、Trojan等）设置统一的TLS握手特征，用于模拟主流浏览器的TLS行为，提升连接兼容性）可选值：chrome、firefox、safari、ios、android等（对应不同浏览器/设备的TLS指纹）当前值：chrome（悠哉定义：模拟Chrome浏览器的TLS握手特征，优先级低于单个代理节点内单独配置的client-fingerprint参数）
 unified-delay: true # 统一延迟策略。这个在 Mihomo/Clash Meta 文档里是指延迟测试统一处理（比如 node 挂载的延迟测评）以避免某些协议／节点因为连接方式差异导致时延偏差。。启用统一延迟策略用于统一管理网络延迟或请求处理的延迟策略。统一延迟策略（悠哉定义：控制代理节点延迟测试的计算逻辑，仅适用于Mihomo/Clash Meta版本）可选值：true（启用）、false（禁用）当前值：true（悠哉定义：启用统一延迟测试逻辑，消除不同代理协议（如VLESS、VMess）、不同节点连接方式导致的延迟测评偏差，保证延迟数据的一致性与可比性）
 ipv6: true # 启用 IPv6 支持。表示支持 AAAA 记录解析和 IPv6 流量。。开启IPv6开关,关闭阻断所有IPv6链接和屏蔽DNS请求 AAAA 记录。IPv6支持开关（悠哉定义：控制代理服务是否支持IPv6协议相关功能）可选值：true（启用）、false（禁用）当前值：true（悠哉定义：启用IPv6地址解析（AAAA记录）和IPv6流量代理，若网络环境不支持IPv6，建议设为false避免连接异常）
-allow-lan: true # 允许局域网 (LAN) 的其他设备连接这个代理服务。局网里的设备也能用你的代理。false是禁止局域网访问，即不允许局域网内的设备使用此代理，局域网访问权限（悠哉定义：控制局域网内其他设备是否可通过当前设备IP连接代理服务）可选值：true（允许）、false（禁止）当前值：true（悠哉定义：允许手机、平板、其他电脑等局域网设备，通过当前设备IP和代理端口连接使用代理）
+allow-lan: true    # 允许局域网 (LAN) 的其他设备连接这个代理服务。局网里的设备也能用你的代理。false是禁止局域网访问，即不允许局域网内的设备使用此代理，局域网访问权限（悠哉定义：控制局域网内其他设备是否可通过当前设备IP连接代理服务）可选值：true（允许）、false（禁止）当前值：true（悠哉定义：允许手机、平板、其他电脑等局域网设备，通过当前设备IP和代理端口连接使用代理）
 bind-address: "*"   # 监听所有网络接口（IP）。即不只是 localhost，还包括局域网、外网接口（若有）都可以接受连接。。的*表示服务程序将监听所有可用的网络接口和IP地址接受来自任何IP的连接请求。监听网络接口（悠哉定义：指定代理服务监听的网络接口IP，决定哪些来源的连接可被接收）。可选值："*"（监听所有接口）、具体IP（如192.168.1.100，仅监听该IP对应接口）当前值："*"（悠哉定义：监听设备所有可用网络接口，包括本地回环接口、局域网接口、公网接口（若有），确保不同来源设备可正常连接）
 tcp-concurrent: true # 新增🔔启用 TCP 并发连接，提升多任务下的代理传输效率
 find-process-mode: strict # 新增🔔进程识别模式（strict 为严格模式，精准匹配发起网络请求的进程，避免规则误判）
@@ -5149,6 +5149,8 @@ rules:
   - DOMAIN-SUFFIX,serv00.net,⚖️ 香港自动负载均衡轮询节点分组
   - DOMAIN-KEYWORD,serv00,⚖️ 香港自动负载均衡轮询节点分组
 
+
+  - IP-CIDR,5.28.195.2/32,✈️ Telegram,no-resolve
 
   - PROCESS-NAME,org.telegram.messenger.web,✈️ Telegram
   - PROCESS-NAME,org.thunderdog.challegram,✈️ Telegram
