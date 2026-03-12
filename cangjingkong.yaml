@@ -10,11 +10,12 @@ tcp-concurrent: true # 新增🔔启用 TCP 并发连接，提升多任务下的
 find-process-mode: strict # 新增🔔进程识别模式（strict 为严格模式，精准匹配发起网络请求的进程，避免规则误判）
 redir-port: 7892 # 重定向端口（redirect port）一般用于大陆直连 / 重定向方式，把 IP／端口重定向到代理里（Linux 下 iptables + redir 模式）。端口转发规则重定向端口流量重定向端口（悠哉定义：主要用于Linux系统，配合iptables防火墙规则，将指定IP/端口的流量重定向至该端口，实现特定流量代理），当前值：7892（悠哉无固定默认值，需根据系统防火墙配置调整，Windows/macOS系统通常无需配置）
 tproxy-port: 7893 # 透明代理端口，当网络支持 TPROXY 模式时，把流量透明捕获（通常在路由器或内核支持）到这个端口进行处理。。表示配置中的tproxy（透明代理）端口号为 7893。这是网络代理相关的参数，用于指定代理服务监听的端口号，即代理程序会在该端口等待连接，从而实现代理功能。 透明代理端口（悠哉定义：需系统内核支持TPROXY模块，用于透明捕获网络流量并转发至代理，无需客户端手动配置代理，常用于路由器场景），当前值：7893（悠哉无固定默认值，需依赖系统内核特性，普通桌面/移动设备较少使用）
-port: 7890 # HTTP代理端口TCP，HTTP代理监听端口，用于接收并处理HTTP协议代理请求的端口，仅支持TCP流量）当前值：7890（悠哉无固定默认值，为常用推荐端口，需确保与其他服务端口不冲突）
-socks-port: 7891 # Socks5代理端口，支持TCP和UDP协议，SOCKS5代理监听端口（悠哉定义：用于接收并处理SOCKS5协议代理请求的端口，支持TCP与UDP流量），当前值：7891（悠哉无固定默认值，为常用推荐端口，需确保与其他服务端口不冲突）
-mixed-port: 10801 # HTTP和SOCKS代理TCP和UDP混合端口，方便一些软件直接用这个端口不用分开设 HTTP和SOCKS。 HTTP与SOCKS5混合代理端口（悠哉定义：统一监听HTTP和SOCKS5协议的端口，无需区分协议类型，同时处理两种协议的TCP/UDP流量），当前值：10801（悠哉无固定默认值，为常用推荐端口，需确保与其他服务端口不冲突）
-authentication:                                       # 代理身份验证（为，HTTP、SOCKS5、mixed端口设置连接验证机制，防止未授权设备使用代理，提升安全性）配置格式：- 用户名:密码（支持配置多组验证信息）当前配置：- youzai:TG@fuchenyouzaibot（悠哉定义：客户端连接对应代理端口时，需输入用户名“youzai”、密码“TG@fuchenyouzaibot”，验证通过后方可使用代理）。。安全策略这是给代理端口 (port / socks-port / mixed-port) 局域网连接用的用户名和密码。当你用 Clash 的代理（HTTP/SOCKS/Mixed）时，客户端会弹出验证框要求输入用户名密码youzai用户名:密码TG@fuchenyouzaibot
-  - youzai:TG@fuchenyouzaibot            # 用户名密码 列里的地址不需要密码
+port: 9521 # HTTP代理端口TCP，HTTP代理监听端口，用于接收并处理HTTP协议代理请求的端口，仅支持TCP流量）当前值：7890（悠哉无固定默认值，为常用推荐端口，需确保与其他服务端口不冲突）
+socks-port: 9125 # Socks5代理端口，支持TCP和UDP协议，SOCKS5代理监听端口（悠哉定义：用于接收并处理SOCKS5协议代理请求的端口，支持TCP与UDP流量），当前值：7891（悠哉无固定默认值，为常用推荐端口，需确保与其他服务端口不冲突）
+mixed-port: 9527 # HTTP和SOCKS代理TCP和UDP混合端口，方便一些软件直接用这个端口不用分开设 HTTP和SOCKS。 HTTP与SOCKS5混合代理端口（悠哉定义：统一监听HTTP和SOCKS5协议的端口，无需区分协议类型，同时处理两种协议的TCP/UDP流量），当前值：10801（悠哉无固定默认值，为常用推荐端口，需确保与其他服务端口不冲突）
+# 代理身份验证（为，HTTP、SOCKS5、mixed端口设置连接验证机制，防止未授权设备使用代理，提升安全性）配置格式：- 用户名:密码（支持配置多组验证信息）当前配置：- youzai:TG@fuchenyouzaibot（悠哉定义：客户端连接对应代理端口时，需输入用户名“youzai”、密码“TG@fuchenyouzaibot”，验证通过后方可使用代理）。。安全策略这是给代理端口 (port / socks-port / mixed-port) 局域网连接用的用户名和密码。当你用 Clash 的代理（HTTP/SOCKS/Mixed）时，客户端会弹出验证框要求输入用户名密码youzai用户名:密码TG@fuchenyouzaibot
+authentication:
+  - youzai:TG@fuchenyouzaibot
 skip-auth-prefixes:                                  # 白名单跳过身份验证的局域网内网私信有地址范围。包含局域网 +私有网段 +回环就够了。这些 IP 来源的连接不需要输入用户名密码。免验证IP段（悠哉定义：指定无需进行身份验证即可连接代理的IP地址范围，通常用于可信的局域网或本地地址，避免内部设备重复验证） 配置格式：- IP段（支持IPv4/IPv6段，遵循CIDR格式）
   - ::1/128                                                 # ipv6本机。IPv6的本地回环地址（loopback address）。类似IPv4的127.0.0.1，用于本机通信。
   - fc00::/7                                                # ipv6内网。IPv6的Unique Local Addresses (ULA)，类似IPv4的私有地址，用于内部通信，不在公网路由。
@@ -5091,7 +5092,7 @@ rules:
 
 # tiktok和.lite极速版 规则
   - DOMAIN-SUFFIX,tiktok.com,🇹🇼 台湾自动分流
-  - DOMAIN-SUFFIX,tiktokcdn.com,🇹🇼 台湾自动分流
+  - DOMAIN-SUFFIX,tiktokcdn.com,??🇼 台湾自动分流
   - DOMAIN-SUFFIX,tiktokv.com,🇹🇼 台湾自动分流              # 视频流与资源加载核心域名
   - DOMAIN-SUFFIX,muscdn.com,🇹🇼 台湾自动分流
   - DOMAIN-SUFFIX,akamaized.net,🇹🇼 台湾自动分流      # CDN 子域名
