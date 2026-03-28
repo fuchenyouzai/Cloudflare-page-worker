@@ -2488,7 +2488,7 @@ proxy-providers:
   ✈️name1:
     <<: *PProviders
     proxy: "直连"
-    url: "订阅地址"
+    url: "https://api.taxicab.cc/sub?target=clash&url=https%3A%2F%2Fget.83289483.org%2Fapi%2Fedoatrqm%2Ftoken%3D59f666fb44b70bd0e9b0754a5c4c839e%7C%7Chttps%3A%2F%2F192.243.117.28%3A65535%2Fapi%2Frest%3Ftoken%3De826b51731d28b9941879c3d789dd0b3%7C%7Chttps%3A%2F%2Fsub.npc-club.org%3A108%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D0ee4852335f40814f098515deed78450%7C%7Chttps%3A%2F%2Ffeed1.chitanda-eru.com%2Foosaka%2F3cc185579ea71bd695dd77779b0aefd2&insert=false"
     client-fingerprint: chrome
     path: ./proxies/2/path1.yaml
     override:
@@ -2521,7 +2521,7 @@ proxy-providers:
   ✈️name3:
     <<: *PProviders
     proxy: "直连"
-    url: "订阅地址"
+    url: "https://sub.npc-club.org:108/api/v1/client/subscribe?token=d2c6fe9f36c2a61049ee477ba5abbc62"
     client-fingerprint: chrome
     path: ./proxies/2/path3.yaml
     override:
