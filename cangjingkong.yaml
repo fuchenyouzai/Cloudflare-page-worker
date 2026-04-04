@@ -2507,101 +2507,13 @@ PProviders: &PProviders
 # 代理订阅源管理模块：用于批量加载、更新外部订阅和本地文件中的节点
 proxy-providers:
 
-# 悠哉方式一，从本地读取配置文件中读取节点
-# file 读取本地配置文件
-
-  ✈️本地配置文件1:
-    <<: *PProvidersfile
-    path: ./proxies/2/本地配置文件1.yaml
-    override:
-      additional-prefix: '[✈️本地配置文件1]'
-
-
-  ✈️本地配置文件2:
-    <<: *PProvidersfile
-    path: ./proxies/2/本地配置文件2.yaml
-    override:
-      additional-prefix: '[✈️本地配置文件2]'
-
-
-  ✈️浪潮本地配置文件3:
-    <<: *PProvidersfile
-    path: ./proxies/2/浪潮本地配置文件3.yaml
-    override:
-      additional-prefix: '[✈️浪潮本地配置文件3]'
-      sni:
-        - djpf1.fr101.xyz
-        - d1sgtrf1.fr101.xyz
-        - dhkf3.110ctc.top
-
-
-  ✈️name1:
-    <<: *PProviders  
-    url: "https://api.taxicab.cc/sub?target=clash&url=https%3A%2F%2Fget.83289483.org%2Fapi%2Fedoatrqm%2Ftoken%3D59f666fb44b70bd0e9b0754a5c4c839e%7C%7Chttps%3A%2F%2F192.243.117.28%3A65535%2Fapi%2Frest%3Ftoken%3De826b51731d28b9941879c3d789dd0b3%7C%7Chttps%3A%2F%2Fsub.npc-club.org%3A108%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D0ee4852335f40814f098515deed78450%7C%7Chttps%3A%2F%2Ffeed1.chitanda-eru.com%2Foosaka%2F3cc185579ea71bd695dd77779b0aefd2&insert=false"
-    path: ./proxies/2/name1.yaml
-    override:
-      additional-prefix: '[✈️name1]'
-
-
-
-  ✈️浪潮专用2:
-    <<: *PProviders
-    proxy: "🕹️ 手动选择节点分组"    
-    url: "订阅链接"
-    path: ./proxies/2/name2.yaml
-    override:
-      additional-prefix: '[✈️浪潮专用2]'
-      sni:
-        - djpf1.fr101.xyz
-        - d1sgtrf1.fr101.xyz
-        - dhkf3.110ctc.top
-
-
   ✈️name3:
     <<: *PProviders
-    url: "https://sub.npc-club.org:108/api/v1/client/subscribe?token=d2c6fe9f36c2a61049ee477ba5abbc62"
-    path: ./proxies/2/name3.yaml
+    url: "https://sub.npc-club.org:108/api/v1/client/subscribe?token=58171380663316ca171d4e3e74632aa1"
+    path: ./proxies/2/npc3.yaml
     override:
-      additional-prefix: '[✈️name3]'
+      additional-prefix: '[✈️npc3]'
 
-
-
-
-  ✈️name4:
-    <<: *PProviders
-    url: "订阅地址"
-    path: ./proxies/2/name4.yaml
-    override:
-      additional-prefix: '[✈️name4]'
-
-
-
-
-  ✈️name5:
-    <<: *PProviders
-    url: "订阅地址"
-    path: ./proxies/2/name5.yaml    
-    override:
-      additional-prefix: '[✈️name5]'
-
-
-      
-  ✈️name6:
-    <<: *PProviders
-    url: "订阅地址"
-    path: ./proxies/2/name6.yaml
-    override:
-      additional-prefix: '[✈️name6]'
-
-
-
-
-  ✈️name7:
-    <<: *PProviders
-    url: "订阅地址"
-    path: ./proxies/2/path7.yaml
-    override:
-      additional-prefix: '[✈️name7]'
 
 
 
