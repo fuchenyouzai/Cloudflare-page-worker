@@ -1,0 +1,168 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+ipv6: true
+prefer-ipv6: true
+external-controller: '127.0.0.1:9090'
+find-process-mode: strict
+unified-delay: true
+tcp-concurrent: true
+geodata-mode: true
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+    geoip: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'
+    geosite: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'
+    mmdb: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb'
+    asn: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb'
+    metadb: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb'
+keep-alive-interval: 30
+keep-alive-idle: 120
+profile:
+    store-selected: true
+    store-fake-ip: true
+sniffer:
+    enable: true
+    force-dns-mapping: true
+    parse-pure-ip: true
+    override-destination: true
+    sniff: { HTTP: { ports: [80, 8080-8880], override-destination: true }, TLS: { ports: [443, 8443] }, QUIC: { ports: [443, 8443] } }
+    skip-domain: ['Mijia Cloud', +.push.apple.com]
+dns:
+    enable: true
+    prefer-h3: true
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    nameserver: ['https://dns.cloudflare.com/dns-query', 'https://dns.google/dns-query']
+    proxy-server-nameserver: ['https://dns.alidns.com/dns-query']
+    nameserver-policy: { 'geosite:cn,geolocation-cn': ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query'] }
+    fake-ip-filter: ['*.lan', '*.local', '*.direct', '*.localhost', 'time.*.com', 'ntp.*.com', 'time.*.gov', 'time.*.apple.com', time.windows.com, time.nist.gov, '*.msftconnecttest.com', '*.msftncsi.com', localhost.ptlogin2.qq.com, '*.cmpassport.com', '*.mcdn.bilivideo.cn', '*.battlenet.com.cn', +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, id6.me, lens.l.google.com, captive.apple.com, connectivitycheck.gstatic.com]
+proxies:
+    - { name: '剩余流量：443.42 GB', type: vless, server: us1.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: { public-key: MrVc8uqpwhoXwJXD-2rOkZp-gXyIH15mYx0noP7joxM, short-id: 014c5bef3f }, client-fingerprint: chrome, network: tcp }
+    - { name: '距离下次重置剩余：15 天', type: vless, server: us1.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: { public-key: MrVc8uqpwhoXwJXD-2rOkZp-gXyIH15mYx0noP7joxM, short-id: 014c5bef3f }, client-fingerprint: chrome, network: tcp }
+    - { name: 套餐到期：2026-11-28, type: vless, server: us1.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: { public-key: MrVc8uqpwhoXwJXD-2rOkZp-gXyIH15mYx0noP7joxM, short-id: 014c5bef3f }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇺🇸United States 01', type: vless, server: us1.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: { public-key: MrVc8uqpwhoXwJXD-2rOkZp-gXyIH15mYx0noP7joxM, short-id: 014c5bef3f }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇺🇸United States 02', type: vless, server: us2.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: { public-key: OIVDQIpAT0W0VQ5E8qHlBZjXtcPOxrbWpx3CxN5L-iQ, short-id: 2714177825354e }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇺🇸United States 03', type: vless, server: us3.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: { public-key: W69IUo4AnRh5R8kBqp5q88Ttaf8rB5ZeqbvQpS5krTY, short-id: 9f3d2bcc02a2 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇺🇸United States 04', type: vless, server: us4.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: { public-key: B-pabyzCie7l9ExybaJhYzE4ym83PIzD2brG0fVFWXM, short-id: b9e7d391fd7b08 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇸🇬Singapore 01', type: anytls, server: sg1.miyazono-kaori.com, port: 443, password: a98a2c50-67e4-43d1-b127-a580b8467666, udp: true, sni: cdn-backup-pool-west.com, skip-cert-verify: true }
+    - { name: '🇸🇬Singapore 04', type: anytls, server: sg4.miyazono-kaori.com, port: 443, password: a98a2c50-67e4-43d1-b127-a580b8467666, udp: true, sni: cdn-backup-pool-west.com, skip-cert-verify: true }
+    - { name: '🇸🇬Singapore 02', type: vless, server: sg2.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.audible.com, reality-opts: { public-key: 8Sg5n7ppvleGd0qb8IMurDZkmNV2aB5XgSHPcIC7wk8, short-id: f17e8f745992733a }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇸🇬Singapore 03', type: vless, server: sg3.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: valorant.secure.dyn.riotcdn.net, reality-opts: { public-key: MxT4L2mlkPlmiS8spb0TL53H-SdAQmRiTBx0mncWOhk, short-id: e16b06ed49aac7 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇯🇵Japan 01', type: vless, server: jp1.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.agc.com, reality-opts: { public-key: ZZjCpb2ZVrFBpZ5bxLCIPlNefxJzwxpRTC8R2h__s2c, short-id: f7ff0d7b }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇯🇵Japan 02', type: vless, server: jp2.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.agc.com, reality-opts: { public-key: w2jnPmBX0wSIX0x0YCzDc-ORsAGdR132f8Oo9HO42B8, short-id: 7f59def7adecbe }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇯🇵Japan 03', type: vless, server: jp3.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.brother.co.jp, reality-opts: { public-key: GGqhxCd4tadwlK-YsFscX-n489EYdXvPU7ZyEwmpJwQ, short-id: 903373b9c7b3 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇯🇵Japan 04', type: vless, server: jp4.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: null, encryption: none, tls: true, skip-cert-verify: false, servername: www.brother.co.jp, reality-opts: { public-key: kswP2Dxs2u-DYPNTO2FiUM76OWaoq-bwwVlhHuyikA4, short-id: 8cdba948eebb03 }, client-fingerprint: chrome, network: grpc, grpc-opts: { grpc-service-name: GunService } }
+    - { name: '🇯🇵Japan 05', server: jp5.miyazono-kaori.com, port: 40172, sni: jp5.miyazono-kaori.com, up: null, down: null, skip-cert-verify: false, ports: 40000-50000, type: hysteria2, password: a98a2c50-67e4-43d1-b127-a580b8467666, obfs: salamander, obfs-password: nXF1UvAL6er3GAQ0 }
+    - { name: '🇯🇵Japan 06', server: jp6.miyazono-kaori.com, port: 44298, sni: jp6.miyazono-kaori.com, up: null, down: null, skip-cert-verify: false, ports: 40000-50000, type: hysteria2, password: a98a2c50-67e4-43d1-b127-a580b8467666, obfs: salamander, obfs-password: mBPdh6xeZmU42scZ }
+    - { name: '🇰🇷Korea 01', server: kr1.miyazono-kaori.com, port: 43795, sni: kr1.miyazono-kaori.com, up: null, down: null, skip-cert-verify: false, ports: 40000-50000, type: hysteria2, password: a98a2c50-67e4-43d1-b127-a580b8467666, obfs: salamander, obfs-password: MKsqfibVxwhZ3pCf }
+    - { name: '🇰🇷Korea 02', server: kr2.miyazono-kaori.com, port: 49203, sni: kr2.miyazono-kaori.com, up: 1000, down: 1000, skip-cert-verify: false, ports: 40000-50000, type: hysteria2, password: a98a2c50-67e4-43d1-b127-a580b8467666, obfs: salamander, obfs-password: rVYx28ncsHBinunc }
+    - { name: '🇳🇱Netherlands 01', type: vless, server: nl1.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.philips.com, reality-opts: { public-key: AFQAIB5u9Uu6nf9fkP1BdcSHivSuUv97l4FH-LoFYgw, short-id: 92dca6 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇳🇱Netherlands 02', type: vless, server: nl2.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.philips.com, reality-opts: { public-key: Ncb78PVwvwU2tB1eiOlJd0ZCG2CbqG7-dPIHztlq2yM, short-id: 69cc4c0d5e }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇫🇷France 01', type: vless, server: fr1.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.fff.fr, reality-opts: { public-key: qRclqjYcZ0xgQswGkd1NYVpxozb9xH5KxRWwLtXm6ng, short-id: 51e14e6907 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇫🇷France 02', type: vless, server: fr2.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.fff.fr, reality-opts: { public-key: fZgalnfCzIoVfWovISdDaRhn9aXPto6UlGAqCJ2PVRs, short-id: db345db2de10 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇮🇹Italy 01', type: vless, server: it1.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.autostrade.it, reality-opts: { public-key: '-4vLy79KFUVnFUXl75NQLO2Dei19XxTyOcBp6WAyeXg', short-id: b5ba0917fc1d2c }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇮🇹Italy 02', type: vless, server: it2.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.autostrade.it, reality-opts: { public-key: PyLwzOp5oMv9Rwe6xPGJstqZdcThJ3xX4U1x-jh_AVU, short-id: a3ae8b0c396d6a }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇬🇧United Kingdom 01', type: vless, server: uk1.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.bp.com, reality-opts: { public-key: _dsOu_vxEU7pY3sIeGJxIpR0Ac2KoqIyBor2Bx0CwGA, short-id: d923 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇬🇧United Kingdom 02', type: vless, server: uk2.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.bp.com, reality-opts: { public-key: QdYs12kmf0mAXNOEPgMpLN5dbZUlgvRK2zCqynOmqBk, short-id: '20' }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇬🇧United Kingdom 03', type: vless, server: uk3.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.bp.com, reality-opts: { public-key: cG7G4lJugF4QkxrzQR2F11TI1qYIOFkDWhFwsgTseX0, short-id: 243e29aac352bf }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇬🇧United Kingdom 04', type: vless, server: uk4.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.bp.com, reality-opts: { public-key: FgXAU_dzSEJsVZqp2ijnjC_qHuXV5QxFB3KqQJlt-HI, short-id: a15df05b53bc0806 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇭🇰Hong Kong 01 [Home]', type: vless, server: hk1.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.microsoft.com, reality-opts: { public-key: JEH14p4YvGvmDdBct-yekywfh8xcbbHjTBoBteh_qSs, short-id: 7538ac }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇭🇰Hong Kong 02 [Home]', type: vless, server: hk2.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.microsoft.com, reality-opts: { public-key: mZtlvdA_Hx2TJDInSO9WF4N241Y4oqUoCWjFcw3fNkA, short-id: 4c5632849b }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇭🇰Hong Kong 03', type: vless, server: hk3.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: game-assets.clashroyaleapp.com, reality-opts: { public-key: 8lMsfz82CUem5CBe1zuI7UIINFRf5HyqHUUCTdqcLnA, short-id: 084c6ba21676 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇭🇰Hong Kong 04', type: vless, server: hk4.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: game-assets.clashroyaleapp.com, reality-opts: { public-key: Tato5UWS43c__QRkhL3wtuvUIx_9fWeR16WIygWamSo, short-id: a9e3c7f2514bf914 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇭🇰Hong Kong 05', type: vless, server: hk5.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.imdb.com, reality-opts: { public-key: '-p-IbPkNNaHtsVVI7Yzdz-GxFaMQXtbXOAqfEKKmFCw', short-id: 20113ef4e6cc7b14 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇭🇰Hong Kong 06', type: vless, server: hk6.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.imdb.com, reality-opts: { public-key: E6HC_4pTyVIX_-njpHl9q49QNzxO165ejZWzxAufjG0, short-id: c4f35ede0a }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇹🇼Taiwan 01 [Home]', type: vless, server: tw1.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.apple.com, reality-opts: { public-key: KJgODVMTQcncG_l1ZCDhzn8gEgMU2YRl2Yw2je6moWY, short-id: c0d856ec }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇹🇼Taiwan 02 [Home]', type: vless, server: tw2.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.apple.com, reality-opts: { public-key: cJc4dNsluJs9LimkkO6uVVafilOvr6H8Jx2uM9JnhEE, short-id: '129271' }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇹🇼Taiwan 03', type: anytls, server: tw3.miyazono-kaori.com, port: 443, password: a98a2c50-67e4-43d1-b127-a580b8467666, udp: true, sni: tw3.miyazono-kaori.com, skip-cert-verify: true }
+    - { name: '🇹🇼Taiwan 04', type: anytls, server: tw4.miyazono-kaori.com, port: 443, password: a98a2c50-67e4-43d1-b127-a580b8467666, udp: true, sni: tw4.miyazono-kaori.com, skip-cert-verify: true }
+    - { name: '🇩🇪Deutschland 01 IPv6', type: vless, server: de1.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.siemens.com, reality-opts: { public-key: 4HHUcSIHNb6CLk7RMzTbVmH8-XNpRwAbILszBoCiQB8, short-id: 3c4dd960 }, client-fingerprint: chrome, network: tcp }
+    - { name: '🇩🇪Deutschland 02 IPv6', type: vless, server: de2.miyazono-kaori.com, port: 443, uuid: a98a2c50-67e4-43d1-b127-a580b8467666, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.siemens.com, reality-opts: { public-key: hHRpSeXU-ajNidKeR9OveKdIl7fuEZZodoc2TiYBYGU, short-id: 0a9b2233cd4d }, client-fingerprint: chrome, network: tcp }
+proxy-groups:
+    - { name: 节点选择, type: select, proxies: [自动选择, '剩余流量：443.42 GB', '距离下次重置剩余：15 天', 套餐到期：2026-11-28, '🇺🇸United States 01', '🇺🇸United States 02', '🇺🇸United States 03', '🇺🇸United States 04', '🇸🇬Singapore 01', '🇸🇬Singapore 04', '🇸🇬Singapore 02', '🇸🇬Singapore 03', '🇯🇵Japan 01', '🇯🇵Japan 02', '🇯🇵Japan 03', '🇯🇵Japan 04', '🇯🇵Japan 05', '🇯🇵Japan 06', '🇰🇷Korea 01', '🇰🇷Korea 02', '🇳🇱Netherlands 01', '🇳🇱Netherlands 02', '🇫🇷France 01', '🇫🇷France 02', '🇮🇹Italy 01', '🇮🇹Italy 02', '🇬🇧United Kingdom 01', '🇬🇧United Kingdom 02', '🇬🇧United Kingdom 03', '🇬🇧United Kingdom 04', '🇭🇰Hong Kong 01 [Home]', '🇭🇰Hong Kong 02 [Home]', '🇭🇰Hong Kong 03', '🇭🇰Hong Kong 04', '🇭🇰Hong Kong 05', '🇭🇰Hong Kong 06', '🇹🇼Taiwan 01 [Home]', '🇹🇼Taiwan 02 [Home]', '🇹🇼Taiwan 03', '🇹🇼Taiwan 04', '🇩🇪Deutschland 01 IPv6', '🇩🇪Deutschland 02 IPv6'] }
+    - { name: 自动选择, type: url-test, url: 'http://cp.cloudflare.com/generate_204', interval: 300, tolerance: 50, hidden: true, exclude-filter: '\[Home\]', proxies: ['剩余流量：443.42 GB', '距离下次重置剩余：15 天', 套餐到期：2026-11-28, '🇺🇸United States 01', '🇺🇸United States 02', '🇺🇸United States 03', '🇺🇸United States 04', '🇸🇬Singapore 01', '🇸🇬Singapore 04', '🇸🇬Singapore 02', '🇸🇬Singapore 03', '🇯🇵Japan 01', '🇯🇵Japan 02', '🇯🇵Japan 03', '🇯🇵Japan 04', '🇯🇵Japan 05', '🇯🇵Japan 06', '🇰🇷Korea 01', '🇰🇷Korea 02', '🇳🇱Netherlands 01', '🇳🇱Netherlands 02', '🇫🇷France 01', '🇫🇷France 02', '🇮🇹Italy 01', '🇮🇹Italy 02', '🇬🇧United Kingdom 01', '🇬🇧United Kingdom 02', '🇬🇧United Kingdom 03', '🇬🇧United Kingdom 04', '🇭🇰Hong Kong 01 [Home]', '🇭🇰Hong Kong 02 [Home]', '🇭🇰Hong Kong 03', '🇭🇰Hong Kong 04', '🇭🇰Hong Kong 05', '🇭🇰Hong Kong 06', '🇹🇼Taiwan 01 [Home]', '🇹🇼Taiwan 02 [Home]', '🇹🇼Taiwan 03', '🇹🇼Taiwan 04', '🇩🇪Deutschland 01 IPv6', '🇩🇪Deutschland 02 IPv6'] }
+rule-providers:
+    overseas-ai: { type: http, behavior: classical, url: 'https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Clash/OverseasAI/OverseasAI.list', path: ./ruleset/overseas-ai.list, interval: 86400, format: text }
+rules:
+    - 'DOMAIN,feed1.chitanda-eru.com,DIRECT'
+    - 'GEOSITE,private,DIRECT'
+    - 'IP-CIDR,127.0.0.0/8,DIRECT,no-resolve'
+    - 'IP-CIDR,10.0.0.0/8,DIRECT,no-resolve'
+    - 'IP-CIDR,172.16.0.0/12,DIRECT,no-resolve'
+    - 'IP-CIDR,192.168.0.0/16,DIRECT,no-resolve'
+    - 'IP-CIDR,100.64.0.0/10,DIRECT,no-resolve'
+    - 'IP-CIDR,169.254.0.0/16,DIRECT,no-resolve'
+    - 'IP-CIDR6,::1/128,DIRECT,no-resolve'
+    - 'IP-CIDR6,fc00::/7,DIRECT,no-resolve'
+    - 'IP-CIDR6,fe80::/10,DIRECT,no-resolve'
+    - 'DST-PORT,3478,REJECT'
+    - 'DST-PORT,3479,REJECT'
+    - 'DST-PORT,5349,REJECT'
+    - 'DST-PORT,5350,REJECT'
+    - 'DST-PORT,19302,REJECT'
+    - 'DST-PORT,19303,REJECT'
+    - 'DST-PORT,19304,REJECT'
+    - 'DST-PORT,19305,REJECT'
+    - 'DST-PORT,19306,REJECT'
+    - 'DST-PORT,19307,REJECT'
+    - 'DST-PORT,19308,REJECT'
+    - 'DST-PORT,19309,REJECT'
+    - 'DOMAIN-SUFFIX,stun.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,stun.miwifi.com,REJECT'
+    - 'DOMAIN-SUFFIX,stun.l.google.com,REJECT'
+    - 'DOMAIN-SUFFIX,stun1.l.google.com,REJECT'
+    - 'DOMAIN-SUFFIX,stun2.l.google.com,REJECT'
+    - 'DOMAIN-SUFFIX,stun3.l.google.com,REJECT'
+    - 'DOMAIN-SUFFIX,stun4.l.google.com,REJECT'
+    - 'DOMAIN-SUFFIX,stun.services.mozilla.com,REJECT'
+    - 'DOMAIN-SUFFIX,stun.cloudflare.com,REJECT'
+    - 'DOMAIN-SUFFIX,turn.speed.cloudflare.com,REJECT'
+    - 'DOMAIN-SUFFIX,global.turn.twilio.com,REJECT'
+    - 'DOMAIN-SUFFIX,turn.twilio.com,REJECT'
+    - 'DOMAIN-SUFFIX,stun.stunprotocol.org,REJECT'
+    - 'DOMAIN-SUFFIX,stun.ekiga.net,REJECT'
+    - 'DOMAIN-SUFFIX,stun.nextcloud.com,REJECT'
+    - 'DOMAIN-SUFFIX,relay.metered.ca,REJECT'
+    - 'DOMAIN-SUFFIX,openrelay.metered.ca,REJECT'
+    - 'DOMAIN-SUFFIX,xirsys.com,REJECT'
+    - 'DOMAIN-SUFFIX,freestun.net,REJECT'
+    - 'DOMAIN-SUFFIX,freeturn.net,REJECT'
+    - 'DOMAIN-SUFFIX,turnix.io,REJECT'
+    - 'GEOSITE,category-ads-all,REJECT'
+    - 'DOMAIN-SUFFIX,trace.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,beacon.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,report.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,pingtas.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,pingtcss.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,stats.g.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,isdspeed.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,tp.linksgo.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,webpush.wx.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,mi.gdt.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,t.gdt.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,e.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,l.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,btrace.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,gdt.qq.com,REJECT'
+    - 'DOMAIN-SUFFIX,pgdt.gtimg.cn,REJECT'
+    - 'DOMAIN-SUFFIX,adsmind.gdtimg.com,REJECT'
+    - 'RULE-SET,overseas-ai,节点选择'
+    - 'DOMAIN-SUFFIX,googleapis.cn,节点选择'
+    - 'DOMAIN-SUFFIX,xn--ngstr-lra8j.com,节点选择'
+    - 'DOMAIN-SUFFIX,ggpht.com,节点选择'
+    - 'DOMAIN-SUFFIX,googleusercontent.com,节点选择'
+    - 'DOMAIN-SUFFIX,gstatic.com,节点选择'
+    - 'GEOSITE,google,节点选择'
+    - 'GEOSITE,telegram,节点选择'
+    - 'GEOSITE,twitter,节点选择'
+    - 'GEOSITE,facebook,节点选择'
+    - 'GEOSITE,github,节点选择'
+    - 'GEOSITE,cn,DIRECT'
+    - 'GEOSITE,geolocation-cn,DIRECT'
+    - 'GEOSITE,geolocation-!cn,节点选择'
+    - 'GEOIP,CN,DIRECT,no-resolve'
+    - 'MATCH,节点选择'
