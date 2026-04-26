@@ -5458,4 +5458,45 @@ rule-providers:
 
 
 
+ # 可选的加载模式如下standard：标准加载器memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
+
+geodata-loader: memconservative
+
+
+
+# 自定义 geodata 规则数据文件（分流核心数据库）
+geox-url:
+  geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"              # IP 规则库：按国家/地区/运营商匹配 IP，实现 IP 精准分流
+  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"        # 域名规则库：按网站/应用/分类匹配域名，实现域名精准分流
+  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"           # 精准 IP 归属库：比 geoip 更详细，用于 IP 定位与分流
+  asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+  
+
+# geox-url:
+  # geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  # geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  # mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  # asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb" # ASN 运营商库：识别 IP 所属公司/运营商，用于运营商分流
+
+
+
+geo-auto-update: true
+# 自动更新规则库：true=开启，false=关闭
+geo-update-interval: 24
+# 自动更新间隔：单位小时，24=每天更新一次
+
+# GeoSite 域名匹配引擎（决定域名匹配速度与兼容性）
+geosite-matcher: succinct
+# succinct：默认引擎，性能快、占用低，与 rule-set 兼容（推荐）
+# memconservative：兼容引擎，来自 V2Ray，仅规则不生效时使用，性能较差
+
+
+
+
+
+
+
+
+
+
 
