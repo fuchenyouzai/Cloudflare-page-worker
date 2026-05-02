@@ -2874,9 +2874,9 @@ proxy-providers:
 
   ✈️kitty:
     <<: *PProviders
-    proxy: "IPV4V6DIRECT"
-    url: "https://raw.githubusercontent.com/fuchenyouzai/Cloudflare-page-worker/refs/heads/main/Kitty.yaml"
-    path: ./proxies/3/kitty.yaml
+    proxy: "DIRECT"
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/Cloudflare-page-worker/refs/heads/main/Kitty.yaml"
+    path: ./proxies/2/kitty.yaml
     override:
       additional-prefix: '[✈️kitty]'
       additional-suffix: " 悠哉"
@@ -5479,7 +5479,7 @@ etag-support: true # 外部资源下载的 ETag 支持，默认为 true  开启 
 
 # 规则提供者。境外内容分流规则集 24小时自动更新
 rule-providers:
-  Netflixip: { type: http, behavior: classical, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/Netflixip.yaml', interval: 86400, path: ./ruleset/3/Netflixip.yaml }
+  Netflixip: { type: http, behavior: classical, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/Netflixip.yaml', interval: 86400, path: ./ruleset/2/Netflixip.yaml }
 
 
 
