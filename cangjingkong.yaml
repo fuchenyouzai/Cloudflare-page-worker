@@ -2874,19 +2874,50 @@ proxy-providers:
 
   ✈️kitty:
     <<: *PProviders
+    proxy: "IPV4V6DIRECT"
     url: "https://raw.githubusercontent.com/fuchenyouzai/Cloudflare-page-worker/refs/heads/main/Kitty.yaml"
-    path: ./proxies/2/kitty.yaml # 默认只允许存储在 mihomo 的 Home Dir，如果想存储到其他位置，请通过设置 SAFE_PATHS 环境变量指定额外的安全路径。该环境变量的语法同本操作系统的PATH环境变量解析规则（即Windows下以分号分割，其他系统下以冒号分割）
+    path: ./proxies/3/kitty.yaml
     override:
       additional-prefix: '[✈️kitty]'
+      additional-suffix: " 悠哉"
+      proxy-name:
+# 香港
+        - pattern: "(.*)Hong Kong(.*)"
+          target: "$1香港$2"
+# 中国台湾
+        - pattern: "(.*)Taiwan(.*)"
+          target: "$1台湾$2"
+# 德国
+        - pattern: "(.*)Deutschland(.*)"
+          target: "$1德国$2"
+# 意大利
+        - pattern: "(.*)Italy(.*)"
+          target: "$1意大利$2"
+# 美国
+        - pattern: "(.*)United States(.*)"
+          target: "$1美国$2"
+# 法国
+        - pattern: "(.*)France(.*)"
+          target: "$1法国$2"
+# 韩国
+        - pattern: "(.*)Korea(.*)"
+          target: "$1韩国$2"
+# 新加坡
+        - pattern: "(.*)Singapore(.*)"
+          target: "$1新加坡$2"
+# 日本
+        - pattern: "(.*)Japan(.*)"
+          target: "$1日本$2"
+# 荷兰
+        - pattern: "(.*)Netherlands(.*)"
+          target: "$1荷兰$2"
+# 去掉多余和空格
+        - pattern: '(.*?)\s*\[Home\]\s*(.*)'
+          target: "$1$2"
 
 
+# 文件path默认只允许存储在 mihomo 的 Home Dir，如果想存储到其他位置，请通过设置 SAFE_PATHS 环境变量指定额外的安全路径。该环境变量的语法同本操作系统的PATH环境变量解析规则（即Windows下以分号分割，其他系统下以冒号分割）
 
-  ✈️NPC:
-    <<: *PProviders
-    url: "https://sub.npc-club.org:108/api/v1/client/subscribe?token=6487e379a743d222b60107be781aed3b"
-    path: ./proxies/2/NPC.yaml
-    override:
-      additional-prefix: '[✈️NPC]'
 
 
  
@@ -4180,13 +4211,21 @@ proxy-groups:
 # 悠哉分流规则
 
 rules:  
+  - DOMAIN-SUFFIX,ip.sb,🕹️ 手动选择 ✈️
 
-# 文采 
+  - PROCESS-NAME,com.liteapks.androidapps,IPV4V6DIRECT
+
+  - DOMAIN-SUFFIX,liteapks.com,IPV4V6DIRECT
+
+  - DOMAIN-SUFFIX,apkmirror.com,🕹️ 手动选择 ✈️  
+  
+  
+# 金牌
   - DOMAIN-SUFFIX,blbtgg.com,DIRECT
   - DOMAIN-SUFFIX,kqgfbs.com,DIRECT
 
-  - DOMAIN-SUFFIX,ip.sb,🕹️ 手动选择 ✈️
 
+# 域名
   - DOMAIN-SUFFIX,dash.domain.digitalplat.org,IPV4V6DIRECT
   - DOMAIN-KEYWORD,digitalplat.org,IPV4V6DIRECT
 
@@ -4195,38 +4234,17 @@ rules:
   - DOMAIN-KEYWORD,gh-proxy.com,IPV4V6DIRECT
   - DOMAIN-SUFFIX,gh-proxy.com,IPV4V6DIRECT
   - DOMAIN-SUFFIX,chakaitui.dpdns.org,IPV4V6DIRECT
-
+  - DOMAIN-SUFFIX,check.proxyip.cmliussss.net,IPV4V6DIRECT
+  - DOMAIN-SUFFIX,shijindui.dpdns.org,IPV4V6DIRECT
   - DOMAIN-SUFFIX,raw.githubusercontent.com,IPV4V6DIRECT
-  - DOMAIN-SUFFIX,github.com,IPV4V6DIRECT
-  
-  
-  - DOMAIN-KEYWORD,Cloudflare-page-worker,IPV4V6DIRECT  
+  - DOMAIN-SUFFIX,github.com,IPV4V6DIRECT  
   - DOMAIN-SUFFIX,testingcf.jsdelivr.net,IPV4V6DIRECT
   - DOMAIN-SUFFIX,fastly.jsdelivr.net,IPV4V6DIRECT
   - DOMAIN-SUFFIX,cdn.jsdelivr.net,IPV4V6DIRECT
-  - DOMAIN-KEYWORD,tg-fuchenyouzaibot,IPV4V6DIRECT
-  - DOMAIN-KEYWORD,cangjingkong.yaml,IPV4V6DIRECT 
- 
-  - DOMAIN-KEYWORD,tg-youzaifuchenbot,IPV4V6DIRECT
-  
-  - DOMAIN-KEYWORD,tv.json,IPV4V6DIRECT
-  - DOMAIN-KEYWORD,baby.json,IPV4V6DIRECT
-  - DOMAIN-KEYWORD,youzai.json,IPV4V6DIRECT
- 
-  - DOMAIN-KEYWORD,Netflixip.yaml,IPV4V6DIRECT
-  - DOMAIN-KEYWORD,悠哉口米口古.m3u,IPV4V6DIRECT
-  - DOMAIN-KEYWORD,悠哉直播.m3u,IPV4V6DIRECT
-  - DOMAIN-KEYWORD,网络平台直播.m3u,IPV4V6DIRECT
-  - DOMAIN-KEYWORD,YouTube.m3u,IPV4V6DIRECT
-
-  - DOMAIN-KEYWORD,feimaolive.json,IPV4V6DIRECT
-  - DOMAIN-KEYWORD,live2vod.js,IPV4V6DIRECT
-  
-  - DOMAIN-SUFFIX,check.proxyip.cmliussss.net,IPV4V6DIRECT
-  - DOMAIN-SUFFIX,shijindui.dpdns.org,IPV4V6DIRECT
 
 
-# ipv6
+
+# ipv6 测试
   - DOMAIN-SUFFIX,test-ipv6.com,IPV4V6DIRECT
   - DOMAIN-SUFFIX,test-ipv6.ro,IPV4V6DIRECT
   - DOMAIN-SUFFIX,test-ipv6.carnet.hr,IPV4V6DIRECT
@@ -4307,11 +4325,18 @@ rules:
   - IP-CIDR6,2606:4700:4700::1001/128,🇺🇸 US,no-resolve
 
   - DOMAIN-SUFFIX,dns.cloudflare.com,🇺🇸 US
-  - DOMAIN-KEYWORD,dns.cloudflare,🇺🇸 US
+
   - DOMAIN-SUFFIX,dns.google,🇺🇸 US
-  - DOMAIN-KEYWORD,dns.google,🇺🇸 US
+
   - DOMAIN-SUFFIX,cloudflare-dns.com,🇺🇸 US
-  - DOMAIN-KEYWORD,cloudflare-dns,🇺🇸 US
+
+
+
+
+
+
+
+
 
 # Cloudflare验证弹窗（人机验证/Just a moment）专用域名 → 直连
   - DOMAIN-SUFFIX,challenges.cloudflare.com,DIRECT
@@ -5454,7 +5479,7 @@ etag-support: true # 外部资源下载的 ETag 支持，默认为 true  开启 
 
 # 规则提供者。境外内容分流规则集 24小时自动更新
 rule-providers:
-  Netflixip: { type: http, behavior: classical, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/Netflixip.yaml', interval: 86400, path: ./ruleset/2/Netflixip.yaml }
+  Netflixip: { type: http, behavior: classical, url: 'https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/refs/heads/main/Netflixip.yaml', interval: 86400, path: ./ruleset/3/Netflixip.yaml }
 
 
 
