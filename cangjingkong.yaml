@@ -1,9 +1,9 @@
 # 苍井空 2026 🐴 躺平的床上不止你和我。
 # 悠哉⚙️功能设置与覆写
-# 悠哉配置文件 2026 年04月13日
+# 悠哉配置文件 2026 年08月28日
 # 悠哉TG https://t.me/fuchenyouzaibot
 
-# 悠哉⚙️ 核心运行与性能 功能设置与覆写 悠哉配置文件 2026 年04月01日 悠哉TG https://t.me/fuchenyouzaibot
+# 悠哉⚙️ 核心运行与性能 功能设置与覆写 悠哉配置文件 2026 年08月28日 悠哉TG https://t.me/fuchenyouzaibot
 
 mode: rule
 
@@ -1034,7 +1034,7 @@ proxies:
 
   - name: 🇭🇰 TG✈️fuchenyouzaibot
     type: vless
-    server: 104.17.104.95
+    server: 104.16.248.152
     port: 443
     uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
     tcp: true
@@ -1051,7 +1051,7 @@ proxies:
 
   - name: v4哈哈0
     type: vless
-    server: 104.25.251.239
+    server: 104.16.151.93
     port: 443
     uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
     tcp: true
@@ -1068,7 +1068,7 @@ proxies:
 
   - name: v4哈哈1
     type: vless
-    server: 104.17.143.3
+    server: 104.17.185.133
     port: 443
     uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
     tcp: true
@@ -1085,7 +1085,7 @@ proxies:
 
   - name: v4哈哈2
     type: vless
-    server: 104.25.246.251
+    server: 104.19.51.175
     port: 443
     uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
     tcp: true
@@ -1100,9 +1100,9 @@ proxies:
       headers:
         Host: qianhouqianhoujiasudu1.dpdns.org
 
-  - name: v6哈哈3
+  - name: v4哈哈3
     type: vless
-    server: 2606:4700:90da:13eb:bebf:8e2e:b242:7218
+    server: 104.16.241.187
     port: 443
     uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
     tcp: true
@@ -1117,9 +1117,9 @@ proxies:
       headers:
         Host: qianhouqianhoujiasudu1.dpdns.org
 
-  - name: v6哈哈4
+  - name: v4哈哈4
     type: vless
-    server: 2606:4700:9c60:ba7e:9ad3:6a70:25ee:83b1
+    server: 104.16.250.53
     port: 443
     uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
     tcp: true
@@ -1134,9 +1134,9 @@ proxies:
       headers:
         Host: qianhouqianhoujiasudu1.dpdns.org
 
-  - name: v6哈哈5
+  - name: v4哈哈5
     type: vless
-    server: 2606:4700:9ada:6c86:56b4:4a97:ee80:8376
+    server: 104.16.150.254
     port: 443
     uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
     tcp: true
@@ -1150,6 +1150,61 @@ proxies:
       path: "/pyip=ProxyIP.HK.CMLiussss.net"
       headers:
         Host: qianhouqianhoujiasudu1.dpdns.org
+
+  - name: v4哈哈6
+    type: vless
+    server: 104.17.25.77
+    port: 443
+    uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+    tcp: true
+    udp: true
+    tls: true
+    client-fingerprint: chrome
+    network: ws
+    skip-cert-verify: false
+    servername: qianhouqianhoujiasudu1.dpdns.org
+    ws-opts:
+      path: "/pyip=ProxyIP.HK.CMLiussss.net"
+      headers:
+        Host: qianhouqianhoujiasudu1.dpdns.org
+
+  - name: v4哈哈7
+    type: vless
+    server: 104.17.173.160
+    port: 443
+    uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+    tcp: true
+    udp: true
+    tls: true
+    client-fingerprint: chrome
+    network: ws
+    skip-cert-verify: false
+    servername: qianhouqianhoujiasudu1.dpdns.org
+    ws-opts:
+      path: "/pyip=ProxyIP.HK.CMLiussss.net"
+      headers:
+        Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+  - name: v4哈哈8
+    type: vless
+    server: 104.19.39.142
+    port: 443
+    uuid: 2a67d0f4-5a8c-461e-89f1-30cdc9bc6d68
+    tcp: true
+    udp: true
+    tls: true
+    client-fingerprint: chrome
+    network: ws
+    skip-cert-verify: false
+    servername: qianhouqianhoujiasudu1.dpdns.org
+    ws-opts:
+      path: "/pyip=ProxyIP.HK.CMLiussss.net"
+      headers:
+        Host: qianhouqianhoujiasudu1.dpdns.org
+
+
+
 
   - name: v4嘻嘻0
     type: vless
@@ -3010,9 +3065,12 @@ proxy-groups:
       - v4哈哈0
       - v4哈哈1
       - v4哈哈2
-      - v6哈哈3
-      - v6哈哈4
-      - v6哈哈5
+      - v4哈哈3
+      - v4哈哈4
+      - v4哈哈5
+      - v4哈哈6
+      - v4哈哈7
+      - v4哈哈8
       - v4嘻嘻0
       - v4嘻嘻1
       - v4嘻嘻2
@@ -3204,9 +3262,12 @@ proxy-groups:
       - v4哈哈0
       - v4哈哈1
       - v4哈哈2
-      - v6哈哈3
-      - v6哈哈4
-      - v6哈哈5
+      - v4哈哈3
+      - v4哈哈4
+      - v4哈哈5
+      - v4哈哈6
+      - v4哈哈7
+      - v4哈哈8
 
 
 
@@ -3233,9 +3294,12 @@ proxy-groups:
       - v4哈哈0
       - v4哈哈1
       - v4哈哈2
-      - v6哈哈3
-      - v6哈哈4
-      - v6哈哈5
+      - v4哈哈3
+      - v4哈哈4
+      - v4哈哈5
+      - v4哈哈6
+      - v4哈哈7
+      - v4哈哈8
 
 
 
@@ -3684,7 +3748,7 @@ proxy-groups:
     interval: 3600
     tolerance: 30
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(🐥|visa|shopify|wto|time|icook|csgo|workers|pages|blog|one.dash|radar|developers)"
+    filter: "(?i)(visa|shopify|wto|time|icook|csgo|workers|pages|blog|one.dash|radar|developers)"
     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/2/cloudflare.png"
     exclude-filter: "(?i)(舒淇)"
 
@@ -3727,10 +3791,12 @@ proxy-groups:
       - v4哈哈0
       - v4哈哈1
       - v4哈哈2
-      - v6哈哈3
-      - v6哈哈4
-      - v6哈哈5
-
+      - v4哈哈3
+      - v4哈哈4
+      - v4哈哈5
+      - v4哈哈6
+      - v4哈哈7
+      - v4哈哈8
 
 
 
@@ -3755,9 +3821,12 @@ proxy-groups:
       - v4哈哈0
       - v4哈哈1
       - v4哈哈2
-      - v6哈哈3
-      - v6哈哈4
-      - v6哈哈5
+      - v4哈哈3
+      - v4哈哈4
+      - v4哈哈5
+      - v4哈哈6
+      - v4哈哈7
+      - v4哈哈8
 
 
 # 负载均衡 type: load-balance
@@ -3825,7 +3894,7 @@ proxy-groups:
     interval: 3600
     tolerance: 30
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(🐥|visa|shopify|wto|time|icook|csgo|workers|pages|blog|one.dash|radar|developers)"
+    filter: "(?i)(visa|shopify|wto|time|icook|csgo|workers|pages|blog|one.dash|radar|developers)"
     icon: "https://gh-proxy.com/https://raw.githubusercontent.com/fuchenyouzai/tg-fuchenyouzaibot/main/2/cloudflare.png"
     exclude-filter: "(?i)(舒淇)"
 
@@ -3845,9 +3914,12 @@ proxy-groups:
       - v4哈哈0
       - v4哈哈1
       - v4哈哈2
-      - v6哈哈3
-      - v6哈哈4
-      - v6哈哈5
+      - v4哈哈3
+      - v4哈哈4
+      - v4哈哈5
+      - v4哈哈6
+      - v4哈哈7
+      - v4哈哈8
 
 
   - name: 🎬 disney
@@ -3864,9 +3936,12 @@ proxy-groups:
       - v4哈哈0
       - v4哈哈1
       - v4哈哈2
-      - v6哈哈3
-      - v6哈哈4
-      - v6哈哈5
+      - v4哈哈3
+      - v4哈哈4
+      - v4哈哈5
+      - v4哈哈6
+      - v4哈哈7
+      - v4哈哈8
 
 
 
@@ -3884,9 +3959,12 @@ proxy-groups:
       - v4哈哈0
       - v4哈哈1
       - v4哈哈2
-      - v6哈哈3
-      - v6哈哈4
-      - v6哈哈5
+      - v4哈哈3
+      - v4哈哈4
+      - v4哈哈5
+      - v4哈哈6
+      - v4哈哈7
+      - v4哈哈8
 
 
 
@@ -3906,9 +3984,12 @@ proxy-groups:
       - v4哈哈0
       - v4哈哈1
       - v4哈哈2
-      - v6哈哈3
-      - v6哈哈4
-      - v6哈哈5
+      - v4哈哈3
+      - v4哈哈4
+      - v4哈哈5
+      - v4哈哈6
+      - v4哈哈7
+      - v4哈哈8
       - v4嘿嘿0
       - v4嘿嘿1
       - v4嘿嘿2
